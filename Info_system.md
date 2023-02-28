@@ -12,7 +12,7 @@
     # until 2023-02-28
     <name>                   <path>
     base                     /home/jiang/mambaforge-pypy3
-    **anvio-7.1**                /home/jiang/mambaforge-pypy3/envs/anvio-7.1
+    anvio-7.1                /home/jiang/mambaforge-pypy3/envs/anvio-7.1
     assembly                 /home/jiang/mambaforge-pypy3/envs/assembly
     checkm                   /home/jiang/mambaforge-pypy3/envs/checkm
     gtdbtk-2.1.1             /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1
