@@ -10,8 +10,6 @@
 - Detailed list of environments and packages please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/List_Environment.md).  
 
 
-<font color="green"> Markdown </font>
-
 
 [^1]: All Rights Reserved.
 [^2]: You should know where to find him^.^
