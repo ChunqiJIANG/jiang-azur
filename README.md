@@ -1,5 +1,5 @@
 
-# This is a repository for usage in server space 'jiang@azur' ***only if you can access***.
+# This is a repository for usage in server space 'jiang@azur' *only if you can access*.
 Start from 2023-02-28
 
 
