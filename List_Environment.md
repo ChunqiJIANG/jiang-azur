@@ -4,6 +4,8 @@
 #example
 > **Environment 'name':**
 - packege_01-version
+  - packege_01 dependent packege_001-version
+  - packege_01 dependent packege_002-version
 - packege_02-version
 - packege_03-version
 - ...
