@@ -1,7 +1,6 @@
 # This is the list of created environments and installed main packeges in 'jiang@azur'
 
-***
-
+## 2023-03-01
 > **Environment 'base':**
 - mamba-1.0.0
 - conda-22.11.1
