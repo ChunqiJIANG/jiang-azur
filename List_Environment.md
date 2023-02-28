@@ -1,11 +1,12 @@
 # This is the list of created environments and installed main packeges in 'jiang@azur'
 
 
-		> **Environment 'name':**
-		- packege-version
-		- packege-version
-		- packege-version
-		- ...
+#example
+> **Environment 'name':**
+- packege_01-version
+- packege_02-version
+- packege_03-version
+- ...
 
 
 ## 2023-03-01
