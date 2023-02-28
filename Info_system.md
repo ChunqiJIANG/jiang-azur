@@ -7,7 +7,7 @@
 - Mambaforge-pypy3-Linux-x86_64 (controller for environments and packages)
 
 
-### current environment list (2023-02-28):
+### Current environment list (2023-02-28):
     <name>                   <path>
     base                     /home/jiang/mambaforge-pypy3
     anvio-7.1                /home/jiang/mambaforge-pypy3/envs/anvio-7.1
