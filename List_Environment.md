@@ -10,12 +10,13 @@
 
 
 ## 2023-03-01
-> **Environment 'base':**
+> **Environment 'base':** (*default*)
 - mamba-1.0.0
 - conda-22.11.1
 - python-3.9.12
 - screen-4.8.0
-	
+
+
 > **Environment 'anvio-7.1':** (*conda activate anvio-7.1*)
 - python-3.6.15
 - anvio-7.1
@@ -34,14 +35,17 @@
 - fasttree-2.1.11
 - fastani-1.33
 
+
 > **Environment 'assembly':** (*conda activate assembly*)
->> python-3.8.15
->> medaka-1.7.2 
-	flye-2.9.1
-	unicycler-0.4.8 
-		pilon-1.24
-		racon-1.5.0
-	filtlong-0.2.1
-	fastp-0.223.2
-	seqkit-2.3.1 
-	fastqc-0.11.9
+- medaka-1.7.2 
+- - python-3.8.15
+- flye-2.9.1
+- unicycler-0.4.8 
+- - pilon-1.24
+- - racon-1.5.0
+- filtlong-0.2.1
+- fastp-0.223.2
+- seqkit-2.3.1 
+- fastqc-0.11.9
+
+
