@@ -51,10 +51,48 @@
 - fastqc-0.11.9
 
 
-> **Environment-03 '':** (*conda activate *)
+> **Environment-03 'gtdbtk-2.1.1':** (*conda activate gtdbtk-2.1.1*)
+- gtdbtk-2.1.1
+  - numpy-1.23.5
+  - prodigal-2.6.3
+	- fasttree-2.1.11
+	- fastani-1.3
 
 
-> **Environment-04 '':** (*conda activate *)
+> **Environment-04 'checkm':** (*conda activate checkm*)
+- checkm-genome-1.2.2
+	- matplotlib-base-3.6.3
+	- numpy-1.24.2
+	- pysam-0.20.0
 
 
-> **Environment-05 '':** (*conda activate *)
+> **Environment-05 'pydata':** (*conda activate pydata*)
+- ipython-8.9.0 
+- numpy-1.24.1
+- pandas-1.5.3
+- matplotlib-3.6.3 
+- scikit-learn-1.2.1
+- seaborn-0.12.2 
+- jupyter-1.0.0
+- notebook-6.5.2
+
+
+> **Environment-06 'r-env':** (*conda activate r-env*)
+- r-base-4.2.2
+- r-essentials-4.2
+- jupyter-1.0.0
+- notebook-6.5.2
+- ipykernel-6.21.1
+- r-irkernel-1.3.2
+- WGCNA 
+  
+
+> **Environment-07 'unicycler050':** (*conda activate unicycler050*)
+- unicycler-0.5.0
+	- racon-1.5.0
+	- spades-3.15.5
+- pilon-1.24
+- canu-2.2
+
+
+> **Environment-xx '':** (*conda activate *)
