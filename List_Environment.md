@@ -2,15 +2,14 @@
 
 ***
 
-> Environment 'base':
+> **Environment 'base':**
 - mamba-1.0.0
 - conda-22.11.1
 - python-3.9.12
 - screen-4.8.0
 	
 
-> Environment 'anvio-7.1':
-(conda activate anvio-7.1)
+> **Environment 'anvio-7.1':** (conda activate anvio-7.1)
 - python-3.6.15
 - anvio-7.1
 - sqlite-3.40.0 
