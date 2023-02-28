@@ -10,9 +10,7 @@
 - Detailed list of environments and packages please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/List_Environment.md).  
 
 
-<font color = "green"> Markdown </font>
-<font color = red>Markdown</font>
-<font color = blue>Markdown</font>
+<font color="green"> Markdown </font>
 
 
 [^1]: All Rights Reserved.
