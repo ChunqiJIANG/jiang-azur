@@ -12,14 +12,14 @@
 
 
 ## 2023-03-01
-> **Environment 'base':** (*default*)
+> **Environment-00 'base':** (*default*)
 - mamba-1.0.0
 - conda-22.11.1
 - python-3.9.12
 - screen-4.8.0
 
 
-> **Environment 'anvio-7.1':** (*conda activate anvio-7.1*)
+> **Environment-01 'anvio-7.1':** (*conda activate anvio-7.1*)
 - anvio-7.1
   - python-3.6.15
   - sqlite-3.40.0 
@@ -38,7 +38,7 @@
   - fastani-1.33
 
 
-> **Environment 'assembly':** (*conda activate assembly*)
+> **Environment-02 'assembly':** (*conda activate assembly*)
 - medaka-1.7.2 
   - python-3.8.15
 - flye-2.9.1
@@ -51,3 +51,10 @@
 - fastqc-0.11.9
 
 
+> **Environment-03 '':** (*conda activate *)
+
+
+> **Environment-04 '':** (*conda activate *)
+
+
+> **Environment-05 '':** (*conda activate *)
