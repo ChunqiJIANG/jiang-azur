@@ -9,7 +9,7 @@
 
 ### Current environment list:
 
-    # 2023-02-28
+    # until 2023-02-28
     <name>                   <path>
     base                     /home/jiang/mambaforge-pypy3
     anvio-7.1                /home/jiang/mambaforge-pypy3/envs/anvio-7.1
