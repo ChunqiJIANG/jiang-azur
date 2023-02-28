@@ -38,11 +38,11 @@
 
 > **Environment 'assembly':** (*conda activate assembly*)
 - medaka-1.7.2 
-- - python-3.8.15
+-- python-3.8.15
 - flye-2.9.1
 - unicycler-0.4.8 
-- - pilon-1.24
-- - racon-1.5.0
+-- pilon-1.24
+-- racon-1.5.0
 - filtlong-0.2.1
 - fastp-0.223.2
 - seqkit-2.3.1 
