@@ -1,5 +1,13 @@
 # This is the list of created environments and installed main packeges in 'jiang@azur'
 
+		example
+> **Environment 'name':**
+- packege-version
+- packege-version
+- packege-version
+- ...
+
+
 ## 2023-03-01
 > **Environment 'base':**
 - mamba-1.0.0
@@ -26,8 +34,8 @@
 - fastani-1.33
 
 > **Environment 'assembly':** (*conda activate assembly*)
->> - python-3.8.15
->> - medaka-1.7.2 
+>> python-3.8.15
+>> medaka-1.7.2 
 	flye-2.9.1
 	unicycler-0.4.8 
 		pilon-1.24
