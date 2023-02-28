@@ -1,6 +1,6 @@
 # This is the list of created environments and installed packeges in 'jiang@azur'
 
-
+***
 
 > Environment 'base':
 - mamba-1.0.0
