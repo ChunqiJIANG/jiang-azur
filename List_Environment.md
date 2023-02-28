@@ -1,13 +1,13 @@
-# This is the list of created environments and installed main packeges in 'jiang@azur'
+# This is the list of created environments and installed main packages in 'jiang@azur'
 
 
 #example
 > **Environment 'name':**
-- packege_01-version
-  - packege_01 dependent packege_001-version
-  - packege_01 dependent packege_002-version
-- packege_02-version
-- packege_03-version
+- package_01-version
+  - dependent package_001-version
+  - dependent package_002-version
+- package_02-version
+- package_03-version
 - ...
 
 
@@ -20,22 +20,22 @@
 
 
 > **Environment 'anvio-7.1':** (*conda activate anvio-7.1*)
-- python-3.6.15
 - anvio-7.1
-- sqlite-3.40.0 
-- prodigal-2.6.3
-- mcl-14.137
-- muscle-3.8.1551
-- hmmer-3.3.2
-- diamond-2.0.15
-- blast-2.5.0
-- megahit-1.2.9
-- spades-3.15.5
-- bowtie2-2.3.5
-- bwa-0.7.17
-- samtools-1.16.1
-- fasttree-2.1.11
-- fastani-1.33
+  - python-3.6.15
+  - sqlite-3.40.0 
+  - prodigal-2.6.3
+  - mcl-14.137
+  - muscle-3.8.1551
+  - hmmer-3.3.2
+  - diamond-2.0.15
+  - blast-2.5.0
+  - megahit-1.2.9
+  - spades-3.15.5
+  - bowtie2-2.3.5
+  - bwa-0.7.17
+  - samtools-1.16.1
+  - fasttree-2.1.11
+  - fastani-1.33
 
 
 > **Environment 'assembly':** (*conda activate assembly*)
