@@ -8,13 +8,14 @@
 
 
 ### current environment list (2023-02-28):
+    <name>                   <path>
     base                     /home/jiang/mambaforge-pypy3
     anvio-7.1                /home/jiang/mambaforge-pypy3/envs/anvio-7.1
     assembly                 /home/jiang/mambaforge-pypy3/envs/assembly
-  checkm                   /home/jiang/mambaforge-pypy3/envs/checkm
-  gtdbtk-2.1.1             /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1
-  pydata                   /home/jiang/mambaforge-pypy3/envs/pydata
-  r-env                    /home/jiang/mambaforge-pypy3/envs/r-env
-  unicycler050             /home/jiang/mambaforge-pypy3/envs/unicycler050
+    checkm                   /home/jiang/mambaforge-pypy3/envs/checkm
+    gtdbtk-2.1.1             /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1
+    pydata                   /home/jiang/mambaforge-pypy3/envs/pydata
+    r-env                    /home/jiang/mambaforge-pypy3/envs/r-env
+    unicycler050             /home/jiang/mambaforge-pypy3/envs/unicycler050
  
 
