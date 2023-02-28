@@ -1,7 +1,7 @@
 
 # This is a repository[^1] for internal usage in server space 'jiang@azur' *only if you can access*.
 
-<p align="right">Start from 2023-02-28</p>
+<p align="right"> Start from 2023-02-28 </p>
 
 ## For access to 'jiang@azur' at the first time, please contact Jiang[^2].
 
@@ -10,7 +10,7 @@
 - Detailed list of environments and packages please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/List_Environment.md).  
 
 
-<font color = green>Markdown</font>
+<font color = "green"> Markdown </font>
 <font color = red>Markdown</font>
 <font color = blue>Markdown</font>
 
