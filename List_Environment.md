@@ -26,8 +26,8 @@
 - fastani-1.33
 
 > **Environment 'assembly':** (*conda activate assembly*)
->> python-3.8.15
->> medaka-1.7.2 
+>> - python-3.8.15
+>> - medaka-1.7.2 
 	flye-2.9.1
 	unicycler-0.4.8 
 		pilon-1.24
