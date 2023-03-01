@@ -1,8 +1,8 @@
 # Usage of environment 01 'anvio-7.1'
 
-ssh azur -L 8080:localhost:8080
+> ssh azur -L 8080:localhost:8080
 
-~/scripts/script_pangenomics_workflow_T20.sh 2>&1 | tee log.txt
+> ~/scripts/script_pangenomics_workflow_T20.sh 2>&1 | tee log.txt
 
 ## Converting FASTA files into anvi’o contigs databases
 # Re-formatting your input FASTA
