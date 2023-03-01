@@ -22,19 +22,19 @@ anvi-gen-genomes-storage -e external_database_path.txt -o GDB_XXXX_GENOMES.db
 		    name	contigs_db_path
 		
 ## Run pangenome analysis using 
-		--use-ncbi-blast (default: False) This program uses DIAMOND by default
-		--enforce-hierarchical-clustering (default: False)/--skip-hierarchical-clustering (default: False)	
+	--use-ncbi-blast (default: False) This program uses DIAMOND by default
+	--enforce-hierarchical-clustering (default: False)/--skip-hierarchical-clustering (default: False)	
 (fast)
 anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering
 (slow)
 anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering --use-ncbi-blast 
 
 ## defualt summary
-	# check collections
+ # check collections
  anvi-summarize  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --list-collections
- 	# add a 'DEFAULT' collection for pangenome
+ # add a 'DEFAULT' collection for pangenome
  anvi-script-add-default-collection  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db 
- 	# summarize the 'DEFAULT' collection
+ # summarize the 'DEFAULT' collection
  anvi-summarize -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db  -C DEFAULT -o SUMMARY-XXXX-default
 
 ## Display the results using 
