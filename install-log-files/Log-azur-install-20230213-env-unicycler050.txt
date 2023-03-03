@@ -1,0 +1,209 @@
+Last login: Mon Feb 13 12:23:28 on ttys000
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % ssh azur
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.15.0-60-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+71 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Mon Feb 13 12:35:16 2023 from 157.82.122.20
+(base) jiang@azur:~$ conda create -n unicycler050 unicycler pilon
+Retrieving notices: ...working... done
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - pilon
+  - unicycler
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge/linux-64
+  - https://conda.anaconda.org/conda-forge/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(base) jiang@azur:~$ conda create -n unicycler050 -c bioconda unicycler pilon
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/mambaforge-pypy3/envs/unicycler050
+
+  added / updated specs:
+    - pilon
+    - unicycler
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    boost-1.80.0               |  py310hc4a4660_4         350 KB  conda-forge
+    boost-cpp-1.80.0           |       h75c5d50_0        17.4 MB  conda-forge
+    jpeg-9e                    |       h0b41bf4_3         235 KB  conda-forge
+    miniasm-0.3                |       h7132678_0         124 KB  bioconda
+    numpy-1.24.2               |  py310h8deb116_0         6.4 MB  conda-forge
+    openjdk-17.0.3             |       h58dac75_5       161.0 MB  conda-forge
+    python-3.10.9              |he550d4f_0_cpython        24.7 MB  conda-forge
+    python_abi-3.10            |          3_cp310           6 KB  conda-forge
+    unicycler-0.5.0            |  py310hc8f18ef_2         1.2 MB  bioconda
+    ------------------------------------------------------------
+                                           Total:       211.3 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge 
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-2_gnu 
+  _sysroot_linux-64~ conda-forge/noarch::_sysroot_linux-64_curr_repodata_hack-3-h5bd9786_13 
+  alsa-lib           conda-forge/linux-64::alsa-lib-1.2.8-h166bdaf_0 
+  blast              bioconda/linux-64::blast-2.5.0-hc0b0e79_3 
+  boost              conda-forge/linux-64::boost-1.80.0-py310hc4a4660_4 
+  boost-cpp          conda-forge/linux-64::boost-cpp-1.80.0-h75c5d50_0 
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-h7f98852_4 
+  ca-certificates    conda-forge/linux-64::ca-certificates-2022.12.7-ha878542_0 
+  cairo              conda-forge/linux-64::cairo-1.16.0-ha61ee94_1014 
+  expat              conda-forge/linux-64::expat-2.5.0-h27087fc_0 
+  font-ttf-dejavu-s~ conda-forge/noarch::font-ttf-dejavu-sans-mono-2.37-hab24e00_0 
+  font-ttf-inconsol~ conda-forge/noarch::font-ttf-inconsolata-3.000-h77eed37_0 
+  font-ttf-source-c~ conda-forge/noarch::font-ttf-source-code-pro-2.038-h77eed37_0 
+  font-ttf-ubuntu    conda-forge/noarch::font-ttf-ubuntu-0.83-hab24e00_0 
+  fontconfig         conda-forge/linux-64::fontconfig-2.14.2-h14ed4e7_0 
+  fonts-conda-ecosy~ conda-forge/noarch::fonts-conda-ecosystem-1-0 
+  fonts-conda-forge  conda-forge/noarch::fonts-conda-forge-1-0 
+  freetype           conda-forge/linux-64::freetype-2.12.1-hca18f0e_1 
+  gettext            conda-forge/linux-64::gettext-0.21.1-h27087fc_0 
+  giflib             conda-forge/linux-64::giflib-5.2.1-h36c2ea0_2 
+  graphite2          conda-forge/linux-64::graphite2-1.3.13-h58526e2_1001 
+  harfbuzz           conda-forge/linux-64::harfbuzz-6.0.0-h8e241bc_0 
+  icu                conda-forge/linux-64::icu-70.1-h27087fc_0 
+  jpeg               conda-forge/linux-64::jpeg-9e-h0b41bf4_3 
+  kernel-headers_li~ conda-forge/noarch::kernel-headers_linux-64-3.10.0-h4a8ded7_13 
+  keyutils           conda-forge/linux-64::keyutils-1.6.1-h166bdaf_0 
+  krb5               conda-forge/linux-64::krb5-1.20.1-h81ceb04_0 
+  lcms2              conda-forge/linux-64::lcms2-2.14-hfd0df8a_1 
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.40-h41732ed_0 
+  lerc               conda-forge/linux-64::lerc-4.0.0-h27087fc_0 
+  libblas            conda-forge/linux-64::libblas-3.9.0-16_linux64_openblas 
+  libcblas           conda-forge/linux-64::libcblas-3.9.0-16_linux64_openblas 
+  libcups            conda-forge/linux-64::libcups-2.3.3-h36d4200_3 
+  libdeflate         conda-forge/linux-64::libdeflate-1.17-h0b41bf4_0 
+  libedit            conda-forge/linux-64::libedit-3.1.20191231-he28a2e2_2 
+  libffi             conda-forge/linux-64::libffi-3.4.2-h7f98852_5 
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-12.2.0-h65d4601_19 
+  libgfortran-ng     conda-forge/linux-64::libgfortran-ng-12.2.0-h69a702a_19 
+  libgfortran5       conda-forge/linux-64::libgfortran5-12.2.0-h337968e_19 
+  libglib            conda-forge/linux-64::libglib-2.74.1-h606061b_1 
+  libgomp            conda-forge/linux-64::libgomp-12.2.0-h65d4601_19 
+  libiconv           conda-forge/linux-64::libiconv-1.17-h166bdaf_0 
+  liblapack          conda-forge/linux-64::liblapack-3.9.0-16_linux64_openblas 
+  libnsl             conda-forge/linux-64::libnsl-2.0.0-h7f98852_0 
+  libopenblas        conda-forge/linux-64::libopenblas-0.3.21-pthreads_h78a6416_3 
+  libpng             conda-forge/linux-64::libpng-1.6.39-h753d276_0 
+  libsqlite          conda-forge/linux-64::libsqlite-3.40.0-h753d276_0 
+  libstdcxx-ng       conda-forge/linux-64::libstdcxx-ng-12.2.0-h46fd767_19 
+  libtiff            conda-forge/linux-64::libtiff-4.5.0-h6adf6a1_2 
+  libuuid            conda-forge/linux-64::libuuid-2.32.1-h7f98852_1000 
+  libwebp-base       conda-forge/linux-64::libwebp-base-1.2.4-h166bdaf_0 
+  libxcb             conda-forge/linux-64::libxcb-1.13-h7f98852_1004 
+  libzlib            conda-forge/linux-64::libzlib-1.2.13-h166bdaf_4 
+  llvm-openmp        conda-forge/linux-64::llvm-openmp-8.0.1-hc9558a2_0 
+  miniasm            bioconda/linux-64::miniasm-0.3-h7132678_0 
+  ncurses            conda-forge/linux-64::ncurses-6.3-h27087fc_1 
+  numpy              conda-forge/linux-64::numpy-1.24.2-py310h8deb116_0 
+  openjdk            conda-forge/linux-64::openjdk-17.0.3-h58dac75_5 
+  openmp             conda-forge/linux-64::openmp-8.0.1-0 
+  openssl            conda-forge/linux-64::openssl-3.0.8-h0b41bf4_0 
+  pcre2              conda-forge/linux-64::pcre2-10.40-hc3806b6_0 
+  pilon              bioconda/noarch::pilon-1.24-hdfd78af_0 
+  pip                conda-forge/noarch::pip-23.0-pyhd8ed1ab_0 
+  pixman             conda-forge/linux-64::pixman-0.40.0-h36c2ea0_0 
+  pthread-stubs      conda-forge/linux-64::pthread-stubs-0.4-h36c2ea0_1001 
+  python             conda-forge/linux-64::python-3.10.9-he550d4f_0_cpython 
+  python_abi         conda-forge/linux-64::python_abi-3.10-3_cp310 
+  racon              bioconda/linux-64::racon-1.5.0-h7ff8a90_0 
+  readline           conda-forge/linux-64::readline-8.1.2-h0f457ee_0 
+  setuptools         conda-forge/noarch::setuptools-67.1.0-pyhd8ed1ab_0 
+  spades             bioconda/linux-64::spades-3.15.5-h95f258a_1 
+  sysroot_linux-64   conda-forge/noarch::sysroot_linux-64-2.17-h4a8ded7_13 
+  tk                 conda-forge/linux-64::tk-8.6.12-h27826a3_0 
+  tzdata             conda-forge/noarch::tzdata-2022g-h191b570_0 
+  unicycler          bioconda/linux-64::unicycler-0.5.0-py310hc8f18ef_2 
+  wheel              conda-forge/noarch::wheel-0.38.4-pyhd8ed1ab_0 
+  xorg-fixesproto    conda-forge/linux-64::xorg-fixesproto-5.0-h7f98852_1002 
+  xorg-inputproto    conda-forge/linux-64::xorg-inputproto-2.3.2-h7f98852_1002 
+  xorg-kbproto       conda-forge/linux-64::xorg-kbproto-1.0.7-h7f98852_1002 
+  xorg-libice        conda-forge/linux-64::xorg-libice-1.0.10-h7f98852_0 
+  xorg-libsm         conda-forge/linux-64::xorg-libsm-1.2.3-hd9c2040_1000 
+  xorg-libx11        conda-forge/linux-64::xorg-libx11-1.7.2-h7f98852_0 
+  xorg-libxau        conda-forge/linux-64::xorg-libxau-1.0.9-h7f98852_0 
+  xorg-libxdmcp      conda-forge/linux-64::xorg-libxdmcp-1.1.3-h7f98852_0 
+  xorg-libxext       conda-forge/linux-64::xorg-libxext-1.3.4-h7f98852_1 
+  xorg-libxfixes     conda-forge/linux-64::xorg-libxfixes-5.0.3-h7f98852_1004 
+  xorg-libxi         conda-forge/linux-64::xorg-libxi-1.7.10-h7f98852_0 
+  xorg-libxrender    conda-forge/linux-64::xorg-libxrender-0.9.10-h7f98852_1003 
+  xorg-libxtst       conda-forge/linux-64::xorg-libxtst-1.2.3-h7f98852_1002 
+  xorg-recordproto   conda-forge/linux-64::xorg-recordproto-1.14.2-h7f98852_1002 
+  xorg-renderproto   conda-forge/linux-64::xorg-renderproto-0.11.1-h7f98852_1002 
+  xorg-xextproto     conda-forge/linux-64::xorg-xextproto-7.3.0-h7f98852_1002 
+  xorg-xproto        conda-forge/linux-64::xorg-xproto-7.0.31-h7f98852_1007 
+  xz                 conda-forge/linux-64::xz-5.2.6-h166bdaf_0 
+  zlib               conda-forge/linux-64::zlib-1.2.13-h166bdaf_4 
+  zstd               conda-forge/linux-64::zstd-1.5.2-h3eb15da_6 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+                                                                                                                                                                             
+Preparing transaction: done                                                                                                                                                  
+Verifying transaction: done                                                                                                                                                  
+Executing transaction: done                                                                                                                                                  
+#                                                                                                                                                                            
+# To activate this environment, use                                                                                                                                          
+#                                                                                                                                                                            
+#     $ conda activate unicycler050                                                                                                                                          
+#                                                                                                                                                                            
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) jiang@azur:~$ conda activate unicycler050
+(unicycler050) jiang@azur:~$ java -XX:+PrintFlagsFinal -version | grep -iE 'HeapSize|PermSize|ThreadStackSize'
+     intx CompilerThreadStackSize                  = 1024                                   {pd product} {default}
+   size_t ErgoHeapSizeLimit                        = 0                                         {product} {default}
+   size_t HeapSizePerGCThread                      = 43620760                                  {product} {default}
+   size_t InitialHeapSize                          = 2147483648                                {product} {ergonomic}
+   size_t LargePageHeapSizeThreshold               = 134217728                                 {product} {default}
+   size_t MaxHeapSize                              = 32178700288                               {product} {ergonomic}
+   size_t MinHeapSize                              = 16777216                                  {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 9372180                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 121143030                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 121143030                              {pd product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 32178700288                            {manageable} {ergonomic}
+     intx ThreadStackSize                          = 1024                                   {pd product} {default}
+     intx VMThreadStackSize                        = 1024                                   {pd product} {default}
+openjdk version "17.0.3-internal" 2022-04-19
+OpenJDK Runtime Environment (build 17.0.3-internal+0-adhoc..src)
+OpenJDK 64-Bit Server VM (build 17.0.3-internal+0-adhoc..src, mixed mode, sharing)
+(unicycler050) jiang@azur:~$ 

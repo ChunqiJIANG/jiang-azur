@@ -1,0 +1,3260 @@
+(base) jiang@azur:~$ conda create -n assembly -c conda-forge -c bioconda medaka
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: / failed
+
+CondaError: KeyboardInterrupt
+
+
+(base) jiang@azur:~$ 
+(base) jiang@azur:~$ conda create -n assembly -c conda-forge -c bioconda
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 22.9.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly
+
+
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate assembly
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) jiang@azur:~$ conda update -n base -c defaults conda
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3
+
+  added / updated specs:
+    - conda
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _openmp_mutex-5.1          |            1_gnu          21 KB
+    ca-certificates-2022.10.11 |       h06a4308_0         124 KB
+    certifi-2022.9.24          |   py39h06a4308_0         154 KB
+    cffi-1.15.1                |   py39h74dc2b5_0         228 KB
+    conda-22.9.0               |   py39h06a4308_0         884 KB
+    conda-package-handling-1.9.0|   py39h5eee18b_1         946 KB
+    cryptography-38.0.1        |   py39h9ce1e76_0         1.3 MB
+    idna-3.4                   |   py39h06a4308_0          93 KB
+    ld_impl_linux-64-2.38      |       h1181459_1         654 KB
+    libgcc-ng-11.2.0           |       h1234567_1         5.3 MB
+    libgomp-11.2.0             |       h1234567_1         474 KB
+    libstdcxx-ng-11.2.0        |       h1234567_1         4.7 MB
+    ncurses-6.3                |       h5eee18b_3         781 KB
+    openssl-1.1.1s             |       h7f8727e_0         3.6 MB
+    pycosat-0.6.4              |   py39h5eee18b_0          84 KB
+    readline-8.2               |       h5eee18b_0         357 KB
+    requests-2.28.1            |   py39h06a4308_0          92 KB
+    setuptools-65.5.0          |   py39h06a4308_0         1.1 MB
+    sqlite-3.40.0              |       h5082296_0         1.2 MB
+    tk-8.6.12                  |       h1ccaba5_0         3.0 MB
+    toolz-0.12.0               |   py39h06a4308_0         105 KB
+    tqdm-4.64.1                |   py39h06a4308_0         125 KB
+    tzdata-2022f               |       h04d1e81_0         115 KB
+    urllib3-1.26.12            |   py39h06a4308_0         181 KB
+    xz-5.2.6                   |       h5eee18b_0         394 KB
+    zlib-1.2.13                |       h5eee18b_0         103 KB
+    ------------------------------------------------------------
+                                           Total:        26.0 MB
+
+The following NEW packages will be INSTALLED:
+
+  toolz              pkgs/main/linux-64::toolz-0.12.0-py39h06a4308_0
+
+The following packages will be REMOVED:
+
+  colorama-0.4.4-pyhd3eb1b0_0
+  conda-content-trust-0.1.1-pyhd3eb1b0_0
+  pip-21.2.4-py39h06a4308_0
+  six-1.16.0-pyhd3eb1b0_1
+  wheel-0.37.1-pyhd3eb1b0_0
+
+The following packages will be UPDATED:
+
+  _openmp_mutex                                   4.5-1_gnu --> 5.1-1_gnu
+  ca-certificates                      2022.3.29-h06a4308_1 --> 2022.10.11-h06a4308_0
+  certifi                          2021.10.8-py39h06a4308_2 --> 2022.9.24-py39h06a4308_0
+  cffi                                1.15.0-py39hd667e15_1 --> 1.15.1-py39h74dc2b5_0
+  conda                               4.12.0-py39h06a4308_0 --> 22.9.0-py39h06a4308_0
+  conda-package-han~                   1.8.1-py39h7f8727e_0 --> 1.9.0-py39h5eee18b_1
+  cryptography                        36.0.0-py39h9ce1e76_0 --> 38.0.1-py39h9ce1e76_0
+  idna               pkgs/main/noarch::idna-3.3-pyhd3eb1b0~ --> pkgs/main/linux-64::idna-3.4-py39h06a4308_0
+  ld_impl_linux-64                        2.35.1-h7274673_9 --> 2.38-h1181459_1
+  libgcc-ng                               9.3.0-h5101ec6_17 --> 11.2.0-h1234567_1
+  libgomp                                 9.3.0-h5101ec6_17 --> 11.2.0-h1234567_1
+  libstdcxx-ng                            9.3.0-hd4cf53a_17 --> 11.2.0-h1234567_1
+  ncurses                                    6.3-h7f8727e_2 --> 6.3-h5eee18b_3
+  openssl                                 1.1.1n-h7f8727e_0 --> 1.1.1s-h7f8727e_0
+  pycosat                              0.6.3-py39h27cfd23_0 --> 0.6.4-py39h5eee18b_0
+  readline                                 8.1.2-h7f8727e_1 --> 8.2-h5eee18b_0
+  requests           pkgs/main/noarch::requests-2.27.1-pyh~ --> pkgs/main/linux-64::requests-2.28.1-py39h06a4308_0
+  setuptools                          61.2.0-py39h06a4308_0 --> 65.5.0-py39h06a4308_0
+  sqlite                                  3.38.2-hc218d9a_0 --> 3.40.0-h5082296_0
+  tk                                      8.6.11-h1ccaba5_0 --> 8.6.12-h1ccaba5_0
+  tqdm               pkgs/main/noarch::tqdm-4.63.0-pyhd3eb~ --> pkgs/main/linux-64::tqdm-4.64.1-py39h06a4308_0
+  tzdata                                   2022a-hda174b7_0 --> 2022f-h04d1e81_0
+  urllib3            pkgs/main/noarch::urllib3-1.26.8-pyhd~ --> pkgs/main/linux-64::urllib3-1.26.12-py39h06a4308_0
+  xz                                       5.2.5-h7b6447c_0 --> 5.2.6-h5eee18b_0
+  zlib                                    1.2.12-h7f8727e_1 --> 1.2.13-h5eee18b_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+libgcc-ng-11.2.0     | 5.3 MB    | #################################################################################################################### | 100% 
+idna-3.4             | 93 KB     | #################################################################################################################### | 100% 
+toolz-0.12.0         | 105 KB    | #################################################################################################################### | 100% 
+urllib3-1.26.12      | 181 KB    | #################################################################################################################### | 100% 
+setuptools-65.5.0    | 1.1 MB    | #################################################################################################################### | 100% 
+ncurses-6.3          | 781 KB    | #################################################################################################################### | 100% 
+libstdcxx-ng-11.2.0  | 4.7 MB    | #################################################################################################################### | 100% 
+libgomp-11.2.0       | 474 KB    | #################################################################################################################### | 100% 
+openssl-1.1.1s       | 3.6 MB    | #################################################################################################################### | 100% 
+_openmp_mutex-5.1    | 21 KB     | #################################################################################################################### | 100% 
+cffi-1.15.1          | 228 KB    | #################################################################################################################### | 100% 
+sqlite-3.40.0        | 1.2 MB    | #################################################################################################################### | 100% 
+certifi-2022.9.24    | 154 KB    | #################################################################################################################### | 100% 
+conda-22.9.0         | 884 KB    | #################################################################################################################### | 100% 
+readline-8.2         | 357 KB    | #################################################################################################################### | 100% 
+tzdata-2022f         | 115 KB    | #################################################################################################################### | 100% 
+zlib-1.2.13          | 103 KB    | #################################################################################################################### | 100% 
+cryptography-38.0.1  | 1.3 MB    | #################################################################################################################### | 100% 
+ca-certificates-2022 | 124 KB    | #################################################################################################################### | 100% 
+requests-2.28.1      | 92 KB     | #################################################################################################################### | 100% 
+tk-8.6.12            | 3.0 MB    | #################################################################################################################### | 100% 
+pycosat-0.6.4        | 84 KB     | #################################################################################################################### | 100% 
+tqdm-4.64.1          | 125 KB    | #################################################################################################################### | 100% 
+ld_impl_linux-64-2.3 | 654 KB    | #################################################################################################################### | 100% 
+conda-package-handli | 946 KB    | #################################################################################################################### | 100% 
+xz-5.2.6             | 394 KB    | #################################################################################################################### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) jiang@azur:~$ conda 
+usage: conda [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+positional arguments:
+  command
+    clean        Remove unused packages and caches.
+    compare      Compare packages between conda environments.
+    config       Modify configuration values in .condarc. This is modeled after the git config command. Writes to the user .condarc file
+                 (/home/jiang/.condarc) by default. Use the --show-sources flag to display all identified configuration locations on your computer.
+    create       Create a new conda environment from a list of specified packages.
+    info         Display information about current conda install.
+    init         Initialize conda for shell interaction.
+    install      Installs a list of packages into a specified conda environment.
+    list         List installed packages in a conda environment.
+    package      Low-level conda package utility. (EXPERIMENTAL)
+    remove       Remove a list of packages from a specified conda environment.
+    rename       Renames an existing environment.
+    run          Run an executable in a conda environment.
+    search       Search for packages and display associated information.The input is a MatchSpec, a query language for conda packages. See examples below.
+    uninstall    Alias for conda remove.
+    update       Updates conda packages to the latest compatible version.
+    upgrade      Alias for conda update.
+    notices      Retrieves latest channel notifications.
+
+optional arguments:
+  -h, --help     Show this help message and exit.
+  -V, --version  Show the conda version number and exit.
+
+conda commands available from other packages:
+  env
+(base) jiang@azur:~$ conda -V
+conda 22.9.0
+(base) jiang@azur:~$ conda activate assembly
+(assembly) jiang@azur:~$ conda info
+
+     active environment : assembly
+    active env location : /home/jiang/miniconda3/envs/assembly
+            shell level : 2
+       user config file : /home/jiang/.condarc
+ populated config files : 
+          conda version : 22.9.0
+    conda-build version : not installed
+         python version : 3.9.12.final.0
+       virtual packages : __linux=5.15.0=0
+                          __glibc=2.31=0
+                          __unix=0=0
+                          __archspec=1=x86_64
+       base environment : /home/jiang/miniconda3  (writable)
+      conda av data dir : /home/jiang/miniconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /home/jiang/miniconda3/pkgs
+                          /home/jiang/.conda/pkgs
+       envs directories : /home/jiang/miniconda3/envs
+                          /home/jiang/.conda/envs
+               platform : linux-64
+             user-agent : conda/22.9.0 requests/2.28.1 CPython/3.9.12 Linux/5.15.0-53-generic ubuntu/20.04.4 glibc/2.31
+                UID:GID : 1014:1015
+             netrc file : None
+           offline mode : False
+
+(assembly) jiang@azur:~$ conda install -c bioconda medaka
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly
+
+  added / updated specs:
+    - medaka
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _tflow_select-2.3.0        |              mkl           2 KB
+    absl-py-0.15.0             |     pyhd3eb1b0_0         103 KB
+    astor-0.8.1                |   py36h06a4308_0          47 KB
+    bcftools-1.9               |       ha228f0b_4         807 KB  bioconda
+    biopython-1.78             |   py36h7f8727e_0         2.2 MB
+    blas-1.0                   |              mkl           6 KB
+    bz2file-0.98               |   py36h06a4308_1         245 KB
+    bzip2-1.0.8                |       h7b6447c_0          78 KB
+    c-ares-1.18.1              |       h7f8727e_0         114 KB
+    certifi-2021.5.30          |   py36h06a4308_0         139 KB
+    cffi-1.14.0                |   py36h2e261b9_0         223 KB
+    coverage-5.5               |   py36h27cfd23_2         258 KB
+    curl-7.69.1                |       hbc83047_0         137 KB
+    cython-0.29.24             |   py36h295c915_0         1.9 MB
+    dataclasses-0.8            |     pyh4f3eec9_6          22 KB
+    decorator-5.1.1            |     pyhd3eb1b0_0          12 KB
+    gast-0.5.3                 |     pyhd3eb1b0_0          21 KB
+    google-pasta-0.2.0         |     pyhd3eb1b0_0          46 KB
+    grpcio-1.36.1              |   py36h2157cd5_1         1.9 MB
+    h5py-2.7.1                 |   py36ha1f6525_2         884 KB
+    hdf5-1.10.2                |       hba1933b_1         3.8 MB
+    htslib-1.9                 |       ha228f0b_7         1.5 MB  bioconda
+    importlib-metadata-4.8.1   |   py36h06a4308_0          38 KB
+    intel-openmp-2022.1.0      |    h9e868ea_3769         4.5 MB
+    intervaltree-3.1.0         |     pyhd3eb1b0_0          25 KB
+    k8-0.2.5                   |       h9a82719_1         1.7 MB  bioconda
+    keras-applications-1.0.8   |             py_1          29 KB
+    keras-preprocessing-1.1.2  |     pyhd3eb1b0_0          35 KB
+    krb5-1.17.1                |       h173b8e3_0         1.3 MB
+    libcurl-7.69.1             |       h20c2e04_0         431 KB
+    libdeflate-1.0             |       h14c3975_1          43 KB  bioconda
+    libedit-3.1.20181209       |       hc058e9b_0         163 KB
+    libffi-3.2.1               |    hf484d3e_1007          48 KB
+    libgfortran-ng-7.5.0       |      ha8ba4b0_17          22 KB
+    libgfortran4-7.5.0         |      ha8ba4b0_17         995 KB
+    libprotobuf-3.17.2         |       h4ff587b_1         2.0 MB
+    libssh2-1.10.0             |       h8f2d780_0         274 KB
+    mappy-2.17                 |   py36h84994c4_0         152 KB  bioconda
+    markdown-3.3.4             |   py36h06a4308_0         127 KB
+    medaka-0.11.5              |   py36h148d290_0        52.0 MB  bioconda
+    minimap2-2.17              |       h5bf99c6_4         448 KB  bioconda
+    mkl-2020.2                 |              256       138.3 MB
+    mkl-service-2.3.0          |   py36he8ac12f_0          52 KB
+    mkl_fft-1.2.0              |   py36h23d657b_0         149 KB
+    mkl_random-1.1.1           |   py36h0573a6f_0         327 KB
+    ncurses-6.1                |       he6710b0_1         777 KB
+    networkx-2.5               |             py_0         1.1 MB
+    numpy-1.16.1               |   py36h7e9f1db_1          48 KB
+    numpy-base-1.16.1          |   py36hde5b4d6_1         3.5 MB
+    ont-fast5-api-1.0.1        |             py_0          25 KB  bioconda
+    packaging-21.3             |     pyhd3eb1b0_0          36 KB
+    parasail-python-1.2        |   py36h8b12597_0         2.3 MB  bioconda
+    pip-21.2.2                 |   py36h06a4308_0         1.8 MB
+    protobuf-3.17.2            |   py36h295c915_0         319 KB
+    pyfaidx-0.7.1              |     pyh5e36f6f_0          32 KB  bioconda
+    pyparsing-3.0.4            |     pyhd3eb1b0_0          81 KB
+    pysam-0.15.3               |   py36hda2845c_1         2.6 MB  bioconda
+    python-3.6.10              |       h0371630_0        29.7 MB
+    pyvcf-0.6.8                |           py36_0          59 KB  bioconda
+    pyvcf3-1.0.3               |     pyhdfd78af_0         957 KB  bioconda
+    readline-7.0               |       h7b6447c_5         324 KB
+    samtools-1.9               |      h10a08f8_12         299 KB  bioconda
+    scipy-1.5.2                |   py36h0b6359f_0        14.4 MB
+    setuptools-58.0.4          |   py36h06a4308_0         788 KB
+    sortedcontainers-2.4.0     |     pyhd3eb1b0_0          26 KB
+    sqlite-3.31.1              |       h7b6447c_0         1.1 MB
+    tensorboard-1.14.0         |   py36hf484d3e_0         3.1 MB
+    tensorflow-1.14.0          |mkl_py36h2526735_0           4 KB
+    tensorflow-base-1.14.0     |mkl_py36h7ce6ba3_0        84.3 MB
+    tensorflow-estimator-1.14.0|             py_0         261 KB
+    termcolor-1.1.0            |   py36h06a4308_1           9 KB
+    typing_extensions-4.1.1    |     pyh06a4308_0          28 KB
+    werkzeug-2.0.3             |     pyhd3eb1b0_0         221 KB
+    whatshap-0.18              |   py36h6bb024c_0         463 KB  bioconda
+    wrapt-1.12.1               |   py36h7b6447c_1          49 KB
+    xopen-0.7.3                |             py_0          11 KB  bioconda
+    zipp-3.6.0                 |     pyhd3eb1b0_0          17 KB
+    ------------------------------------------------------------
+                                           Total:       366.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main None
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu None
+  _tflow_select      pkgs/main/linux-64::_tflow_select-2.3.0-mkl None
+  absl-py            pkgs/main/noarch::absl-py-0.15.0-pyhd3eb1b0_0 None
+  astor              pkgs/main/linux-64::astor-0.8.1-py36h06a4308_0 None
+  bcftools           bioconda/linux-64::bcftools-1.9-ha228f0b_4 None
+  biopython          pkgs/main/linux-64::biopython-1.78-py36h7f8727e_0 None
+  blas               pkgs/main/linux-64::blas-1.0-mkl None
+  bz2file            pkgs/main/linux-64::bz2file-0.98-py36h06a4308_1 None
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h7b6447c_0 None
+  c-ares             pkgs/main/linux-64::c-ares-1.18.1-h7f8727e_0 None
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2022.10.11-h06a4308_0 None
+  certifi            pkgs/main/linux-64::certifi-2021.5.30-py36h06a4308_0 None
+  cffi               pkgs/main/linux-64::cffi-1.14.0-py36h2e261b9_0 None
+  coverage           pkgs/main/linux-64::coverage-5.5-py36h27cfd23_2 None
+  curl               pkgs/main/linux-64::curl-7.69.1-hbc83047_0 None
+  cython             pkgs/main/linux-64::cython-0.29.24-py36h295c915_0 None
+  dataclasses        pkgs/main/noarch::dataclasses-0.8-pyh4f3eec9_6 None
+  decorator          pkgs/main/noarch::decorator-5.1.1-pyhd3eb1b0_0 None
+  gast               pkgs/main/noarch::gast-0.5.3-pyhd3eb1b0_0 None
+  google-pasta       pkgs/main/noarch::google-pasta-0.2.0-pyhd3eb1b0_0 None
+  grpcio             pkgs/main/linux-64::grpcio-1.36.1-py36h2157cd5_1 None
+  h5py               pkgs/main/linux-64::h5py-2.7.1-py36ha1f6525_2 None
+  hdf5               pkgs/main/linux-64::hdf5-1.10.2-hba1933b_1 None
+  htslib             bioconda/linux-64::htslib-1.9-ha228f0b_7 None
+  importlib-metadata pkgs/main/linux-64::importlib-metadata-4.8.1-py36h06a4308_0 None
+  intel-openmp       pkgs/main/linux-64::intel-openmp-2022.1.0-h9e868ea_3769 None
+  intervaltree       pkgs/main/noarch::intervaltree-3.1.0-pyhd3eb1b0_0 None
+  k8                 bioconda/linux-64::k8-0.2.5-h9a82719_1 None
+  keras-applications pkgs/main/noarch::keras-applications-1.0.8-py_1 None
+  keras-preprocessi~ pkgs/main/noarch::keras-preprocessing-1.1.2-pyhd3eb1b0_0 None
+  krb5               pkgs/main/linux-64::krb5-1.17.1-h173b8e3_0 None
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1 None
+  libcurl            pkgs/main/linux-64::libcurl-7.69.1-h20c2e04_0 None
+  libdeflate         bioconda/linux-64::libdeflate-1.0-h14c3975_1 None
+  libedit            pkgs/main/linux-64::libedit-3.1.20181209-hc058e9b_0 None
+  libffi             pkgs/main/linux-64::libffi-3.2.1-hf484d3e_1007 None
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1 None
+  libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-7.5.0-ha8ba4b0_17 None
+  libgfortran4       pkgs/main/linux-64::libgfortran4-7.5.0-ha8ba4b0_17 None
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1 None
+  libprotobuf        pkgs/main/linux-64::libprotobuf-3.17.2-h4ff587b_1 None
+  libssh2            pkgs/main/linux-64::libssh2-1.10.0-h8f2d780_0 None
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1 None
+  mappy              bioconda/linux-64::mappy-2.17-py36h84994c4_0 None
+  markdown           pkgs/main/linux-64::markdown-3.3.4-py36h06a4308_0 None
+  medaka             bioconda/linux-64::medaka-0.11.5-py36h148d290_0 None
+  minimap2           bioconda/linux-64::minimap2-2.17-h5bf99c6_4 None
+  mkl                pkgs/main/linux-64::mkl-2020.2-256 None
+  mkl-service        pkgs/main/linux-64::mkl-service-2.3.0-py36he8ac12f_0 None
+  mkl_fft            pkgs/main/linux-64::mkl_fft-1.2.0-py36h23d657b_0 None
+  mkl_random         pkgs/main/linux-64::mkl_random-1.1.1-py36h0573a6f_0 None
+  ncurses            pkgs/main/linux-64::ncurses-6.1-he6710b0_1 None
+  networkx           pkgs/main/noarch::networkx-2.5-py_0 None
+  numpy              pkgs/main/linux-64::numpy-1.16.1-py36h7e9f1db_1 None
+  numpy-base         pkgs/main/linux-64::numpy-base-1.16.1-py36hde5b4d6_1 None
+  ont-fast5-api      bioconda/noarch::ont-fast5-api-1.0.1-py_0 None
+  openssl            pkgs/main/linux-64::openssl-1.1.1s-h7f8727e_0 None
+  packaging          pkgs/main/noarch::packaging-21.3-pyhd3eb1b0_0 None
+  parasail-python    bioconda/linux-64::parasail-python-1.2-py36h8b12597_0 None
+  pip                pkgs/main/linux-64::pip-21.2.2-py36h06a4308_0 None
+  protobuf           pkgs/main/linux-64::protobuf-3.17.2-py36h295c915_0 None
+  pycparser          pkgs/main/noarch::pycparser-2.21-pyhd3eb1b0_0 None
+  pyfaidx            bioconda/noarch::pyfaidx-0.7.1-pyh5e36f6f_0 None
+  pyparsing          pkgs/main/noarch::pyparsing-3.0.4-pyhd3eb1b0_0 None
+  pysam              bioconda/linux-64::pysam-0.15.3-py36hda2845c_1 None
+  python             pkgs/main/linux-64::python-3.6.10-h0371630_0 None
+  pyvcf              bioconda/linux-64::pyvcf-0.6.8-py36_0 None
+  pyvcf3             bioconda/noarch::pyvcf3-1.0.3-pyhdfd78af_0 None
+  readline           pkgs/main/linux-64::readline-7.0-h7b6447c_5 None
+  samtools           bioconda/linux-64::samtools-1.9-h10a08f8_12 None
+  scipy              pkgs/main/linux-64::scipy-1.5.2-py36h0b6359f_0 None
+  setuptools         pkgs/main/linux-64::setuptools-58.0.4-py36h06a4308_0 None
+  six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_1 None
+  sortedcontainers   pkgs/main/noarch::sortedcontainers-2.4.0-pyhd3eb1b0_0 None
+  sqlite             pkgs/main/linux-64::sqlite-3.31.1-h7b6447c_0 None
+  tensorboard        pkgs/main/linux-64::tensorboard-1.14.0-py36hf484d3e_0 None
+  tensorflow         pkgs/main/linux-64::tensorflow-1.14.0-mkl_py36h2526735_0 None
+  tensorflow-base    pkgs/main/linux-64::tensorflow-base-1.14.0-mkl_py36h7ce6ba3_0 None
+  tensorflow-estima~ pkgs/main/noarch::tensorflow-estimator-1.14.0-py_0 None
+  termcolor          pkgs/main/linux-64::termcolor-1.1.0-py36h06a4308_1 None
+  tk                 pkgs/main/linux-64::tk-8.6.12-h1ccaba5_0 None
+  typing_extensions  pkgs/main/noarch::typing_extensions-4.1.1-pyh06a4308_0 None
+  werkzeug           pkgs/main/noarch::werkzeug-2.0.3-pyhd3eb1b0_0 None
+  whatshap           bioconda/linux-64::whatshap-0.18-py36h6bb024c_0 None
+  wheel              pkgs/main/noarch::wheel-0.37.1-pyhd3eb1b0_0 None
+  wrapt              pkgs/main/linux-64::wrapt-1.12.1-py36h7b6447c_1 None
+  xopen              bioconda/noarch::xopen-0.7.3-py_0 None
+  xz                 pkgs/main/linux-64::xz-5.2.6-h5eee18b_0 None
+  zipp               pkgs/main/noarch::zipp-3.6.0-pyhd3eb1b0_0 None
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0 None
+
+
+Proceed ([y]/n)? n
+
+
+CondaSystemExit: Exiting.
+
+(assembly) jiang@azur:~$ conda deactivate
+(base) jiang@azur:~$ conda rm -n assembly --all
+
+CommandNotFoundError: No command 'conda rm'.
+
+(base) jiang@azur:~$ conda remove -n assembly --all
+
+Remove all packages in environment /home/jiang/miniconda3/envs/assembly:
+
+No packages found in /home/jiang/miniconda3/envs/assembly. Continuing environment removal
+(base) jiang@azur:~$ conda env list
+# conda environments:
+#
+base                  *  /home/jiang/miniconda3
+
+(base) jiang@azur:~$ conda create -n assembly -c conda-forge -c bioconda python=3.8
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly
+
+  added / updated specs:
+    - python=3.8
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _libgcc_mutex-0.1          |      conda_forge           3 KB  conda-forge
+    _openmp_mutex-4.5          |            2_gnu          23 KB  conda-forge
+    bzip2-1.0.8                |       h7f98852_4         484 KB  conda-forge
+    ca-certificates-2022.9.24  |       ha878542_0         150 KB  conda-forge
+    ld_impl_linux-64-2.39      |       hcc3a1bd_1         675 KB  conda-forge
+    libffi-3.4.2               |       h7f98852_5          57 KB  conda-forge
+    libgcc-ng-12.2.0           |      h65d4601_19         931 KB  conda-forge
+    libgomp-12.2.0             |      h65d4601_19         455 KB  conda-forge
+    libnsl-2.0.0               |       h7f98852_0          31 KB  conda-forge
+    libsqlite-3.40.0           |       h753d276_0         791 KB  conda-forge
+    libuuid-2.32.1             |    h7f98852_1000          28 KB  conda-forge
+    libzlib-1.2.13             |       h166bdaf_4          64 KB  conda-forge
+    ncurses-6.3                |       h27087fc_1        1002 KB  conda-forge
+    openssl-3.0.7              |       h166bdaf_0         2.8 MB  conda-forge
+    pip-22.3.1                 |     pyhd8ed1ab_0         1.5 MB  conda-forge
+    python-3.8.15              |h4a9ceb5_0_cpython        19.9 MB  conda-forge
+    readline-8.1.2             |       h0f457ee_0         291 KB  conda-forge
+    setuptools-65.5.1          |     pyhd8ed1ab_0         731 KB  conda-forge
+    tk-8.6.12                  |       h27826a3_0         3.3 MB  conda-forge
+    wheel-0.38.4               |     pyhd8ed1ab_0          32 KB  conda-forge
+    xz-5.2.6                   |       h166bdaf_0         409 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        33.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge None
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-2_gnu None
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-h7f98852_4 None
+  ca-certificates    conda-forge/linux-64::ca-certificates-2022.9.24-ha878542_0 None
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.39-hcc3a1bd_1 None
+  libffi             conda-forge/linux-64::libffi-3.4.2-h7f98852_5 None
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-12.2.0-h65d4601_19 None
+  libgomp            conda-forge/linux-64::libgomp-12.2.0-h65d4601_19 None
+  libnsl             conda-forge/linux-64::libnsl-2.0.0-h7f98852_0 None
+  libsqlite          conda-forge/linux-64::libsqlite-3.40.0-h753d276_0 None
+  libuuid            conda-forge/linux-64::libuuid-2.32.1-h7f98852_1000 None
+  libzlib            conda-forge/linux-64::libzlib-1.2.13-h166bdaf_4 None
+  ncurses            conda-forge/linux-64::ncurses-6.3-h27087fc_1 None
+  openssl            conda-forge/linux-64::openssl-3.0.7-h166bdaf_0 None
+  pip                conda-forge/noarch::pip-22.3.1-pyhd8ed1ab_0 None
+  python             conda-forge/linux-64::python-3.8.15-h4a9ceb5_0_cpython None
+  readline           conda-forge/linux-64::readline-8.1.2-h0f457ee_0 None
+  setuptools         conda-forge/noarch::setuptools-65.5.1-pyhd8ed1ab_0 None
+  tk                 conda-forge/linux-64::tk-8.6.12-h27826a3_0 None
+  wheel              conda-forge/noarch::wheel-0.38.4-pyhd8ed1ab_0 None
+  xz                 conda-forge/linux-64::xz-5.2.6-h166bdaf_0 None
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+ncurses-6.3          | 1002 KB   | #################################################################################################################### | 100% 
+libgomp-12.2.0       | 455 KB    | #################################################################################################################### | 100% 
+readline-8.1.2       | 291 KB    | #################################################################################################################### | 100% 
+xz-5.2.6             | 409 KB    | #################################################################################################################### | 100% 
+python-3.8.15        | 19.9 MB   | #################################################################################################################### | 100% 
+wheel-0.38.4         | 32 KB     | #################################################################################################################### | 100% 
+libzlib-1.2.13       | 64 KB     | #################################################################################################################### | 100% 
+libnsl-2.0.0         | 31 KB     | #################################################################################################################### | 100% 
+libsqlite-3.40.0     | 791 KB    | #################################################################################################################### | 100% 
+setuptools-65.5.1    | 731 KB    | #################################################################################################################### | 100% 
+pip-22.3.1           | 1.5 MB    | #################################################################################################################### | 100% 
+libffi-3.4.2         | 57 KB     | #################################################################################################################### | 100% 
+libuuid-2.32.1       | 28 KB     | #################################################################################################################### | 100% 
+openssl-3.0.7        | 2.8 MB    | #################################################################################################################### | 100% 
+ca-certificates-2022 | 150 KB    | #################################################################################################################### | 100% 
+_libgcc_mutex-0.1    | 3 KB      | #################################################################################################################### | 100% 
+_openmp_mutex-4.5    | 23 KB     | #################################################################################################################### | 100% 
+libgcc-ng-12.2.0     | 931 KB    | #################################################################################################################### | 100% 
+ld_impl_linux-64-2.3 | 675 KB    | #################################################################################################################### | 100% 
+tk-8.6.12            | 3.3 MB    | #################################################################################################################### | 100% 
+bzip2-1.0.8          | 484 KB    | #################################################################################################################### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate assembly
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Retrieving notices: ...working... done
+(base) jiang@azur:~$ conda activate assembly
+(assembly) jiang@azur:~$ conda install -c bioconda medaka
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: | 
+Found conflicts! Looking for incompatible packages.
+This can take several minutes.  Press CTRL-C to abort.
+failed                                                                                                                                                         
+
+UnsatisfiableError: The following specifications were found to be incompatible with each other:
+
+Output in format: Requested package -> Available versionsThe following specifications were found to be incompatible with your system:
+
+  - feature:/linux-64::__glibc==2.31=0
+  - medaka -> libgcc-ng[version='>=10.3.0'] -> __glibc[version='>=2.17']
+  - python=3.8 -> libgcc-ng[version='>=11.2.0'] -> __glibc[version='>=2.17']
+
+Your installed version is: 2.31
+
+
+(assembly) jiang@azur:~$ conda deactivate 
+(base) jiang@azur:~$ conda install mamba
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - mamba
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/linux-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/linux-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(base) jiang@azur:~$ conda install mamba -n base -c conda-forge
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3
+
+  added / updated specs:
+    - mamba
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _openmp_mutex-4.5          |       2_kmp_llvm           6 KB  conda-forge
+    c-ares-1.18.1              |       h7f98852_0         113 KB  conda-forge
+    certifi-2022.9.24          |     pyhd8ed1ab_0         155 KB  conda-forge
+    conda-22.9.0               |   py39hf3d152e_2         963 KB  conda-forge
+    fmt-9.1.0                  |       h924138e_0         185 KB  conda-forge
+    icu-58.2                   |    hf484d3e_1000        22.6 MB  conda-forge
+    keyutils-1.6.1             |       h166bdaf_0         115 KB  conda-forge
+    krb5-1.19.3                |       h3790be6_0         1.4 MB  conda-forge
+    libarchive-3.5.2           |       hccf745f_1         1.6 MB  conda-forge
+    libcurl-7.86.0             |       h91b91d3_0         368 KB
+    libedit-3.1.20191231       |       he28a2e2_2         121 KB  conda-forge
+    libev-4.33                 |       h516909a_1         104 KB  conda-forge
+    libiconv-1.17              |       h166bdaf_0         1.4 MB  conda-forge
+    libmamba-1.1.0             |       h2c5f835_2         1.4 MB  conda-forge
+    libmambapy-1.1.0           |   py39he50db72_2         307 KB  conda-forge
+    libnghttp2-1.46.0          |       hce63b2e_0         680 KB
+    libsolv-0.7.22             |       he621ea3_0         436 KB
+    libssh2-1.10.0             |       ha56f1ee_2         233 KB  conda-forge
+    libstdcxx-ng-12.2.0        |      h46fd767_19         4.3 MB  conda-forge
+    libxml2-2.9.14             |       h74e7548_0         718 KB
+    llvm-openmp-14.0.6         |       h9e868ea_0         4.4 MB
+    lz4-c-1.9.3                |       h9c3ff4c_1         179 KB  conda-forge
+    lzo-2.10                   |    h516909a_1000         314 KB  conda-forge
+    mamba-1.1.0                |   py39hfa8f2c8_2          47 KB  conda-forge
+    openssl-1.1.1s             |       h166bdaf_0         2.1 MB  conda-forge
+    pcre2-10.37                |       h032f7d1_0         1.1 MB  conda-forge
+    pybind11-abi-4             |       hd8ed1ab_3          10 KB  conda-forge
+    python_abi-3.9             |           2_cp39           4 KB  conda-forge
+    reproc-14.2.3              |       h7f98852_0          28 KB  conda-forge
+    reproc-cpp-14.2.3          |       h9c3ff4c_0          20 KB  conda-forge
+    yaml-cpp-0.7.0             |       h27087fc_2         215 KB  conda-forge
+    zstd-1.5.2                 |       ha4553b6_0         488 KB
+    ------------------------------------------------------------
+                                           Total:        45.9 MB
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-h7f98852_4 None
+  c-ares             conda-forge/linux-64::c-ares-1.18.1-h7f98852_0 None
+  fmt                conda-forge/linux-64::fmt-9.1.0-h924138e_0 None
+  icu                conda-forge/linux-64::icu-58.2-hf484d3e_1000 None
+  keyutils           conda-forge/linux-64::keyutils-1.6.1-h166bdaf_0 None
+  krb5               conda-forge/linux-64::krb5-1.19.3-h3790be6_0 None
+  libarchive         conda-forge/linux-64::libarchive-3.5.2-hccf745f_1 None
+  libcurl            pkgs/main/linux-64::libcurl-7.86.0-h91b91d3_0 None
+  libedit            conda-forge/linux-64::libedit-3.1.20191231-he28a2e2_2 None
+  libev              conda-forge/linux-64::libev-4.33-h516909a_1 None
+  libiconv           conda-forge/linux-64::libiconv-1.17-h166bdaf_0 None
+  libmamba           conda-forge/linux-64::libmamba-1.1.0-h2c5f835_2 None
+  libmambapy         conda-forge/linux-64::libmambapy-1.1.0-py39he50db72_2 None
+  libnghttp2         pkgs/main/linux-64::libnghttp2-1.46.0-hce63b2e_0 None
+  libsolv            pkgs/main/linux-64::libsolv-0.7.22-he621ea3_0 None
+  libssh2            conda-forge/linux-64::libssh2-1.10.0-ha56f1ee_2 None
+  libxml2            pkgs/main/linux-64::libxml2-2.9.14-h74e7548_0 None
+  llvm-openmp        pkgs/main/linux-64::llvm-openmp-14.0.6-h9e868ea_0 None
+  lz4-c              conda-forge/linux-64::lz4-c-1.9.3-h9c3ff4c_1 None
+  lzo                conda-forge/linux-64::lzo-2.10-h516909a_1000 None
+  mamba              conda-forge/linux-64::mamba-1.1.0-py39hfa8f2c8_2 None
+  pcre2              conda-forge/linux-64::pcre2-10.37-h032f7d1_0 None
+  pybind11-abi       conda-forge/noarch::pybind11-abi-4-hd8ed1ab_3 None
+  python_abi         conda-forge/linux-64::python_abi-3.9-2_cp39 None
+  reproc             conda-forge/linux-64::reproc-14.2.3-h7f98852_0 None
+  reproc-cpp         conda-forge/linux-64::reproc-cpp-14.2.3-h9c3ff4c_0 None
+  yaml-cpp           conda-forge/linux-64::yaml-cpp-0.7.0-h27087fc_2 None
+  zstd               pkgs/main/linux-64::zstd-1.5.2-ha4553b6_0 None
+
+The following packages will be REMOVED:
+
+  libgomp-11.2.0-h1234567_1
+
+The following packages will be UPDATED:
+
+  conda              pkgs/main::conda-22.9.0-py39h06a4308_0 --> conda-forge::conda-22.9.0-py39hf3d152e_2 None
+  libgcc-ng          pkgs/main::libgcc-ng-11.2.0-h1234567_1 --> conda-forge::libgcc-ng-12.2.0-h65d4601_19 None
+  libstdcxx-ng       pkgs/main::libstdcxx-ng-11.2.0-h12345~ --> conda-forge::libstdcxx-ng-12.2.0-h46fd767_19 None
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  _libgcc_mutex           pkgs/main::_libgcc_mutex-0.1-main --> conda-forge::_libgcc_mutex-0.1-conda_forge None
+  _openmp_mutex          pkgs/main::_openmp_mutex-5.1-1_gnu --> conda-forge::_openmp_mutex-4.5-2_kmp_llvm None
+  ca-certificates    pkgs/main::ca-certificates-2022.10.11~ --> conda-forge::ca-certificates-2022.9.24-ha878542_0 None
+  certifi            pkgs/main/linux-64::certifi-2022.9.24~ --> conda-forge/noarch::certifi-2022.9.24-pyhd8ed1ab_0 None
+  openssl              pkgs/main::openssl-1.1.1s-h7f8727e_0 --> conda-forge::openssl-1.1.1s-h166bdaf_0 None
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+krb5-1.19.3          | 1.4 MB    | #################################################################################################################### | 100% 
+reproc-14.2.3        | 28 KB     | #################################################################################################################### | 100% 
+openssl-1.1.1s       | 2.1 MB    | #################################################################################################################### | 100% 
+libev-4.33           | 104 KB    | #################################################################################################################### | 100% 
+zstd-1.5.2           | 488 KB    | #################################################################################################################### | 100% 
+libarchive-3.5.2     | 1.6 MB    | #################################################################################################################### | 100% 
+reproc-cpp-14.2.3    | 20 KB     | #################################################################################################################### | 100% 
+libiconv-1.17        | 1.4 MB    | #################################################################################################################### | 100% 
+libedit-3.1.20191231 | 121 KB    | #################################################################################################################### | 100% 
+libnghttp2-1.46.0    | 680 KB    | #################################################################################################################### | 100% 
+libstdcxx-ng-12.2.0  | 4.3 MB    | #################################################################################################################### | 100% 
+lz4-c-1.9.3          | 179 KB    | #################################################################################################################### | 100% 
+c-ares-1.18.1        | 113 KB    | #################################################################################################################### | 100% 
+conda-22.9.0         | 963 KB    | #################################################################################################################### | 100% 
+lzo-2.10             | 314 KB    | #################################################################################################################### | 100% 
+llvm-openmp-14.0.6   | 4.4 MB    | #################################################################################################################### | 100% 
+libxml2-2.9.14       | 718 KB    | #################################################################################################################### | 100% 
+libmambapy-1.1.0     | 307 KB    | #################################################################################################################### | 100% 
+certifi-2022.9.24    | 155 KB    | #################################################################################################################### | 100% 
+python_abi-3.9       | 4 KB      | #################################################################################################################### | 100% 
+libssh2-1.10.0       | 233 KB    | #################################################################################################################### | 100% 
+yaml-cpp-0.7.0       | 215 KB    | #################################################################################################################### | 100% 
+mamba-1.1.0          | 47 KB     | #################################################################################################################### | 100% 
+pybind11-abi-4       | 10 KB     | #################################################################################################################### | 100% 
+fmt-9.1.0            | 185 KB    | #################################################################################################################### | 100% 
+icu-58.2             | 22.6 MB   | #################################################################################################################### | 100% 
+libcurl-7.86.0       | 368 KB    | #################################################################################################################### | 100% 
+libsolv-0.7.22       | 436 KB    | #################################################################################################################### | 100% 
+keyutils-1.6.1       | 115 KB    | #################################################################################################################### | 100% 
+_openmp_mutex-4.5    | 6 KB      | #################################################################################################################### | 100% 
+libmamba-1.1.0       | 1.4 MB    | #################################################################################################################### | 100% 
+pcre2-10.37          | 1.1 MB    | #################################################################################################################### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+Retrieving notices: ...working... done
+(base) jiang@azur:~$ conda env list
+# conda environments:
+#
+base                  *  /home/jiang/miniconda3
+assembly                 /home/jiang/miniconda3/envs/assembly
+
+(base) jiang@azur:~$ conda remove -n assembly --all
+
+Remove all packages in environment /home/jiang/miniconda3/envs/assembly:
+
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly
+
+
+The following packages will be REMOVED:
+
+  _libgcc_mutex-0.1-conda_forge
+  _openmp_mutex-4.5-2_gnu
+  bzip2-1.0.8-h7f98852_4
+  ca-certificates-2022.9.24-ha878542_0
+  ld_impl_linux-64-2.39-hcc3a1bd_1
+  libffi-3.4.2-h7f98852_5
+  libgcc-ng-12.2.0-h65d4601_19
+  libgomp-12.2.0-h65d4601_19
+  libnsl-2.0.0-h7f98852_0
+  libsqlite-3.40.0-h753d276_0
+  libuuid-2.32.1-h7f98852_1000
+  libzlib-1.2.13-h166bdaf_4
+  ncurses-6.3-h27087fc_1
+  openssl-3.0.7-h166bdaf_0
+  pip-22.3.1-pyhd8ed1ab_0
+  python-3.8.15-h4a9ceb5_0_cpython
+  readline-8.1.2-h0f457ee_0
+  setuptools-65.5.1-pyhd8ed1ab_0
+  tk-8.6.12-h27826a3_0
+  wheel-0.38.4-pyhd8ed1ab_0
+  xz-5.2.6-h166bdaf_0
+
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) jiang@azur:~$ conda env list
+# conda environments:
+#
+base                  *  /home/jiang/miniconda3
+
+(base) jiang@azur:~$ mamba create -n assembly medaka -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.1.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['medaka']
+
+pkgs/main/linux-64                                            No change
+pkgs/main/noarch                                              No change
+pkgs/r/linux-64                                               No change
+bioconda/linux-64                                             No change
+bioconda/noarch                                               No change
+pkgs/r/noarch                                                 No change
+Transaction
+
+  Prefix: /home/jiang/miniconda3/envs/assembly
+
+  Updating specs:
+
+   - medaka
+
+
+  Package                      Version  Build               Channel                  Size
+───────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex                  0.1  main                pkgs/main/linux-64     Cached
+  + _openmp_mutex                  5.1  1_gnu               pkgs/main/linux-64     Cached
+  + _tflow_select                2.3.0  mkl                 pkgs/main/linux-64        2kB
+  + absl-py                     0.15.0  pyhd3eb1b0_0        pkgs/main/noarch        106kB
+  + astor                        0.8.1  py36h06a4308_0      pkgs/main/linux-64       48kB
+  + bcftools                       1.9  ha228f0b_4          bioconda/linux-64       826kB
+  + biopython                     1.78  py36h7f8727e_0      pkgs/main/linux-64        2MB
+  + blas                           1.0  mkl                 pkgs/main/linux-64        6kB
+  + bz2file                       0.98  py36h06a4308_1      pkgs/main/linux-64      251kB
+  + bzip2                        1.0.8  h7b6447c_0          pkgs/main/linux-64       80kB
+  + c-ares                      1.18.1  h7f8727e_0          pkgs/main/linux-64      116kB
+  + ca-certificates         2022.10.11  h06a4308_0          pkgs/main/linux-64     Cached
+  + certifi                  2021.5.30  py36h06a4308_0      pkgs/main/linux-64      142kB
+  + cffi                        1.14.0  py36h2e261b9_0      pkgs/main/linux-64      229kB
+  + coverage                       5.5  py36h27cfd23_2      pkgs/main/linux-64      265kB
+  + curl                        7.69.1  hbc83047_0          pkgs/main/linux-64      140kB
+  + cython                     0.29.24  py36h295c915_0      pkgs/main/linux-64        2MB
+  + dataclasses                    0.8  pyh4f3eec9_6        pkgs/main/noarch         22kB
+  + decorator                    4.4.2  pyhd3eb1b0_0        pkgs/main/noarch         12kB
+  + gast                         0.5.3  pyhd3eb1b0_0        pkgs/main/noarch         22kB
+  + google-pasta                 0.2.0  pyhd3eb1b0_0        pkgs/main/noarch         47kB
+  + grpcio                      1.36.1  py36h2157cd5_1      pkgs/main/linux-64        2MB
+  + h5py                         2.7.1  py36ha1f6525_2      pkgs/main/linux-64      905kB
+  + hdf5                        1.10.2  hba1933b_1          pkgs/main/linux-64        4MB
+  + htslib                         1.9  ha228f0b_7          bioconda/linux-64         2MB
+  + importlib-metadata           4.8.1  py36h06a4308_0      pkgs/main/linux-64       39kB
+  + intel-openmp              2022.1.0  h9e868ea_3769       pkgs/main/linux-64        5MB
+  + intervaltree                 3.1.0  pyhd3eb1b0_0        pkgs/main/noarch         26kB
+  + k8                           0.2.5  h9a82719_1          bioconda/linux-64         2MB
+  + keras-applications           1.0.8  py_1                pkgs/main/noarch         29kB
+  + keras-preprocessing          1.1.2  pyhd3eb1b0_0        pkgs/main/noarch         36kB
+  + krb5                        1.17.1  h173b8e3_0          pkgs/main/linux-64        1MB
+  + ld_impl_linux-64              2.38  h1181459_1          pkgs/main/linux-64     Cached
+  + libcurl                     7.69.1  h20c2e04_0          pkgs/main/linux-64      441kB
+  + libdeflate                     1.0  h14c3975_1          bioconda/linux-64        44kB
+  + libedit               3.1.20181209  hc058e9b_0          pkgs/main/linux-64      167kB
+  + libffi                       3.2.1  hf484d3e_1007       pkgs/main/linux-64       49kB
+  + libgcc-ng                   11.2.0  h1234567_1          pkgs/main/linux-64     Cached
+  + libgfortran-ng               7.5.0  ha8ba4b0_17         pkgs/main/linux-64       22kB
+  + libgfortran4                 7.5.0  ha8ba4b0_17         pkgs/main/linux-64        1MB
+  + libgomp                     11.2.0  h1234567_1          pkgs/main/linux-64     Cached
+  + libprotobuf                 3.17.2  h4ff587b_1          pkgs/main/linux-64        2MB
+  + libssh2                     1.10.0  h8f2d780_0          pkgs/main/linux-64      281kB
+  + libstdcxx-ng                11.2.0  h1234567_1          pkgs/main/linux-64     Cached
+  + mappy                         2.17  py36h84994c4_0      bioconda/linux-64       156kB
+  + markdown                     3.3.4  py36h06a4308_0      pkgs/main/linux-64      130kB
+  + medaka                      0.11.5  py36h148d290_0      bioconda/linux-64        55MB
+  + minimap2                      2.17  h5bf99c6_4          bioconda/linux-64       458kB
+  + mkl                         2020.2  256                 pkgs/main/linux-64      145MB
+  + mkl-service                  2.3.0  py36he8ac12f_0      pkgs/main/linux-64       53kB
+  + mkl_fft                      1.2.0  py36h23d657b_0      pkgs/main/linux-64      153kB
+  + mkl_random                   1.1.1  py36h0573a6f_0      pkgs/main/linux-64      334kB
+  + ncurses                        6.1  he6710b0_1          pkgs/main/linux-64      796kB
+  + networkx                     2.5.1  pyhd3eb1b0_0        pkgs/main/noarch          1MB
+  + numpy                       1.16.1  py36h7e9f1db_1      pkgs/main/linux-64       49kB
+  + numpy-base                  1.16.1  py36hde5b4d6_1      pkgs/main/linux-64        4MB
+  + ont-fast5-api                1.0.1  py_0                bioconda/noarch          26kB
+  + openssl                     1.1.1s  h7f8727e_0          pkgs/main/linux-64     Cached
+  + packaging                     21.3  pyhd3eb1b0_0        pkgs/main/noarch         37kB
+  + parasail-python                1.2  py36h8b12597_0      bioconda/linux-64         2MB
+  + pip                         21.2.2  py36h06a4308_0      pkgs/main/linux-64        2MB
+  + protobuf                    3.17.2  py36h295c915_0      pkgs/main/linux-64      327kB
+  + pycparser                     2.21  pyhd3eb1b0_0        pkgs/main/noarch       Cached
+  + pyfaidx                      0.7.1  pyh5e36f6f_0        bioconda/noarch          33kB
+  + pyparsing                    3.0.4  pyhd3eb1b0_0        pkgs/main/noarch         83kB
+  + pysam                       0.15.3  py36hda2845c_1      bioconda/linux-64         3MB
+  + python                      3.6.10  h0371630_0          pkgs/main/linux-64       31MB
+  + pyvcf                        0.6.8  py36_0              bioconda/linux-64        60kB
+  + pyvcf3                       1.0.3  pyhdfd78af_0        bioconda/noarch         980kB
+  + readline                       7.0  h7b6447c_5          pkgs/main/linux-64      332kB
+  + samtools                       1.9  h10a08f8_12         bioconda/linux-64       306kB
+  + scipy                        1.5.2  py36h0b6359f_0      pkgs/main/linux-64       15MB
+  + setuptools                  58.0.4  py36h06a4308_0      pkgs/main/linux-64      807kB
+  + six                         1.16.0  pyhd3eb1b0_1        pkgs/main/noarch       Cached
+  + sortedcontainers             2.4.0  pyhd3eb1b0_0        pkgs/main/noarch         26kB
+  + sqlite                      3.31.1  h7b6447c_0          pkgs/main/linux-64        1MB
+  + tensorboard                 1.14.0  py36hf484d3e_0      pkgs/main/linux-64        3MB
+  + tensorflow                  1.14.0  mkl_py36h2526735_0  pkgs/main/linux-64        4kB
+  + tensorflow-base             1.14.0  mkl_py36h7ce6ba3_0  pkgs/main/linux-64       88MB
+  + tensorflow-estimator        1.14.0  py_0                pkgs/main/noarch        268kB
+  + termcolor                    1.1.0  py36h06a4308_1      pkgs/main/linux-64        9kB
+  + tk                          8.6.12  h1ccaba5_0          pkgs/main/linux-64     Cached
+  + typing_extensions            4.1.1  pyh06a4308_0        pkgs/main/noarch         29kB
+  + werkzeug                     2.0.3  pyhd3eb1b0_0        pkgs/main/noarch        226kB
+  + whatshap                      0.18  py36h6bb024c_0      bioconda/linux-64       475kB
+  + wheel                       0.37.1  pyhd3eb1b0_0        pkgs/main/noarch       Cached
+  + wrapt                       1.12.1  py36h7b6447c_1      pkgs/main/linux-64       50kB
+  + xopen                        0.7.3  py_0                bioconda/noarch          12kB
+  + xz                           5.2.6  h5eee18b_0          pkgs/main/linux-64     Cached
+  + zipp                         3.6.0  pyhd3eb1b0_0        pkgs/main/noarch         17kB
+  + zlib                        1.2.13  h5eee18b_0          pkgs/main/linux-64     Cached
+
+  Summary:
+
+  Install: 91 packages
+
+  Total download: 384MB
+
+───────────────────────────────────────────────────────────────────────────────────────────
+
+
+Confirm changes: [Y/n] n
+Aborted.
+(base) jiang@azur:~$ mamba create -n assembly medaka=1.7.2 -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.1.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['medaka=1.7.2']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+pkgs/main/linux-64                                            No change
+pkgs/main/noarch                                              No change
+pkgs/r/linux-64                                               No change
+pkgs/r/noarch                                                 No change
+Could not solve for environment specs
+Encountered problems while solving:
+  - nothing provides libgcc-ng >=12 needed by medaka-1.7.2-py38h6239ad4_1
+
+The environment can't be solved, aborting the operation
+
+(base) jiang@azur:~$ conda create -n assembly -c conda-forge -c bioconda python=3.7
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly
+
+  added / updated specs:
+    - python=3.7
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    python-3.7.12              |hf930737_100_cpython        57.3 MB  conda-forge
+    sqlite-3.40.0              |       h4ff8645_0         801 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        58.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge None
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-2_gnu None
+  ca-certificates    conda-forge/linux-64::ca-certificates-2022.9.24-ha878542_0 None
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.39-hcc3a1bd_1 None
+  libffi             conda-forge/linux-64::libffi-3.4.2-h7f98852_5 None
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-12.2.0-h65d4601_19 None
+  libgomp            conda-forge/linux-64::libgomp-12.2.0-h65d4601_19 None
+  libnsl             conda-forge/linux-64::libnsl-2.0.0-h7f98852_0 None
+  libsqlite          conda-forge/linux-64::libsqlite-3.40.0-h753d276_0 None
+  libstdcxx-ng       conda-forge/linux-64::libstdcxx-ng-12.2.0-h46fd767_19 None
+  libzlib            conda-forge/linux-64::libzlib-1.2.13-h166bdaf_4 None
+  ncurses            conda-forge/linux-64::ncurses-6.3-h27087fc_1 None
+  openssl            conda-forge/linux-64::openssl-3.0.7-h166bdaf_0 None
+  pip                conda-forge/noarch::pip-22.3.1-pyhd8ed1ab_0 None
+  python             conda-forge/linux-64::python-3.7.12-hf930737_100_cpython None
+  readline           conda-forge/linux-64::readline-8.1.2-h0f457ee_0 None
+  setuptools         conda-forge/noarch::setuptools-65.5.1-pyhd8ed1ab_0 None
+  sqlite             conda-forge/linux-64::sqlite-3.40.0-h4ff8645_0 None
+  tk                 conda-forge/linux-64::tk-8.6.12-h27826a3_0 None
+  wheel              conda-forge/noarch::wheel-0.38.4-pyhd8ed1ab_0 None
+  xz                 conda-forge/linux-64::xz-5.2.6-h166bdaf_0 None
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+sqlite-3.40.0        | 801 KB    | #################################################################################################################### | 100% 
+python-3.7.12        | 57.3 MB   | #################################################################################################################### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate assembly
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Retrieving notices: ...working... done
+(base) jiang@azur:~$ conda activate assembly
+(assembly) jiang@azur:~$ mamba install medaka -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.1.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['medaka']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+pkgs/main/noarch                                              No change
+pkgs/r/linux-64                                               No change
+pkgs/r/noarch                                                 No change
+pkgs/main/linux-64                                            No change
+
+Pinned packages:
+  - python 3.7.*
+
+
+Could not solve for environment specs
+Encountered problems while solving:
+  - nothing provides libdeflate >=1.3,<1.4.0a0 needed by medaka-0.10.0-py36hbcae180_1
+
+The environment can't be solved, aborting the operation
+
+(assembly) jiang@azur:~$ conda remove -n assembly --all
+
+CondaEnvironmentError: cannot remove current environment. deactivate and run conda remove again
+
+(assembly) jiang@azur:~$ conda deactivate
+(base) jiang@azur:~$ conda remove -n assembly --all
+
+Remove all packages in environment /home/jiang/miniconda3/envs/assembly:
+
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly
+
+
+The following packages will be REMOVED:
+
+  _libgcc_mutex-0.1-conda_forge
+  _openmp_mutex-4.5-2_gnu
+  ca-certificates-2022.9.24-ha878542_0
+  ld_impl_linux-64-2.39-hcc3a1bd_1
+  libffi-3.4.2-h7f98852_5
+  libgcc-ng-12.2.0-h65d4601_19
+  libgomp-12.2.0-h65d4601_19
+  libnsl-2.0.0-h7f98852_0
+  libsqlite-3.40.0-h753d276_0
+  libstdcxx-ng-12.2.0-h46fd767_19
+  libzlib-1.2.13-h166bdaf_4
+  ncurses-6.3-h27087fc_1
+  openssl-3.0.7-h166bdaf_0
+  pip-22.3.1-pyhd8ed1ab_0
+  python-3.7.12-hf930737_100_cpython
+  readline-8.1.2-h0f457ee_0
+  setuptools-65.5.1-pyhd8ed1ab_0
+  sqlite-3.40.0-h4ff8645_0
+  tk-8.6.12-h27826a3_0
+  wheel-0.38.4-pyhd8ed1ab_0
+  xz-5.2.6-h166bdaf_0
+
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) jiang@azur:~$ conda create -n assembly -c conda-forge -c bioconda python=3
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly
+
+  added / updated specs:
+    - python=3
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    python-3.11.0              |ha86cf86_0_cpython        35.9 MB  conda-forge
+    tzdata-2022g               |       h191b570_0         106 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        36.0 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge None
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-2_gnu None
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-h7f98852_4 None
+  ca-certificates    conda-forge/linux-64::ca-certificates-2022.9.24-ha878542_0 None
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.39-hcc3a1bd_1 None
+  libffi             conda-forge/linux-64::libffi-3.4.2-h7f98852_5 None
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-12.2.0-h65d4601_19 None
+  libgomp            conda-forge/linux-64::libgomp-12.2.0-h65d4601_19 None
+  libnsl             conda-forge/linux-64::libnsl-2.0.0-h7f98852_0 None
+  libsqlite          conda-forge/linux-64::libsqlite-3.40.0-h753d276_0 None
+  libuuid            conda-forge/linux-64::libuuid-2.32.1-h7f98852_1000 None
+  libzlib            conda-forge/linux-64::libzlib-1.2.13-h166bdaf_4 None
+  ncurses            conda-forge/linux-64::ncurses-6.3-h27087fc_1 None
+  openssl            conda-forge/linux-64::openssl-3.0.7-h166bdaf_0 None
+  pip                conda-forge/noarch::pip-22.3.1-pyhd8ed1ab_0 None
+  python             conda-forge/linux-64::python-3.11.0-ha86cf86_0_cpython None
+  readline           conda-forge/linux-64::readline-8.1.2-h0f457ee_0 None
+  setuptools         conda-forge/noarch::setuptools-65.5.1-pyhd8ed1ab_0 None
+  tk                 conda-forge/linux-64::tk-8.6.12-h27826a3_0 None
+  tzdata             conda-forge/noarch::tzdata-2022g-h191b570_0 None
+  wheel              conda-forge/noarch::wheel-0.38.4-pyhd8ed1ab_0 None
+  xz                 conda-forge/linux-64::xz-5.2.6-h166bdaf_0 None
+
+
+Proceed ([y]/n)? n
+
+
+CondaSystemExit: Exiting.
+
+(base) jiang@azur:~$ conda create -n assembly36 -c conda-forge -c bioconda python=3.6
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly36
+
+  added / updated specs:
+    - python=3.6
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    certifi-2016.9.26          |           py36_0         217 KB  conda-forge
+    pip-21.2.4                 |     pyhd8ed1ab_0         1.1 MB  conda-forge
+    python-3.6.15              |hb7a2778_0_cpython        38.4 MB  conda-forge
+    python_abi-3.6             |          2_cp36m           4 KB  conda-forge
+    setuptools-49.6.0          |   py36h5fab9bb_3         936 KB  conda-forge
+    wheel-0.34.2               |           py36_0          43 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        40.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge None
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-2_gnu None
+  ca-certificates    conda-forge/linux-64::ca-certificates-2022.9.24-ha878542_0 None
+  certifi            conda-forge/linux-64::certifi-2016.9.26-py36_0 None
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.39-hcc3a1bd_1 None
+  libffi             conda-forge/linux-64::libffi-3.4.2-h7f98852_5 None
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-12.2.0-h65d4601_19 None
+  libgomp            conda-forge/linux-64::libgomp-12.2.0-h65d4601_19 None
+  libnsl             conda-forge/linux-64::libnsl-2.0.0-h7f98852_0 None
+  libsqlite          conda-forge/linux-64::libsqlite-3.40.0-h753d276_0 None
+  libstdcxx-ng       conda-forge/linux-64::libstdcxx-ng-12.2.0-h46fd767_19 None
+  libzlib            conda-forge/linux-64::libzlib-1.2.13-h166bdaf_4 None
+  ncurses            conda-forge/linux-64::ncurses-6.3-h27087fc_1 None
+  openssl            conda-forge/linux-64::openssl-1.1.1s-h166bdaf_0 None
+  pip                conda-forge/noarch::pip-21.2.4-pyhd8ed1ab_0 None
+  python             conda-forge/linux-64::python-3.6.15-hb7a2778_0_cpython None
+  python_abi         conda-forge/linux-64::python_abi-3.6-2_cp36m None
+  readline           conda-forge/linux-64::readline-8.1.2-h0f457ee_0 None
+  setuptools         conda-forge/linux-64::setuptools-49.6.0-py36h5fab9bb_3 None
+  sqlite             conda-forge/linux-64::sqlite-3.40.0-h4ff8645_0 None
+  tk                 conda-forge/linux-64::tk-8.6.12-h27826a3_0 None
+  wheel              conda-forge/linux-64::wheel-0.34.2-py36_0 None
+  xz                 conda-forge/linux-64::xz-5.2.6-h166bdaf_0 None
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+wheel-0.34.2         | 43 KB     | #################################################################################################################### | 100% 
+setuptools-49.6.0    | 936 KB    | #################################################################################################################### | 100% 
+python-3.6.15        | 38.4 MB   | #################################################################################################################### | 100% 
+python_abi-3.6       | 4 KB      | #################################################################################################################### | 100% 
+certifi-2016.9.26    | 217 KB    | #################################################################################################################### | 100% 
+pip-21.2.4           | 1.1 MB    | #################################################################################################################### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate assembly36
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Retrieving notices: ...working... done
+(base) jiang@azur:~$ conda activate assembly36
+(assembly36) jiang@azur:~$ mamba install medaka -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.1.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['medaka']
+
+pkgs/main/linux-64                                            No change
+pkgs/main/noarch                                              No change
+bioconda/noarch                                               No change
+bioconda/linux-64                                             No change
+pkgs/r/noarch                                                 No change
+pkgs/r/linux-64                                               No change
+
+Pinned packages:
+  - python 3.6.*
+
+
+Could not solve for environment specs
+Encountered problems while solving:
+  - nothing provides libdeflate >=1.3,<1.4.0a0 needed by htslib-1.10.2-h78d89cc_0
+
+The environment can't be solved, aborting the operation
+
+(assembly36) jiang@azur:~$ conda install -c bioconda medaka
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3/envs/assembly36
+
+  added / updated specs:
+    - medaka
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _tflow_select-2.3.0        |              mkl           2 KB
+    absl-py-0.15.0             |     pyhd3eb1b0_0         103 KB
+    astor-0.8.1                |   py36h06a4308_0          47 KB
+    bcftools-1.3.1             |       h5bf99c6_7         660 KB  bioconda
+    biopython-1.78             |   py36h7f8727e_0         2.2 MB
+    blas-1.0                   |              mkl           6 KB
+    bzip2-1.0.8                |       h7b6447c_0          78 KB
+    c-ares-1.18.1              |       h7f8727e_0         114 KB
+    certifi-2021.5.30          |   py36h06a4308_0         139 KB
+    cffi-1.14.6                |   py36h400218f_0         220 KB
+    coverage-5.5               |   py36h27cfd23_2         258 KB
+    curl-7.86.0                |       h5eee18b_0          87 KB
+    cython-0.29.24             |   py36h295c915_0         1.9 MB
+    dataclasses-0.8            |     pyh4f3eec9_6          22 KB
+    gast-0.5.3                 |     pyhd3eb1b0_0          21 KB
+    grpcio-1.36.1              |   py36h2157cd5_1         1.9 MB
+    h5py-2.7.1                 |   py36ha1f6525_2         884 KB
+    hdf5-1.10.2                |       hba1933b_1         3.8 MB
+    htslib-1.3.2               |                0         951 KB  bioconda
+    importlib-metadata-4.8.1   |   py36h06a4308_0          38 KB
+    intel-openmp-2022.1.0      |    h9e868ea_3769         4.5 MB
+    intervaltree-3.1.0         |     pyhd3eb1b0_0          25 KB
+    keras-2.2.4                |                0           5 KB
+    keras-applications-1.0.8   |             py_1          29 KB
+    keras-base-2.2.4           |           py36_0         418 KB
+    keras-preprocessing-1.1.2  |     pyhd3eb1b0_0          35 KB
+    krb5-1.19.2                |       hac12032_0         1.2 MB
+    libdeflate-1.0             |       h14c3975_1          43 KB  bioconda
+    libedit-3.1.20210910       |       h7f8727e_0         166 KB
+    libev-4.33                 |       h7f8727e_1         111 KB
+    libgfortran-ng-7.5.0       |      ha8ba4b0_17          22 KB
+    libgfortran4-7.5.0         |      ha8ba4b0_17         995 KB
+    libprotobuf-3.17.2         |       h4ff587b_1         2.0 MB
+    libssh2-1.10.0             |       h8f2d780_0         274 KB
+    markdown-3.3.4             |   py36h06a4308_0         127 KB
+    medaka-0.5.2               |   py36h2b5150b_0         6.0 MB  bioconda
+    minimap2-2.11              |       ha92aebf_0         342 KB  bioconda
+    mkl-2020.2                 |              256       138.3 MB
+    mkl-service-2.3.0          |   py36he8ac12f_0          52 KB
+    mkl_fft-1.2.0              |   py36h23d657b_0         149 KB
+    mkl_random-1.1.1           |   py36h0573a6f_0         327 KB
+    numpy-1.16.1               |   py36h7e9f1db_1          48 KB
+    numpy-base-1.16.1          |   py36hde5b4d6_1         3.5 MB
+    protobuf-3.17.2            |   py36h295c915_0         319 KB
+    pysam-0.15.3               |   py36hda2845c_1         2.6 MB  bioconda
+    python-3.6.13              |       h12debd9_1        32.5 MB
+    pyyaml-5.4.1               |   py36h27cfd23_1         170 KB
+    samtools-1.3.1             |       h1b8c3c0_8         470 KB  bioconda
+    scipy-1.5.2                |   py36h0b6359f_0        14.4 MB
+    sortedcontainers-2.4.0     |     pyhd3eb1b0_0          26 KB
+    tensorboard-1.12.2         |   py36he6710b0_0         3.0 MB
+    tensorflow-1.12.0          |mkl_py36h69b6ba0_0           4 KB
+    tensorflow-base-1.12.0     |mkl_py36h3c3e929_0        71.6 MB
+    termcolor-1.1.0            |   py36h06a4308_1           9 KB
+    typing_extensions-4.1.1    |     pyh06a4308_0          28 KB
+    werkzeug-2.0.3             |     pyhd3eb1b0_0         221 KB
+    zipp-3.6.0                 |     pyhd3eb1b0_0          17 KB
+    ------------------------------------------------------------
+                                           Total:       297.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  _tflow_select      pkgs/main/linux-64::_tflow_select-2.3.0-mkl None
+  absl-py            pkgs/main/noarch::absl-py-0.15.0-pyhd3eb1b0_0 None
+  astor              pkgs/main/linux-64::astor-0.8.1-py36h06a4308_0 None
+  bcftools           bioconda/linux-64::bcftools-1.3.1-h5bf99c6_7 None
+  biopython          pkgs/main/linux-64::biopython-1.78-py36h7f8727e_0 None
+  blas               pkgs/main/linux-64::blas-1.0-mkl None
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h7b6447c_0 None
+  c-ares             pkgs/main/linux-64::c-ares-1.18.1-h7f8727e_0 None
+  cffi               pkgs/main/linux-64::cffi-1.14.6-py36h400218f_0 None
+  coverage           pkgs/main/linux-64::coverage-5.5-py36h27cfd23_2 None
+  curl               pkgs/main/linux-64::curl-7.86.0-h5eee18b_0 None
+  cython             pkgs/main/linux-64::cython-0.29.24-py36h295c915_0 None
+  dataclasses        pkgs/main/noarch::dataclasses-0.8-pyh4f3eec9_6 None
+  gast               pkgs/main/noarch::gast-0.5.3-pyhd3eb1b0_0 None
+  grpcio             pkgs/main/linux-64::grpcio-1.36.1-py36h2157cd5_1 None
+  h5py               pkgs/main/linux-64::h5py-2.7.1-py36ha1f6525_2 None
+  hdf5               pkgs/main/linux-64::hdf5-1.10.2-hba1933b_1 None
+  htslib             bioconda/linux-64::htslib-1.3.2-0 None
+  importlib-metadata pkgs/main/linux-64::importlib-metadata-4.8.1-py36h06a4308_0 None
+  intel-openmp       pkgs/main/linux-64::intel-openmp-2022.1.0-h9e868ea_3769 None
+  intervaltree       pkgs/main/noarch::intervaltree-3.1.0-pyhd3eb1b0_0 None
+  keras              pkgs/main/linux-64::keras-2.2.4-0 None
+  keras-applications pkgs/main/noarch::keras-applications-1.0.8-py_1 None
+  keras-base         pkgs/main/linux-64::keras-base-2.2.4-py36_0 None
+  keras-preprocessi~ pkgs/main/noarch::keras-preprocessing-1.1.2-pyhd3eb1b0_0 None
+  krb5               pkgs/main/linux-64::krb5-1.19.2-hac12032_0 None
+  libcurl            pkgs/main/linux-64::libcurl-7.86.0-h91b91d3_0 None
+  libdeflate         bioconda/linux-64::libdeflate-1.0-h14c3975_1 None
+  libedit            pkgs/main/linux-64::libedit-3.1.20210910-h7f8727e_0 None
+  libev              pkgs/main/linux-64::libev-4.33-h7f8727e_1 None
+  libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-7.5.0-ha8ba4b0_17 None
+  libgfortran4       pkgs/main/linux-64::libgfortran4-7.5.0-ha8ba4b0_17 None
+  libnghttp2         pkgs/main/linux-64::libnghttp2-1.46.0-hce63b2e_0 None
+  libprotobuf        pkgs/main/linux-64::libprotobuf-3.17.2-h4ff587b_1 None
+  libssh2            pkgs/main/linux-64::libssh2-1.10.0-h8f2d780_0 None
+  markdown           pkgs/main/linux-64::markdown-3.3.4-py36h06a4308_0 None
+  medaka             bioconda/linux-64::medaka-0.5.2-py36h2b5150b_0 None
+  minimap2           bioconda/linux-64::minimap2-2.11-ha92aebf_0 None
+  mkl                pkgs/main/linux-64::mkl-2020.2-256 None
+  mkl-service        pkgs/main/linux-64::mkl-service-2.3.0-py36he8ac12f_0 None
+  mkl_fft            pkgs/main/linux-64::mkl_fft-1.2.0-py36h23d657b_0 None
+  mkl_random         pkgs/main/linux-64::mkl_random-1.1.1-py36h0573a6f_0 None
+  numpy              pkgs/main/linux-64::numpy-1.16.1-py36h7e9f1db_1 None
+  numpy-base         pkgs/main/linux-64::numpy-base-1.16.1-py36hde5b4d6_1 None
+  protobuf           pkgs/main/linux-64::protobuf-3.17.2-py36h295c915_0 None
+  pycparser          pkgs/main/noarch::pycparser-2.21-pyhd3eb1b0_0 None
+  pysam              bioconda/linux-64::pysam-0.15.3-py36hda2845c_1 None
+  pyyaml             pkgs/main/linux-64::pyyaml-5.4.1-py36h27cfd23_1 None
+  samtools           bioconda/linux-64::samtools-1.3.1-h1b8c3c0_8 None
+  scipy              pkgs/main/linux-64::scipy-1.5.2-py36h0b6359f_0 None
+  six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_1 None
+  sortedcontainers   pkgs/main/noarch::sortedcontainers-2.4.0-pyhd3eb1b0_0 None
+  tensorboard        pkgs/main/linux-64::tensorboard-1.12.2-py36he6710b0_0 None
+  tensorflow         pkgs/main/linux-64::tensorflow-1.12.0-mkl_py36h69b6ba0_0 None
+  tensorflow-base    pkgs/main/linux-64::tensorflow-base-1.12.0-mkl_py36h3c3e929_0 None
+  termcolor          pkgs/main/linux-64::termcolor-1.1.0-py36h06a4308_1 None
+  typing_extensions  pkgs/main/noarch::typing_extensions-4.1.1-pyh06a4308_0 None
+  werkzeug           pkgs/main/noarch::werkzeug-2.0.3-pyhd3eb1b0_0 None
+  yaml               pkgs/main/linux-64::yaml-0.2.5-h7b6447c_0 None
+  zipp               pkgs/main/noarch::zipp-3.6.0-pyhd3eb1b0_0 None
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0 None
+
+The following packages will be REMOVED:
+
+  libsqlite-3.40.0-h753d276_0
+  libzlib-1.2.13-h166bdaf_4
+
+The following packages will be UPDATED:
+
+  ca-certificates    conda-forge::ca-certificates-2022.9.2~ --> pkgs/main::ca-certificates-2022.10.11-h06a4308_0 None
+  certifi             conda-forge::certifi-2016.9.26-py36_0 --> pkgs/main::certifi-2021.5.30-py36h06a4308_0 None
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  libffi               conda-forge::libffi-3.4.2-h7f98852_5 --> pkgs/main::libffi-3.3-he6710b0_2 None
+  openssl            conda-forge::openssl-1.1.1s-h166bdaf_0 --> pkgs/main::openssl-1.1.1s-h7f8727e_0 None
+  python             conda-forge::python-3.6.15-hb7a2778_0~ --> pkgs/main::python-3.6.13-h12debd9_1 None
+  sqlite              conda-forge::sqlite-3.40.0-h4ff8645_0 --> pkgs/main::sqlite-3.40.0-h5082296_0 None
+  tk                      conda-forge::tk-8.6.12-h27826a3_0 --> pkgs/main::tk-8.6.12-h1ccaba5_0 None
+
+
+Proceed ([y]/n)? n
+
+
+CondaSystemExit: Exiting.
+
+(assembly36) jiang@azur:~$ conda info
+
+     active environment : assembly36
+    active env location : /home/jiang/miniconda3/envs/assembly36
+            shell level : 2
+       user config file : /home/jiang/.condarc
+ populated config files : 
+          conda version : 22.9.0
+    conda-build version : not installed
+         python version : 3.9.12.final.0
+       virtual packages : __linux=5.15.0=0
+                          __glibc=2.31=0
+                          __unix=0=0
+                          __archspec=1=x86_64
+       base environment : /home/jiang/miniconda3  (writable)
+      conda av data dir : /home/jiang/miniconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /home/jiang/miniconda3/pkgs
+                          /home/jiang/.conda/pkgs
+       envs directories : /home/jiang/miniconda3/envs
+                          /home/jiang/.conda/envs
+               platform : linux-64
+             user-agent : conda/22.9.0 requests/2.28.1 CPython/3.9.12 Linux/5.15.0-53-generic ubuntu/20.04.4 glibc/2.31
+                UID:GID : 1014:1015
+             netrc file : None
+           offline mode : False
+
+(assembly36) jiang@azur:~$ conda deactivate
+(base) jiang@azur:~$ conda install anaconda-clean
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/jiang/miniconda3
+
+  added / updated specs:
+    - anaconda-clean
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    anaconda-clean-1.1.1       |   py39h06a4308_0           8 KB
+    ------------------------------------------------------------
+                                           Total:           8 KB
+
+The following NEW packages will be INSTALLED:
+
+  anaconda-clean     pkgs/main/linux-64::anaconda-clean-1.1.1-py39h06a4308_0 None
+
+The following packages will be UPDATED:
+
+  ca-certificates    conda-forge::ca-certificates-2022.9.2~ --> pkgs/main::ca-certificates-2022.10.11-h06a4308_0 None
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  certifi            conda-forge/noarch::certifi-2022.9.24~ --> pkgs/main/linux-64::certifi-2022.9.24-py39h06a4308_0 None
+  conda              conda-forge::conda-22.9.0-py39hf3d152~ --> pkgs/main::conda-22.9.0-py39h06a4308_0 None
+  openssl            conda-forge::openssl-1.1.1s-h166bdaf_0 --> pkgs/main::openssl-1.1.1s-h7f8727e_0 None
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+anaconda-clean-1.1.1 | 8 KB      | #################################################################################################################### | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+Retrieving notices: ...working... done
+(base) jiang@azur:~$ anaconda-clean --yes
+Backup directory: /home/jiang/.anaconda_backup/2022-12-01T182106
+(base) jiang@azur:~$ rm -rf anaconda3
+(base) jiang@azur:~$ ls
+Miniconda3-latest-Linux-x86_64.sh  miniconda3
+(base) jiang@azur:~$ rm -rf ~/anaconda3
+(base) jiang@azur:~$ ls
+Miniconda3-latest-Linux-x86_64.sh  miniconda3
+(base) jiang@azur:~$ rm -rf ~/miniconda3
+(base) jiang@azur:~$ ls -la
+total 74868
+drwxr-xr-x  7 jiang jiang     4096 12月  1 18:23 .
+drwxr-xr-x 18 root  root      4096 12月  1 11:30 ..
+drwxrwxr-x  3 jiang jiang     4096 12月  1 18:21 .anaconda_backup
+-rw-------  1 jiang jiang      153 12月  1 17:09 .bash_history
+-rw-r--r--  1 jiang jiang      220  2月 25  2020 .bash_logout
+-rw-r--r--  1 jiang jiang     4250 12月  1 16:52 .bashrc
+drwx------  5 jiang jiang     4096 12月  1 17:33 .cache
+drwx------  5 jiang jiang     4096 12月  1 17:06 .config
+drwxr-xr-x  3 jiang jiang     4096 12月  1 15:15 .local
+-rw-r--r--  1 jiang jiang      807  2月 25  2020 .profile
+drwx------  2 jiang jiang     4096 12月  1 11:33 .ssh
+-rw-------  1 jiang jiang     1240 12月  1 11:33 .viminfo
+-rw-rw-r--  1 jiang jiang 76607678  5月 17  2022 Miniconda3-latest-Linux-x86_64.sh
+(base) jiang@azur:~$ rm .anaconda_backup/
+rm: cannot remove '.anaconda_backup/': Is a directory
+(base) jiang@azur:~$ rm -r .anaconda_backup/
+(base) jiang@azur:~$ rm .anaconda_backup/
+rm: cannot remove '.anaconda_backup/': No such file or directory
+(base) jiang@azur:~$ ls -la
+total 74864
+drwxr-xr-x  6 jiang jiang     4096 12月  1 18:24 .
+drwxr-xr-x 18 root  root      4096 12月  1 11:30 ..
+-rw-------  1 jiang jiang      153 12月  1 17:09 .bash_history
+-rw-r--r--  1 jiang jiang      220  2月 25  2020 .bash_logout
+-rw-r--r--  1 jiang jiang     4250 12月  1 16:52 .bashrc
+drwx------  5 jiang jiang     4096 12月  1 17:33 .cache
+drwx------  5 jiang jiang     4096 12月  1 17:06 .config
+drwxr-xr-x  3 jiang jiang     4096 12月  1 15:15 .local
+-rw-r--r--  1 jiang jiang      807  2月 25  2020 .profile
+drwx------  2 jiang jiang     4096 12月  1 11:33 .ssh
+-rw-------  1 jiang jiang     1240 12月  1 11:33 .viminfo
+-rw-rw-r--  1 jiang jiang 76607678  5月 17  2022 Miniconda3-latest-Linux-x86_64.sh
+(base) jiang@azur:~$ conda deactivate
+-bash: /home/jiang/miniconda3/bin/conda: No such file or directory
+(base) jiang@azur:~$ exit
+logout
+Connection to 157.82.133.226 closed.
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % ssh azur
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.15.0-53-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+55 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Thu Dec  1 17:09:23 2022 from 157.82.122.20
+jiang@azur:~$ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-pypy3-Linux-x86_64.sh"
+--2022-12-01 18:26:10--  https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-pypy3-Linux-x86_64.sh
+Resolving github.com (github.com)... 20.27.177.113
+Connecting to github.com (github.com)|20.27.177.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github.com/conda-forge/miniforge/releases/download/22.9.0-2/Mambaforge-pypy3-Linux-x86_64.sh [following]
+--2022-12-01 18:26:10--  https://github.com/conda-forge/miniforge/releases/download/22.9.0-2/Mambaforge-pypy3-Linux-x86_64.sh
+Reusing existing connection to github.com:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/221584272/9a643dd9-7bf4-4f0a-9db5-e99b5415b2e3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221201T092611Z&X-Amz-Expires=300&X-Amz-Signature=475fc14a8d49e52c9db761feadf4e3bb769c5f8b021fc2e4ce3aae27b04447bc&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=221584272&response-content-disposition=attachment%3B%20filename%3DMambaforge-pypy3-Linux-x86_64.sh&response-content-type=application%2Foctet-stream [following]
+--2022-12-01 18:26:11--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/221584272/9a643dd9-7bf4-4f0a-9db5-e99b5415b2e3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221201T092611Z&X-Amz-Expires=300&X-Amz-Signature=475fc14a8d49e52c9db761feadf4e3bb769c5f8b021fc2e4ce3aae27b04447bc&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=221584272&response-content-disposition=attachment%3B%20filename%3DMambaforge-pypy3-Linux-x86_64.sh&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.109.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 100767712 (96M) [application/octet-stream]
+Saving to: ‘Mambaforge-pypy3-Linux-x86_64.sh’
+
+Mambaforge-pypy3-Linux-x86_64.sh        100%[==============================================================================>]  96.10M  3.58MB/s    in 29s     
+
+2022-12-01 18:26:41 (3.28 MB/s) - ‘Mambaforge-pypy3-Linux-x86_64.sh’ saved [100767712/100767712]
+
+jiang@azur:~$ ls
+Mambaforge-pypy3-Linux-x86_64.sh  Miniconda3-latest-Linux-x86_64.sh
+jiang@azur:~$ bash Mambaforge-pypy3-Linux-x86_64.sh 
+
+Welcome to Mambaforge-pypy3 22.9.0-2
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+>>> 
+Miniforge installer code uses BSD-3-Clause license as stated below.
+
+Binary packages that come with it have their own licensing terms
+and by installing miniforge you agree to the licensing terms of individual
+packages as well. They include different OSI-approved licenses including
+the GNU General Public License and can be found in pkgs/<pkg-name>/info/licenses
+folders.
+
+Miniforge installer comes with a boostrapping executable that is used
+when installing miniforge and is deleted after miniforge is installed.
+The bootstrapping executable uses micromamba, cli11, cpp-filesystem,
+curl, c-ares, krb5, libarchive, libev, lz4, nghttp2, openssl, libsolv,
+nlohmann-json, reproc and zstd which are licensed under BSD-3-Clause,
+MIT and OpenSSL licenses. Licenses and copyright notices of these
+projects can be found at the following URL.
+https://github.com/conda-forge/micromamba-feedstock/tree/master/recipe.
+
+=============================================================================
+
+Copyright (c) 2019-2022, conda-forge
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Do you accept the license terms? [yes|no]
+[no] >>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> 
+Please answer 'yes' or 'no':'
+>>> yes
+
+Mambaforge-pypy3 will now be installed into this location:
+/home/jiang/mambaforge-pypy3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/jiang/mambaforge-pypy3] >>> 
+PREFIX=/home/jiang/mambaforge-pypy3
+Unpacking payload ...
+Extracting python-3.9.12-0_73_pypy.tar.bz2
+Extracting _libgcc_mutex-0.1-conda_forge.tar.bz2
+Extracting ca-certificates-2022.9.24-ha878542_0.tar.bz2
+Extracting libstdcxx-ng-12.2.0-h46fd767_19.tar.bz2
+Extracting pybind11-abi-4-hd8ed1ab_3.tar.bz2
+Extracting tzdata-2022f-h191b570_0.tar.bz2
+Extracting libgomp-12.2.0-h65d4601_19.tar.bz2
+Extracting _openmp_mutex-4.5-2_gnu.tar.bz2
+Extracting libgcc-ng-12.2.0-h65d4601_19.tar.bz2
+Extracting bzip2-1.0.8-h7f98852_4.tar.bz2
+Extracting c-ares-1.18.1-h7f98852_0.tar.bz2
+Extracting expat-2.5.0-h27087fc_0.tar.bz2
+Extracting fmt-9.1.0-h924138e_0.tar.bz2
+Extracting icu-70.1-h27087fc_0.tar.bz2
+Extracting keyutils-1.6.1-h166bdaf_0.tar.bz2
+Extracting libev-4.33-h516909a_1.tar.bz2
+Extracting libffi-3.4.2-h7f98852_5.tar.bz2
+Extracting libiconv-1.17-h166bdaf_0.tar.bz2
+Extracting libzlib-1.2.13-h166bdaf_4.tar.bz2
+Extracting lz4-c-1.9.3-h9c3ff4c_1.tar.bz2
+Extracting lzo-2.10-h516909a_1000.tar.bz2
+Extracting ncurses-6.3-h27087fc_1.tar.bz2
+Extracting openssl-3.0.7-h166bdaf_0.tar.bz2
+Extracting reproc-14.2.3-h7f98852_0.tar.bz2
+Extracting xz-5.2.6-h166bdaf_0.tar.bz2
+Extracting yaml-0.2.5-h7f98852_2.tar.bz2
+Extracting yaml-cpp-0.7.0-h27087fc_2.tar.bz2
+Extracting libedit-3.1.20191231-he28a2e2_2.tar.bz2
+Extracting libnghttp2-1.47.0-hff17c54_1.tar.bz2
+Extracting libsolv-0.7.22-h6239696_0.tar.bz2
+Extracting libsqlite-3.40.0-h753d276_0.tar.bz2
+Extracting libssh2-1.10.0-hf14f497_3.tar.bz2
+Extracting libxml2-2.10.3-h7463322_0.tar.bz2
+Extracting readline-8.1.2-h0f457ee_0.tar.bz2
+Extracting reproc-cpp-14.2.3-h9c3ff4c_0.tar.bz2
+Extracting tk-8.6.12-h27826a3_0.tar.bz2
+Extracting zlib-1.2.13-h166bdaf_4.tar.bz2
+Extracting zstd-1.5.2-h6239696_4.tar.bz2
+Extracting gdbm-1.18-h0a1914f_2.tar.bz2
+Extracting krb5-1.19.3-h08a2579_0.tar.bz2
+Extracting libarchive-3.5.2-hada088e_3.tar.bz2
+Extracting sqlite-3.40.0-h4ff8645_0.tar.bz2
+Extracting libcurl-7.86.0-h2283fc2_1.tar.bz2
+Extracting pypy3.9-7.3.9-hd671c94_6.tar.bz2
+Extracting libmamba-1.0.0-h9eff5f0_2.tar.bz2
+Extracting python_abi-3.9-2_pypy39_pp73.tar.bz2
+Extracting certifi-2022.9.24-pyhd8ed1ab_0.tar.bz2
+Extracting charset-normalizer-2.1.1-pyhd8ed1ab_0.tar.bz2
+Extracting colorama-0.4.6-pyhd8ed1ab_0.tar.bz2
+Extracting cryptography-38.0.3-py39hcc4996a_0.tar.bz2
+Extracting idna-3.4-pyhd8ed1ab_0.tar.bz2
+Extracting libmambapy-1.0.0-py39h64ccbee_2.tar.bz2
+Extracting pycosat-0.6.4-py39h4d8b378_1.tar.bz2
+Extracting pycparser-2.21-pyhd8ed1ab_0.tar.bz2
+Extracting pysocks-1.7.1-pyha2e5f31_6.tar.bz2
+Extracting ruamel_yaml-0.15.80-py39h4d8b378_1008.tar.bz2
+Extracting setuptools-65.5.1-pyhd8ed1ab_0.tar.bz2
+Extracting toolz-0.12.0-pyhd8ed1ab_0.tar.bz2
+Extracting wheel-0.38.4-pyhd8ed1ab_0.tar.bz2
+Extracting cffi-1.15.1-py39hfda2a12_2.tar.bz2
+Extracting pip-22.3.1-pyhd8ed1ab_0.tar.bz2
+Extracting pyopenssl-22.1.0-pyhd8ed1ab_0.tar.bz2
+Extracting tqdm-4.64.1-pyhd8ed1ab_0.tar.bz2
+Extracting brotlipy-0.7.0-py39h4d8b378_1005.tar.bz2
+Extracting conda-package-handling-1.9.0-py39h4d8b378_1.tar.bz2
+Extracting urllib3-1.26.11-pyhd8ed1ab_0.tar.bz2
+Extracting requests-2.28.1-pyhd8ed1ab_1.tar.bz2
+Extracting conda-22.9.0-py39h4162558_2.tar.bz2
+Extracting mamba-1.0.0-py39hcbb6966_2.tar.bz2
+
+                                           __
+          __  ______ ___  ____ _____ ___  / /_  ____ _
+         / / / / __ `__ \/ __ `/ __ `__ \/ __ \/ __ `/
+        / /_/ / / / / / / /_/ / / / / / / /_/ / /_/ /
+       / .___/_/ /_/ /_/\__,_/_/ /_/ /_/_.___/\__,_/
+      /_/
+
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3
+
+  Updating specs:
+
+   - python==3.9.12=0_73_pypy
+   - _libgcc_mutex==0.1=conda_forge
+   - ca-certificates==2022.9.24=ha878542_0
+   - libstdcxx-ng==12.2.0=h46fd767_19
+   - pybind11-abi==4=hd8ed1ab_3
+   - tzdata==2022f=h191b570_0
+   - libgomp==12.2.0=h65d4601_19
+   - _openmp_mutex==4.5=2_gnu
+   - libgcc-ng==12.2.0=h65d4601_19
+   - bzip2==1.0.8=h7f98852_4
+   - c-ares==1.18.1=h7f98852_0
+   - expat==2.5.0=h27087fc_0
+   - fmt==9.1.0=h924138e_0
+   - icu==70.1=h27087fc_0
+   - keyutils==1.6.1=h166bdaf_0
+   - libev==4.33=h516909a_1
+   - libffi==3.4.2=h7f98852_5
+   - libiconv==1.17=h166bdaf_0
+   - libzlib==1.2.13=h166bdaf_4
+   - lz4-c==1.9.3=h9c3ff4c_1
+   - lzo==2.10=h516909a_1000
+   - ncurses==6.3=h27087fc_1
+   - openssl==3.0.7=h166bdaf_0
+   - reproc==14.2.3=h7f98852_0
+   - xz==5.2.6=h166bdaf_0
+   - yaml==0.2.5=h7f98852_2
+   - yaml-cpp==0.7.0=h27087fc_2
+   - libedit==3.1.20191231=he28a2e2_2
+   - libnghttp2==1.47.0=hff17c54_1
+   - libsolv==0.7.22=h6239696_0
+   - libsqlite==3.40.0=h753d276_0
+   - libssh2==1.10.0=hf14f497_3
+   - libxml2==2.10.3=h7463322_0
+   - readline==8.1.2=h0f457ee_0
+   - reproc-cpp==14.2.3=h9c3ff4c_0
+   - tk==8.6.12=h27826a3_0
+   - zlib==1.2.13=h166bdaf_4
+   - zstd==1.5.2=h6239696_4
+   - gdbm==1.18=h0a1914f_2
+   - krb5==1.19.3=h08a2579_0
+   - libarchive==3.5.2=hada088e_3
+   - sqlite==3.40.0=h4ff8645_0
+   - libcurl==7.86.0=h2283fc2_1
+   - pypy3.9==7.3.9=hd671c94_6
+   - libmamba==1.0.0=h9eff5f0_2
+   - python_abi==3.9=2_pypy39_pp73
+   - certifi==2022.9.24=pyhd8ed1ab_0
+   - charset-normalizer==2.1.1=pyhd8ed1ab_0
+   - colorama==0.4.6=pyhd8ed1ab_0
+   - cryptography==38.0.3=py39hcc4996a_0
+   - idna==3.4=pyhd8ed1ab_0
+   - libmambapy==1.0.0=py39h64ccbee_2
+   - pycosat==0.6.4=py39h4d8b378_1
+   - pycparser==2.21=pyhd8ed1ab_0
+   - pysocks==1.7.1=pyha2e5f31_6
+   - ruamel_yaml==0.15.80=py39h4d8b378_1008
+   - setuptools==65.5.1=pyhd8ed1ab_0
+   - toolz==0.12.0=pyhd8ed1ab_0
+   - wheel==0.38.4=pyhd8ed1ab_0
+   - cffi==1.15.1=py39hfda2a12_2
+   - pip==22.3.1=pyhd8ed1ab_0
+   - pyopenssl==22.1.0=pyhd8ed1ab_0
+   - tqdm==4.64.1=pyhd8ed1ab_0
+   - brotlipy==0.7.0=py39h4d8b378_1005
+   - conda-package-handling==1.9.0=py39h4d8b378_1
+   - urllib3==1.26.11=pyhd8ed1ab_0
+   - requests==2.28.1=pyhd8ed1ab_1
+   - conda==22.9.0=py39h4162558_2
+   - mamba==1.0.0=py39hcbb6966_2
+
+
+  Package                        Version  Build              Channel                    Size
+──────────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+──────────────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex                    0.1  conda_forge        conda-forge/linux-64     Cached
+  + _openmp_mutex                    4.5  2_gnu              conda-forge/linux-64     Cached
+  + brotlipy                       0.7.0  py39h4d8b378_1005  conda-forge/linux-64     Cached
+  + bzip2                          1.0.8  h7f98852_4         conda-forge/linux-64     Cached
+  + c-ares                        1.18.1  h7f98852_0         conda-forge/linux-64     Cached
+  + ca-certificates            2022.9.24  ha878542_0         conda-forge/linux-64     Cached
+  + certifi                    2022.9.24  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + cffi                          1.15.1  py39hfda2a12_2     conda-forge/linux-64     Cached
+  + charset-normalizer             2.1.1  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + colorama                       0.4.6  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + conda                         22.9.0  py39h4162558_2     conda-forge/linux-64     Cached
+  + conda-package-handling         1.9.0  py39h4d8b378_1     conda-forge/linux-64     Cached
+  + cryptography                  38.0.3  py39hcc4996a_0     conda-forge/linux-64     Cached
+  + expat                          2.5.0  h27087fc_0         conda-forge/linux-64     Cached
+  + fmt                            9.1.0  h924138e_0         conda-forge/linux-64     Cached
+  + gdbm                            1.18  h0a1914f_2         conda-forge/linux-64     Cached
+  + icu                             70.1  h27087fc_0         conda-forge/linux-64     Cached
+  + idna                             3.4  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + keyutils                       1.6.1  h166bdaf_0         conda-forge/linux-64     Cached
+  + krb5                          1.19.3  h08a2579_0         conda-forge/linux-64     Cached
+  + libarchive                     3.5.2  hada088e_3         conda-forge/linux-64     Cached
+  + libcurl                       7.86.0  h2283fc2_1         conda-forge/linux-64     Cached
+  + libedit                 3.1.20191231  he28a2e2_2         conda-forge/linux-64     Cached
+  + libev                           4.33  h516909a_1         conda-forge/linux-64     Cached
+  + libffi                         3.4.2  h7f98852_5         conda-forge/linux-64     Cached
+  + libgcc-ng                     12.2.0  h65d4601_19        conda-forge/linux-64     Cached
+  + libgomp                       12.2.0  h65d4601_19        conda-forge/linux-64     Cached
+  + libiconv                        1.17  h166bdaf_0         conda-forge/linux-64     Cached
+  + libmamba                       1.0.0  h9eff5f0_2         conda-forge/linux-64     Cached
+  + libmambapy                     1.0.0  py39h64ccbee_2     conda-forge/linux-64     Cached
+  + libnghttp2                    1.47.0  hff17c54_1         conda-forge/linux-64     Cached
+  + libsolv                       0.7.22  h6239696_0         conda-forge/linux-64     Cached
+  + libsqlite                     3.40.0  h753d276_0         conda-forge/linux-64     Cached
+  + libssh2                       1.10.0  hf14f497_3         conda-forge/linux-64     Cached
+  + libstdcxx-ng                  12.2.0  h46fd767_19        conda-forge/linux-64     Cached
+  + libxml2                       2.10.3  h7463322_0         conda-forge/linux-64     Cached
+  + libzlib                       1.2.13  h166bdaf_4         conda-forge/linux-64     Cached
+  + lz4-c                          1.9.3  h9c3ff4c_1         conda-forge/linux-64     Cached
+  + lzo                             2.10  h516909a_1000      conda-forge/linux-64     Cached
+  + mamba                          1.0.0  py39hcbb6966_2     conda-forge/linux-64     Cached
+  + ncurses                          6.3  h27087fc_1         conda-forge/linux-64     Cached
+  + openssl                        3.0.7  h166bdaf_0         conda-forge/linux-64     Cached
+  + pip                           22.3.1  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + pybind11-abi                       4  hd8ed1ab_3         conda-forge/noarch       Cached
+  + pycosat                        0.6.4  py39h4d8b378_1     conda-forge/linux-64     Cached
+  + pycparser                       2.21  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + pyopenssl                     22.1.0  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + pypy3.9                        7.3.9  hd671c94_6         conda-forge/linux-64     Cached
+  + pysocks                        1.7.1  pyha2e5f31_6       conda-forge/noarch       Cached
+  + python                        3.9.12  0_73_pypy          conda-forge              Cached
+  + python_abi                       3.9  2_pypy39_pp73      conda-forge              Cached
+  + readline                       8.1.2  h0f457ee_0         conda-forge/linux-64     Cached
+  + reproc                        14.2.3  h7f98852_0         conda-forge/linux-64     Cached
+  + reproc-cpp                    14.2.3  h9c3ff4c_0         conda-forge/linux-64     Cached
+  + requests                      2.28.1  pyhd8ed1ab_1       conda-forge/noarch       Cached
+  + ruamel_yaml                  0.15.80  py39h4d8b378_1008  conda-forge/linux-64     Cached
+  + setuptools                    65.5.1  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + sqlite                        3.40.0  h4ff8645_0         conda-forge/linux-64     Cached
+  + tk                            8.6.12  h27826a3_0         conda-forge/linux-64     Cached
+  + toolz                         0.12.0  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + tqdm                          4.64.1  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + tzdata                         2022f  h191b570_0         conda-forge/noarch       Cached
+  + urllib3                      1.26.11  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + wheel                         0.38.4  pyhd8ed1ab_0       conda-forge/noarch       Cached
+  + xz                             5.2.6  h166bdaf_0         conda-forge/linux-64     Cached
+  + yaml                           0.2.5  h7f98852_2         conda-forge/linux-64     Cached
+  + yaml-cpp                       0.7.0  h27087fc_2         conda-forge/linux-64     Cached
+  + zlib                          1.2.13  h166bdaf_4         conda-forge/linux-64     Cached
+  + zstd                           1.5.2  h6239696_4         conda-forge/linux-64     Cached
+
+  Summary:
+
+  Install: 69 packages
+
+  Total download: 0 B
+
+──────────────────────────────────────────────────────────────────────────────────────────────
+
+
+Transaction starting
+Linking _libgcc_mutex-0.1-conda_forge
+Linking ca-certificates-2022.9.24-ha878542_0
+Linking libstdcxx-ng-12.2.0-h46fd767_19
+Linking libgomp-12.2.0-h65d4601_19
+Linking _openmp_mutex-4.5-2_gnu
+Linking libgcc-ng-12.2.0-h65d4601_19
+Linking yaml-cpp-0.7.0-h27087fc_2
+Linking yaml-0.2.5-h7f98852_2
+Linking xz-5.2.6-h166bdaf_0
+Linking reproc-14.2.3-h7f98852_0
+Linking openssl-3.0.7-h166bdaf_0
+Linking ncurses-6.3-h27087fc_1
+Linking lzo-2.10-h516909a_1000
+Linking lz4-c-1.9.3-h9c3ff4c_1
+Linking libzlib-1.2.13-h166bdaf_4
+Linking libiconv-1.17-h166bdaf_0
+Linking libffi-3.4.2-h7f98852_5
+Linking libev-4.33-h516909a_1
+Linking keyutils-1.6.1-h166bdaf_0
+Linking icu-70.1-h27087fc_0
+Linking fmt-9.1.0-h924138e_0
+Linking expat-2.5.0-h27087fc_0
+Linking c-ares-1.18.1-h7f98852_0
+Linking bzip2-1.0.8-h7f98852_4
+Linking reproc-cpp-14.2.3-h9c3ff4c_0
+Linking readline-8.1.2-h0f457ee_0
+Linking libedit-3.1.20191231-he28a2e2_2
+Linking zstd-1.5.2-h6239696_4
+Linking zlib-1.2.13-h166bdaf_4
+Linking tk-8.6.12-h27826a3_0
+Linking libssh2-1.10.0-hf14f497_3
+Linking libsqlite-3.40.0-h753d276_0
+Linking libsolv-0.7.22-h6239696_0
+Linking libxml2-2.10.3-h7463322_0
+Linking libnghttp2-1.47.0-hff17c54_1
+Linking gdbm-1.18-h0a1914f_2
+Linking krb5-1.19.3-h08a2579_0
+Linking sqlite-3.40.0-h4ff8645_0
+Linking libarchive-3.5.2-hada088e_3
+Linking libcurl-7.86.0-h2283fc2_1
+Linking libmamba-1.0.0-h9eff5f0_2
+Linking pybind11-abi-4-hd8ed1ab_3
+Linking tzdata-2022f-h191b570_0
+Linking pypy3.9-7.3.9-hd671c94_6
+Linking python_abi-3.9-2_pypy39_pp73
+Linking python-3.9.12-0_73_pypy
+Linking wheel-0.38.4-pyhd8ed1ab_0
+Linking setuptools-65.5.1-pyhd8ed1ab_0
+Linking pip-22.3.1-pyhd8ed1ab_0
+Linking toolz-0.12.0-pyhd8ed1ab_0
+Linking pysocks-1.7.1-pyha2e5f31_6
+Linking pycparser-2.21-pyhd8ed1ab_0
+Linking idna-3.4-pyhd8ed1ab_0
+Linking colorama-0.4.6-pyhd8ed1ab_0
+Linking charset-normalizer-2.1.1-pyhd8ed1ab_0
+Linking certifi-2022.9.24-pyhd8ed1ab_0
+Linking tqdm-4.64.1-pyhd8ed1ab_0
+Linking ruamel_yaml-0.15.80-py39h4d8b378_1008
+Linking pycosat-0.6.4-py39h4d8b378_1
+Linking libmambapy-1.0.0-py39h64ccbee_2
+Linking cryptography-38.0.3-py39hcc4996a_0
+Linking cffi-1.15.1-py39hfda2a12_2
+Linking conda-package-handling-1.9.0-py39h4d8b378_1
+Linking brotlipy-0.7.0-py39h4d8b378_1005
+Linking pyopenssl-22.1.0-pyhd8ed1ab_0
+Linking urllib3-1.26.11-pyhd8ed1ab_0
+Linking requests-2.28.1-pyhd8ed1ab_1
+Linking conda-22.9.0-py39h4162558_2
+Linking mamba-1.0.0-py39hcbb6966_2
+Transaction finished
+installation finished.
+Do you wish the installer to initialize Mambaforge-pypy3
+by running conda init? [yes|no]
+[no] >>> yes
+modified      /home/jiang/mambaforge-pypy3/condabin/conda
+modified      /home/jiang/mambaforge-pypy3/bin/conda
+modified      /home/jiang/mambaforge-pypy3/bin/conda-env
+no change     /home/jiang/mambaforge-pypy3/bin/activate
+no change     /home/jiang/mambaforge-pypy3/bin/deactivate
+no change     /home/jiang/mambaforge-pypy3/etc/profile.d/conda.sh
+no change     /home/jiang/mambaforge-pypy3/etc/fish/conf.d/conda.fish
+no change     /home/jiang/mambaforge-pypy3/shell/condabin/Conda.psm1
+no change     /home/jiang/mambaforge-pypy3/shell/condabin/conda-hook.ps1
+no change     /home/jiang/mambaforge-pypy3/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     /home/jiang/mambaforge-pypy3/etc/profile.d/conda.csh
+modified      /home/jiang/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+no change     /home/jiang/mambaforge-pypy3/condabin/conda
+no change     /home/jiang/mambaforge-pypy3/bin/conda
+no change     /home/jiang/mambaforge-pypy3/bin/conda-env
+no change     /home/jiang/mambaforge-pypy3/bin/activate
+no change     /home/jiang/mambaforge-pypy3/bin/deactivate
+no change     /home/jiang/mambaforge-pypy3/etc/profile.d/conda.sh
+no change     /home/jiang/mambaforge-pypy3/etc/fish/conf.d/conda.fish
+no change     /home/jiang/mambaforge-pypy3/shell/condabin/Conda.psm1
+no change     /home/jiang/mambaforge-pypy3/shell/condabin/conda-hook.ps1
+no change     /home/jiang/mambaforge-pypy3/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     /home/jiang/mambaforge-pypy3/etc/profile.d/conda.csh
+no change     /home/jiang/.bashrc
+No action taken.
+Added mamba to /home/jiang/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+If you'd prefer that conda's base environment not be activated on startup, 
+   set the auto_activate_base parameter to false: 
+
+conda config --set auto_activate_base false
+
+Thank you for installing Mambaforge-pypy3!
+jiang@azur:~$ exit
+logout
+Connection to 157.82.133.226 closed.
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % ssh azur
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.15.0-53-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+55 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Thu Dec  1 18:25:47 2022 from 157.82.122.20
+(base) jiang@azur:~$ mamba create -n assembly medaka -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['medaka']
+
+bioconda/noarch                                      4.1MB @   4.1MB/s  1.0s
+bioconda/linux-64                                    4.5MB @   4.1MB/s  1.1s
+conda-forge/noarch                                  10.4MB @   4.1MB/s  2.6s
+conda-forge/linux-64                                28.0MB @   5.5MB/s  5.3s
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/assembly
+
+  Updating specs:
+
+   - medaka
+
+
+  Package                         Version  Build                   Channel                    Size
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex                     0.1  conda_forge             conda-forge/linux-64     Cached
+  + _openmp_mutex                     4.5  2_gnu                   conda-forge/linux-64     Cached
+  + abseil-cpp                 20210324.2  h9c3ff4c_0              conda-forge/linux-64        1MB
+  + absl-py                         1.3.0  pyhd8ed1ab_0            conda-forge/noarch         98kB
+  + aiohttp                         3.8.3  py38h0a891b7_1          conda-forge/linux-64      452kB
+  + aiosignal                       1.3.1  pyhd8ed1ab_0            conda-forge/noarch         13kB
+  + astunparse                      1.6.3  pyhd8ed1ab_0            conda-forge/noarch         16kB
+  + async-timeout                   4.0.2  pyhd8ed1ab_0            conda-forge/noarch          9kB
+  + attrs                          22.1.0  pyh71513ae_1            conda-forge/noarch         49kB
+  + bcftools                         1.16  hfe4b78e_1              bioconda/linux-64         899kB
+  + biopython                        1.80  py38h0a891b7_0          conda-forge/linux-64        2MB
+  + blinker                           1.5  pyhd8ed1ab_0            conda-forge/noarch         15kB
+  + brotlipy                        0.7.0  py38h0a891b7_1005       conda-forge/linux-64      351kB
+  + bzip2                           1.0.8  h7f98852_4              conda-forge/linux-64     Cached
+  + c-ares                         1.18.1  h7f98852_0              conda-forge/linux-64     Cached
+  + ca-certificates             2022.9.24  ha878542_0              conda-forge/linux-64     Cached
+  + cached-property                 1.5.2  hd8ed1ab_1              conda-forge/noarch          4kB
+  + cached_property                 1.5.2  pyha770c72_1            conda-forge/noarch         11kB
+  + cachetools                      4.2.4  pyhd8ed1ab_0            conda-forge/noarch         13kB
+  + certifi                     2022.9.24  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + cffi                           1.15.1  py38h4a40e3a_2          conda-forge/linux-64      235kB
+  + charset-normalizer              2.1.1  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + click                           8.1.3  unix_pyhd8ed1ab_2       conda-forge/noarch         76kB
+  + cryptography                   38.0.4  py38h2b5fc30_0          conda-forge/linux-64        1MB
+  + frozenlist                      1.3.3  py38h0a891b7_0          conda-forge/linux-64       46kB
+  + gast                            0.4.0  pyh9f0ad1d_0            conda-forge/noarch         12kB
+  + giflib                          5.2.1  h36c2ea0_2              conda-forge/linux-64       79kB
+  + google-auth                    1.35.0  pyh6c4a22f_0            conda-forge/noarch         83kB
+  + google-auth-oauthlib            0.4.6  pyhd8ed1ab_0            conda-forge/noarch         19kB
+  + google-pasta                    0.2.0  pyh8c360ce_0            conda-forge/noarch         43kB
+  + grpc-cpp                       1.43.2  h9e046d8_3              conda-forge/linux-64        4MB
+  + grpcio                         1.43.0  py38hdd6454d_0          conda-forge/linux-64        2MB
+  + gsl                               2.7  he838d99_0              conda-forge/linux-64        3MB
+  + h5py                            3.7.0  nompi_py38h045baee_101  conda-forge/linux-64        1MB
+  + hdf5                           1.12.2  nompi_h2386368_100      conda-forge/linux-64        4MB
+  + htslib                           1.16  h6bc39ce_0              bioconda/linux-64           2MB
+  + icu                              70.1  h27087fc_0              conda-forge/linux-64     Cached
+  + idna                              3.4  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + importlib-metadata              5.1.0  pyha770c72_0            conda-forge/noarch         24kB
+  + intervaltree                    3.0.2  py_0                    conda-forge/noarch         24kB
+  + jpeg                               9e  h166bdaf_2              conda-forge/linux-64      275kB
+  + k8                              0.2.5  hd03093a_2              bioconda/linux-64           2MB
+  + keras                           2.7.0  pyhd8ed1ab_0            conda-forge/noarch        862kB
+  + keras-preprocessing             1.1.2  pyhd8ed1ab_0            conda-forge/noarch         35kB
+  + keyutils                        1.6.1  h166bdaf_0              conda-forge/linux-64     Cached
+  + krb5                           1.19.3  h3790be6_0              conda-forge/linux-64        2MB
+  + ld_impl_linux-64                 2.39  hcc3a1bd_1              conda-forge/linux-64      691kB
+  + libblas                         3.9.0  16_linux64_openblas     conda-forge/linux-64       13kB
+  + libcblas                        3.9.0  16_linux64_openblas     conda-forge/linux-64       13kB
+  + libcurl                        7.86.0  h7bff187_1              conda-forge/linux-64      357kB
+  + libdeflate                       1.13  h166bdaf_0              conda-forge/linux-64       80kB
+  + libedit                  3.1.20191231  he28a2e2_2              conda-forge/linux-64     Cached
+  + libev                            4.33  h516909a_1              conda-forge/linux-64     Cached
+  + libffi                          3.4.2  h7f98852_5              conda-forge/linux-64     Cached
+  + libgcc-ng                      12.2.0  h65d4601_19             conda-forge/linux-64     Cached
+  + libgfortran-ng                 12.2.0  h69a702a_19             conda-forge/linux-64       23kB
+  + libgfortran5                   12.2.0  h337968e_19             conda-forge/linux-64        2MB
+  + libgomp                        12.2.0  h65d4601_19             conda-forge/linux-64     Cached
+  + libiconv                         1.17  h166bdaf_0              conda-forge/linux-64     Cached
+  + liblapack                       3.9.0  16_linux64_openblas     conda-forge/linux-64       13kB
+  + libnghttp2                     1.47.0  hdcd2b5c_1              conda-forge/linux-64      828kB
+  + libnsl                          2.0.0  h7f98852_0              conda-forge/linux-64       31kB
+  + libopenblas                    0.3.21  pthreads_h78a6416_3     conda-forge/linux-64       11MB
+  + libpng                         1.6.39  h753d276_0              conda-forge/linux-64      283kB
+  + libprotobuf                    3.19.4  h780b84a_0              conda-forge/linux-64        3MB
+  + libsqlite                      3.40.0  h753d276_0              conda-forge/linux-64     Cached
+  + libssh2                        1.10.0  haa6b8db_3              conda-forge/linux-64      239kB
+  + libstdcxx-ng                   12.2.0  h46fd767_19             conda-forge/linux-64     Cached
+  + libuuid                        2.32.1  h7f98852_1000           conda-forge/linux-64       28kB
+  + libzlib                        1.2.13  h166bdaf_4              conda-forge/linux-64     Cached
+  + mappy                            2.24  py38h4c6a040_1          bioconda/linux-64         160kB
+  + markdown                        3.4.1  pyhd8ed1ab_0            conda-forge/noarch         66kB
+  + markupsafe                      2.1.1  py38h0a891b7_2          conda-forge/linux-64       23kB
+  + medaka                          1.7.2  py38h6239ad4_1          bioconda/linux-64          38MB
+  + minimap2                         2.24  h7132678_1              bioconda/linux-64         496kB
+  + multidict                       6.0.2  py38h0a891b7_2          conda-forge/linux-64       54kB
+  + ncurses                           6.3  h27087fc_1              conda-forge/linux-64     Cached
+  + numpy                          1.19.5  py38h8246c76_3          conda-forge/linux-64        6MB
+  + oauthlib                        3.2.2  pyhd8ed1ab_0            conda-forge/noarch         92kB
+  + ont-fast5-api                   4.1.0  pyhdfd78af_0            bioconda/noarch             2MB
+  + openssl                        1.1.1s  h166bdaf_0              conda-forge/linux-64        2MB
+  + opt_einsum                      3.3.0  pyhd8ed1ab_1            conda-forge/noarch         54kB
+  + packaging                        21.3  pyhd8ed1ab_0            conda-forge/noarch         36kB
+  + parasail-python                 1.3.3  py38h3b68952_0          bioconda/linux-64           3MB
+  + perl                           5.32.1  2_h7f98852_perl5        conda-forge/linux-64       15MB
+  + pip                            22.3.1  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + progressbar33                     2.4  py_0                    conda-forge/noarch         11kB
+  + protobuf                       3.19.4  py38h709712a_0          conda-forge/linux-64      327kB
+  + pyasn1                          0.4.8  py_0                    conda-forge/noarch         54kB
+  + pyasn1-modules                  0.2.7  py_0                    conda-forge/noarch         61kB
+  + pycparser                        2.21  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + pyjwt                           2.6.0  pyhd8ed1ab_0            conda-forge/noarch         21kB
+  + pyopenssl                      22.1.0  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + pyparsing                       3.0.9  pyhd8ed1ab_0            conda-forge/noarch         81kB
+  + pysam                          0.19.1  py38h1c8baaf_1          bioconda/linux-64           3MB
+  + pysocks                         1.7.1  pyha2e5f31_6            conda-forge/noarch       Cached
+  + pyspoa                          0.0.3  py38h8ded8fe_3          bioconda/linux-64         118kB
+  + python                         3.8.15  h257c98d_0_cpython      conda-forge/linux-64       21MB
+  + python-edlib                    1.3.9  py38h4a32c8e_1          bioconda/linux-64          77kB
+  + python-flatbuffers                2.0  pyhd8ed1ab_0            conda-forge/noarch         29kB
+  + python_abi                        3.8  3_cp38                  conda-forge/linux-64        6kB
+  + pyu2f                           0.1.5  pyhd8ed1ab_0            conda-forge/noarch         32kB
+  + re2                        2022.02.01  h9c3ff4c_0              conda-forge/linux-64      228kB
+  + readline                        8.1.2  h0f457ee_0              conda-forge/linux-64     Cached
+  + requests                       2.28.1  pyhd8ed1ab_1            conda-forge/noarch       Cached
+  + requests-oauthlib               1.3.1  pyhd8ed1ab_0            conda-forge/noarch         22kB
+  + rsa                               4.9  pyhd8ed1ab_0            conda-forge/noarch         30kB
+  + samtools                       1.16.1  h6899075_1              bioconda/linux-64         421kB
+  + scipy                           1.9.1  py38hea3f02b_0          conda-forge/linux-64       27MB
+  + setuptools                     65.5.1  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + six                            1.16.0  pyh6c4a22f_0            conda-forge/noarch         14kB
+  + snappy                          1.1.9  hbd366e4_2              conda-forge/linux-64       37kB
+  + sortedcontainers                2.4.0  pyhd8ed1ab_0            conda-forge/noarch         26kB
+  + sqlite                         3.40.0  h4ff8645_0              conda-forge/linux-64     Cached
+  + tar                              1.34  hb2e2bae_1              conda-forge/linux-64      915kB
+  + tensorboard                     2.6.0  pyhd8ed1ab_1            conda-forge/noarch          5MB
+  + tensorboard-data-server         0.6.0  py38h2b5fc30_3          conda-forge/linux-64        3MB
+  + tensorboard-plugin-wit          1.8.1  pyhd8ed1ab_0            conda-forge/noarch        685kB
+  + tensorflow                      2.7.1  cpu_py38h66f0ec1_0      conda-forge/linux-64       28kB
+  + tensorflow-base                 2.7.1  cpu_py38ha28dbe6_0      conda-forge/linux-64      115MB
+  + tensorflow-estimator            2.7.1  cpu_py38h4e23bc6_0      conda-forge/linux-64      669kB
+  + termcolor                       2.1.1  pyhd8ed1ab_0            conda-forge/noarch         10kB
+  + tk                             8.6.12  h27826a3_0              conda-forge/linux-64     Cached
+  + typing-extensions               4.4.0  hd8ed1ab_0              conda-forge/noarch          9kB
+  + typing_extensions               4.4.0  pyha770c72_0            conda-forge/noarch         30kB
+  + urllib3                       1.26.13  pyhd8ed1ab_0            conda-forge/noarch        111kB
+  + werkzeug                        2.2.2  pyhd8ed1ab_0            conda-forge/noarch        255kB
+  + wheel                          0.38.4  pyhd8ed1ab_0            conda-forge/noarch       Cached
+  + wrapt                          1.14.1  py38h0a891b7_1          conda-forge/linux-64       52kB
+  + xz                              5.2.6  h166bdaf_0              conda-forge/linux-64     Cached
+  + yarl                            1.8.1  py38h0a891b7_0          conda-forge/linux-64       93kB
+  + zipp                           3.11.0  pyhd8ed1ab_0            conda-forge/noarch         16kB
+  + zlib                           1.2.13  h166bdaf_4              conda-forge/linux-64     Cached
+  + zstd                            1.5.2  h6239696_4              conda-forge/linux-64     Cached
+
+  Summary:
+
+  Install: 134 packages
+
+  Total download: 294MB
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+libgfortran-ng                                      22.9kB @ 145.5kB/s  0.2s
+libgfortran5                                         1.8MB @   8.4MB/s  0.2s
+abseil-cpp                                           1.0MB @   4.0MB/s  0.1s
+libopenblas                                         10.6MB @  33.9MB/s  0.3s
+libpng                                             282.6kB @ 800.0kB/s  0.0s
+python_abi                                           5.7kB @  15.1kB/s  0.4s
+ld_impl_linux-64                                   691.4kB @   1.6MB/s  0.4s
+libdeflate                                          80.4kB @ 174.6kB/s  0.2s
+krb5                                                 1.5MB @   3.2MB/s  0.1s
+minimap2                                           495.7kB @ 937.1kB/s  0.1s
+zipp                                                15.7kB @  28.5kB/s  0.0s
+blinker                                             15.2kB @  27.3kB/s  0.1s
+cachetools                                          12.7kB @  22.2kB/s  0.0s
+perl                                                15.1MB @  25.9MB/s  0.3s
+hdf5                                                 3.7MB @   6.3MB/s  0.2s
+typing_extensions                                   30.0kB @  50.6kB/s  0.0s
+six                                                 14.3kB @  23.2kB/s  0.0s
+importlib-metadata                                  23.9kB @  38.3kB/s  0.0s
+sortedcontainers                                    26.3kB @  41.7kB/s  0.0s
+packaging                                           36.4kB @  56.8kB/s  0.0s
+astunparse                                          15.5kB @  23.9kB/s  0.0s
+markdown                                            66.2kB @ 100.4kB/s  0.0s
+tensorboard-plugin-wit                             684.5kB @   1.0MB/s  0.1s
+gsl                                                  3.4MB @   4.9MB/s  0.3s
+brotlipy                                           350.5kB @ 488.5kB/s  0.0s
+pysam                                                2.8MB @   3.3MB/s  0.1s
+frozenlist                                          45.6kB @  53.4kB/s  0.2s
+werkzeug                                           254.6kB @ 292.3kB/s  0.0s
+keras-preprocessing                                 35.2kB @  39.9kB/s  0.0s
+requests-oauthlib                                   22.2kB @  24.9kB/s  0.0s
+google-auth                                         83.1kB @  90.6kB/s  0.0s
+h5py                                                 1.3MB @   1.0MB/s  0.6s
+re2                                                227.9kB @ 171.1kB/s  0.0s
+numpy                                                5.6MB @   3.9MB/s  0.8s
+openssl                                              2.2MB @   1.5MB/s  0.1s
+libcblas                                            12.8kB @   8.7kB/s  0.0s
+libprotobuf                                          2.7MB @   1.8MB/s  0.1s
+k8                                                   1.8MB @   1.1MB/s  0.1s
+bcftools                                           899.0kB @ 547.2kB/s  0.0s
+grpcio                                               2.5MB @   1.5MB/s  1.0s
+attrs                                               49.5kB @  29.7kB/s  0.0s
+libblas                                             12.9kB @   7.7kB/s  0.2s
+pyparsing                                           81.3kB @  48.1kB/s  0.0s
+termcolor                                           10.3kB @   6.1kB/s  0.0s
+progressbar33                                       11.1kB @   6.5kB/s  0.0s
+cached-property                                      4.1kB @   2.4kB/s  0.0s
+google-pasta                                        43.2kB @  25.0kB/s  0.0s
+markupsafe                                          23.0kB @  13.3kB/s  0.0s
+wrapt                                               51.9kB @  29.7kB/s  0.0s
+yarl                                                93.2kB @  53.0kB/s  0.0s
+opt_einsum                                          54.5kB @  30.6kB/s  0.0s
+cryptography                                         1.4MB @ 778.7kB/s  0.1s
+tensorboard                                          5.3MB @   2.8MB/s  0.1s
+snappy                                              37.5kB @  19.4kB/s  0.0s
+libuuid                                             28.3kB @  14.4kB/s  0.0s
+libssh2                                            239.5kB @ 120.5kB/s  0.0s
+python                                              20.9MB @   9.1MB/s  0.3s
+htslib                                               2.4MB @   1.0MB/s  0.1s
+mappy                                              160.4kB @  67.4kB/s  0.6s
+python-flatbuffers                                  28.6kB @  11.9kB/s  0.0s
+keras                                              862.4kB @ 340.3kB/s  0.1s
+typing-extensions                                    8.6kB @   3.4kB/s  0.0s
+pyasn1                                              54.3kB @  21.2kB/s  0.2s
+async-timeout                                        9.3kB @   3.6kB/s  0.0s
+cffi                                               234.5kB @  90.2kB/s  0.0s
+ont-fast5-api                                        2.3MB @ 864.9kB/s  0.9s
+urllib3                                            110.7kB @  41.0kB/s  0.0s
+tensorflow-estimator                               669.2kB @ 238.7kB/s  0.1s
+medaka                                              37.6MB @  13.3MB/s  1.9s
+giflib                                              79.3kB @  28.0kB/s  0.0s
+libnghttp2                                         827.7kB @ 289.4kB/s  0.0s
+cached_property                                     11.1kB @   3.8kB/s  0.0s
+absl-py                                             97.6kB @  33.6kB/s  0.0s
+pyu2f                                               31.9kB @  10.9kB/s  0.0s
+tensorboard-data-server                              3.5MB @   1.2MB/s  0.1s
+pyspoa                                             117.7kB @  39.0kB/s  0.4s
+biopython                                            2.5MB @ 820.7kB/s  0.4s
+oauthlib                                            91.9kB @  30.2kB/s  0.0s
+tensorflow                                          27.9kB @   9.1kB/s  0.0s
+samtools                                           420.8kB @ 135.5kB/s  0.0s
+tar                                                914.7kB @ 292.0kB/s  0.1s
+gast                                                12.3kB @   3.9kB/s  0.0s
+intervaltree                                        23.7kB @   7.5kB/s  0.0s
+aiohttp                                            452.2kB @ 141.8kB/s  0.0s
+libnsl                                              31.2kB @   9.7kB/s  0.0s
+python-edlib                                        77.5kB @  24.0kB/s  0.2s
+pyjwt                                               21.4kB @   6.6kB/s  0.0s
+grpc-cpp                                             4.4MB @   1.3MB/s  0.4s
+rsa                                                 29.9kB @   9.1kB/s  0.0s
+jpeg                                               275.1kB @  83.8kB/s  0.0s
+click                                               76.0kB @  23.1kB/s  0.0s
+liblapack                                           12.8kB @   3.9kB/s  0.0s
+multidict                                           53.7kB @  16.1kB/s  0.0s
+libcurl                                            356.9kB @ 106.1kB/s  0.0s
+google-auth-oauthlib                                19.3kB @   5.7kB/s  0.0s
+pyasn1-modules                                      61.3kB @  18.0kB/s  0.0s
+aiosignal                                           12.7kB @   3.7kB/s  0.0s
+protobuf                                           326.7kB @  87.8kB/s  0.4s
+tensorflow-base                                    115.3MB @  27.3MB/s  3.3s
+parasail-python                                      2.9MB @ 675.1kB/s  1.1s
+scipy                                               27.5MB @   6.0MB/s  1.5s
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+To activate this environment, use
+
+     $ mamba activate assembly
+
+To deactivate an active environment, use
+
+     $ mamba deactivate
+
+(base) jiang@azur:~$ conda activate assembly
+(assembly) jiang@azur:~$ mamba install flye -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['flye']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Pinned packages:
+  - python 3.8.*
+
+
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/assembly
+
+  Updating specs:
+
+   - flye
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package  Version  Build           Channel               Size
+────────────────────────────────────────────────────────────────
+  Install:
+────────────────────────────────────────────────────────────────
+
+  + flye     2.9.1  py38hf4f3596_0  bioconda/linux-64     37MB
+
+  Summary:
+
+  Install: 1 packages
+
+  Total download: 37MB
+
+────────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+flye                                                37.0MB @  19.5MB/s  1.9s
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(assembly) jiang@azur:~$ mamba install unicycler=0.4.8
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['unicycler=0.4.8']
+
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Pinned packages:
+  - python 3.8.*
+
+
+Encountered problems while solving:
+  - nothing provides requested unicycler 0.4.8**
+
+(assembly) jiang@azur:~$ mamba install unicycler=0.4.8 -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['unicycler=0.4.8']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Pinned packages:
+  - python 3.8.*
+
+
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/assembly
+
+  Updating specs:
+
+   - unicycler=0.4.8
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package                                  Version  Build             Channel                    Size
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  + _sysroot_linux-64_curr_repodata_hack         3  h5bd9786_13       conda-forge/noarch         15kB
+  + alsa-lib                                 1.2.8  h166bdaf_0        conda-forge/linux-64      592kB
+  + bc                                      1.07.1  h7f98852_0        conda-forge/linux-64      103kB
+  + blast                                   2.13.0  hf3cf87c_0        bioconda/linux-64          24MB
+  + bowtie2                                  2.5.0  py38h77f66f0_0    bioconda/linux-64          15MB
+  + cairo                                   1.16.0  ha61ee94_1014     conda-forge/linux-64        2MB
+  + curl                                    7.86.0  h7bff187_1        conda-forge/linux-64       93kB
+  + entrez-direct                             16.2  he881be0_1        bioconda/linux-64           8MB
+  + expat                                    2.5.0  h27087fc_0        conda-forge/linux-64     Cached
+  + font-ttf-dejavu-sans-mono                 2.37  hab24e00_0        conda-forge/noarch        397kB
+  + font-ttf-inconsolata                     3.000  h77eed37_0        conda-forge/noarch         97kB
+  + font-ttf-source-code-pro                 2.038  h77eed37_0        conda-forge/noarch        701kB
+  + font-ttf-ubuntu                           0.83  hab24e00_0        conda-forge/noarch          2MB
+  + fontconfig                              2.14.1  hc2a2eb6_0        conda-forge/linux-64      374kB
+  + fonts-conda-ecosystem                        1  0                 conda-forge/noarch          4kB
+  + fonts-conda-forge                            1  0                 conda-forge/noarch          4kB
+  + freebayes                                1.3.6  hbfe0e7f_2        bioconda/linux-64          13MB
+  + freetype                                2.12.1  hca18f0e_1        conda-forge/linux-64      626kB
+  + gettext                                 0.21.1  h27087fc_0        conda-forge/linux-64        4MB
+  + graphite2                               1.3.13  h58526e2_1001     conda-forge/linux-64      105kB
+  + harfbuzz                                 5.3.0  h418a68e_0        conda-forge/linux-64        2MB
+  + kernel-headers_linux-64                 3.10.0  h4a8ded7_13       conda-forge/noarch        976kB
+  + lcms2                                     2.14  h6ed2654_0        conda-forge/linux-64      262kB
+  + lerc                                     4.0.0  h27087fc_0        conda-forge/linux-64      282kB
+  + libcups                                  2.3.3  h3e49a29_2        conda-forge/linux-64        5MB
+  + libglib                                 2.74.1  h606061b_1        conda-forge/linux-64        3MB
+  + libidn2                                  2.3.4  h166bdaf_0        conda-forge/linux-64      160kB
+  + libtiff                                  4.4.0  h0e0dad5_3        conda-forge/linux-64      658kB
+  + libunistring                            0.9.10  h7f98852_0        conda-forge/linux-64        1MB
+  + libwebp-base                             1.2.4  h166bdaf_0        conda-forge/linux-64      413kB
+  + libxcb                                    1.13  h7f98852_1004     conda-forge/linux-64      400kB
+  + llvm-openmp                              8.0.1  hc9558a2_0        conda-forge/linux-64      449kB
+  + miniasm                               0.3_r179  h7132678_3        bioconda/linux-64         127kB
+  + openjdk                                 17.0.3  hafdced1_4        conda-forge/linux-64      181MB
+  + openmp                                   8.0.1  0                 conda-forge/linux-64        8kB
+  + parallel                              20160622  1                 bioconda/linux-64           1MB
+  + pcre                                      8.45  h9c3ff4c_0        conda-forge/linux-64      259kB
+  + pcre2                                    10.40  hc3806b6_0        conda-forge/linux-64        2MB
+  + perl-archive-tar                          2.40  pl5321hdfd78af_0  bioconda/noarch            34kB
+  + perl-carp                                 1.38  pl5321hdfd78af_4  bioconda/noarch            17kB
+  + perl-common-sense                         3.75  pl5321hdfd78af_0  bioconda/noarch            14kB
+  + perl-compress-raw-bzip2                  2.201  pl5321h87f3376_1  bioconda/linux-64          49kB
+  + perl-compress-raw-zlib                   2.105  pl5321h87f3376_0  bioconda/linux-64          77kB
+  + perl-encode                               3.19  pl5321hec16e2b_1  bioconda/linux-64           2MB
+  + perl-exporter                             5.72  pl5321hdfd78af_2  bioconda/noarch            16kB
+  + perl-exporter-tiny                    1.002002  pl5321hdfd78af_0  bioconda/noarch            25kB
+  + perl-extutils-makemaker                   7.64  pl5321hd8ed1ab_0  conda-forge/noarch        148kB
+  + perl-io-compress                         2.201  pl5321h87f3376_0  bioconda/linux-64          86kB
+  + perl-io-zlib                              1.11  pl5321hdfd78af_0  bioconda/noarch            11kB
+  + perl-json                                 4.10  pl5321hdfd78af_0  bioconda/noarch            57kB
+  + perl-json-xs                              2.34  pl5321h9f5acd7_5  bioconda/linux-64          65kB
+  + perl-list-moreutils                      0.430  pl5321hdfd78af_0  bioconda/noarch            32kB
+  + perl-list-moreutils-xs                   0.430  pl5321hec16e2b_1  bioconda/linux-64          50kB
+  + perl-parent                              0.236  pl5321hdfd78af_2  bioconda/noarch             8kB
+  + perl-pathtools                            3.75  pl5321hec16e2b_3  bioconda/linux-64          43kB
+  + perl-scalar-list-utils                    1.62  pl5321hec16e2b_1  bioconda/linux-64          45kB
+  + perl-threaded                           5.32.1  hdfd78af_1        bioconda/noarch             6kB
+  + perl-types-serialiser                     1.01  pl5321hdfd78af_0  bioconda/noarch            13kB
+  + pilon                                     1.24  hdfd78af_0        bioconda/noarch            10MB
+  + pixman                                  0.40.0  h36c2ea0_0        conda-forge/linux-64      643kB
+  + pthread-stubs                              0.4  h36c2ea0_1001     conda-forge/linux-64        6kB
+  + racon                                    1.5.0  h7ff8a90_0        bioconda/linux-64         158kB
+  + spades                                  3.15.5  h95f258a_1        bioconda/linux-64          50MB
+  + sysroot_linux-64                          2.17  h4a8ded7_13       conda-forge/noarch         36MB
+  + tabixpp                                  1.1.0  h470d46e_11       bioconda/linux-64          26kB
+  + tbb                                   2021.7.0  h924138e_0        conda-forge/linux-64        2MB
+  + unicycler                                0.4.8  py38h8e3bb3f_5    bioconda/linux-64           1MB
+  + vcflib                                   1.0.3  ha04fe3b_2        bioconda/linux-64           1MB
+  + wget                                    1.20.3  ha56f1ee_1        conda-forge/linux-64      824kB
+  + xorg-fixesproto                            5.0  h7f98852_1002     conda-forge/linux-64        9kB
+  + xorg-inputproto                          2.3.2  h7f98852_1002     conda-forge/linux-64       20kB
+  + xorg-kbproto                             1.0.7  h7f98852_1002     conda-forge/linux-64       27kB
+  + xorg-libice                             1.0.10  h7f98852_0        conda-forge/linux-64       59kB
+  + xorg-libsm                               1.2.3  hd9c2040_1000     conda-forge/linux-64       26kB
+  + xorg-libx11                              1.7.2  h7f98852_0        conda-forge/linux-64      963kB
+  + xorg-libxau                              1.0.9  h7f98852_0        conda-forge/linux-64       13kB
+  + xorg-libxdmcp                            1.1.3  h7f98852_0        conda-forge/linux-64       19kB
+  + xorg-libxext                             1.3.4  h7f98852_1        conda-forge/linux-64       55kB
+  + xorg-libxfixes                           5.0.3  h7f98852_1004     conda-forge/linux-64       18kB
+  + xorg-libxi                              1.7.10  h7f98852_0        conda-forge/linux-64       47kB
+  + xorg-libxrender                         0.9.10  h7f98852_1003     conda-forge/linux-64       33kB
+  + xorg-libxtst                             1.2.3  h7f98852_1002     conda-forge/linux-64       32kB
+  + xorg-recordproto                        1.14.2  h7f98852_1002     conda-forge/linux-64        8kB
+  + xorg-renderproto                        0.11.1  h7f98852_1002     conda-forge/linux-64       10kB
+  + xorg-xextproto                           7.3.0  h7f98852_1002     conda-forge/linux-64       28kB
+  + xorg-xproto                             7.0.31  h7f98852_1007     conda-forge/linux-64       75kB
+
+  Summary:
+
+  Install: 86 packages
+
+  Total download: 377MB
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+pcre                                               259.4kB @   1.4MB/s  0.2s
+curl                                                92.8kB @ 491.4kB/s  0.2s
+alsa-lib                                           592.3kB @   2.8MB/s  0.2s
+xorg-libice                                         59.4kB @ 268.5kB/s  0.0s
+tbb                                                  2.1MB @   8.8MB/s  0.2s
+xorg-recordproto                                     8.0kB @  34.0kB/s  0.0s
+xorg-kbproto                                        27.3kB @ 109.1kB/s  0.0s
+pthread-stubs                                        5.6kB @  21.8kB/s  0.0s
+openmp                                               8.2kB @  30.7kB/s  0.0s
+fontconfig                                         374.2kB @   1.3MB/s  0.0s
+libidn2                                            160.4kB @ 545.1kB/s  0.0s
+xorg-libxext                                        54.9kB @ 178.0kB/s  0.0s
+xorg-libxtst                                        32.1kB @ 101.0kB/s  0.0s
+wget                                               823.6kB @   2.5MB/s  0.1s
+perl-list-moreutils-xs                              50.3kB @ 149.9kB/s  0.0s
+perl-scalar-list-utils                              44.7kB @ 130.3kB/s  0.0s
+gettext                                              4.3MB @  12.1MB/s  0.2s
+fonts-conda-forge                                    4.1kB @  10.8kB/s  0.0s
+font-ttf-source-code-pro                           700.8kB @   1.8MB/s  0.0s
+perl-exporter-tiny                                  25.4kB @  63.1kB/s  0.0s
+perl-exporter                                       15.9kB @  38.6kB/s  0.0s
+perl-list-moreutils                                 32.5kB @  77.0kB/s  0.0s
+perl-json-xs                                        65.4kB @ 148.0kB/s  0.0s
+entrez-direct                                        7.8MB @  16.1MB/s  0.2s
+freebayes                                           12.5MB @  17.9MB/s  0.3s
+pilon                                               10.4MB @  10.2MB/s  0.3s
+freetype                                           625.7kB @ 581.8kB/s  0.1s
+libwebp-base                                       413.4kB @ 369.4kB/s  0.0s
+llvm-openmp                                        449.4kB @ 361.4kB/s  1.2s
+xorg-renderproto                                     9.6kB @   7.6kB/s  0.0s
+graphite2                                          104.7kB @  65.4kB/s  0.5s
+libunistring                                         1.4MB @ 889.7kB/s  0.3s
+xorg-fixesproto                                      9.1kB @   5.6kB/s  0.0s
+font-ttf-ubuntu                                      2.0MB @   1.2MB/s  1.3s
+libtiff                                            657.5kB @ 397.7kB/s  0.1s
+perl-compress-raw-bzip2                             48.8kB @  29.1kB/s  0.0s
+xorg-libx11                                        963.4kB @ 572.1kB/s  0.1s
+xorg-libxi                                          47.3kB @  27.9kB/s  0.1s
+_sysroot_linux-64_curr_repodata_hack                14.6kB @   8.6kB/s  0.0s
+tabixpp                                             25.7kB @  15.1kB/s  0.0s
+perl-io-zlib                                        11.5kB @   6.6kB/s  0.0s
+perl-encode                                          2.2MB @   1.2MB/s  0.1s
+perl-io-compress                                    85.8kB @  46.4kB/s  0.0s
+perl-parent                                          7.9kB @   4.2kB/s  0.2s
+spades                                              50.2MB @  25.1MB/s  1.6s
+pixman                                             642.5kB @ 309.7kB/s  0.1s
+perl-json                                           57.1kB @  27.4kB/s  0.2s
+xorg-inputproto                                     19.6kB @   9.3kB/s  0.0s
+xorg-libsm                                          26.4kB @  12.4kB/s  0.0s
+xorg-libxau                                         13.4kB @   6.3kB/s  0.0s
+xorg-libxfixes                                      18.1kB @   8.4kB/s  0.0s
+kernel-headers_linux-64                            976.3kB @ 452.8kB/s  0.5s
+perl-extutils-makemaker                            148.2kB @  67.0kB/s  0.1s
+vcflib                                               1.4MB @ 616.9kB/s  0.1s
+perl-carp                                           17.1kB @   7.6kB/s  0.0s
+cairo                                                1.6MB @ 673.6kB/s  0.1s
+racon                                              158.1kB @  67.1kB/s  0.2s
+perl-common-sense                                   13.6kB @   5.6kB/s  0.2s
+pcre2                                                2.4MB @ 963.3kB/s  0.1s
+libxcb                                             399.9kB @ 155.3kB/s  0.1s
+unicycler                                            1.3MB @ 484.4kB/s  0.7s
+font-ttf-dejavu-sans-mono                          397.4kB @ 131.3kB/s  0.4s
+fonts-conda-ecosystem                                3.7kB @   1.2kB/s  0.0s
+openjdk                                            180.7MB @  56.4MB/s  2.7s
+miniasm                                            126.6kB @  39.4kB/s  0.6s
+bc                                                 102.7kB @  31.8kB/s  0.0s
+perl-archive-tar                                    34.1kB @  10.5kB/s  0.0s
+blast                                               23.5MB @   7.1MB/s  1.0s
+libglib                                              3.3MB @ 963.7kB/s  0.2s
+parallel                                             1.0MB @ 304.7kB/s  0.4s
+perl-pathtools                                      43.1kB @  12.5kB/s  0.0s
+perl-compress-raw-zlib                              77.2kB @  22.4kB/s  0.2s
+lcms2                                              262.1kB @  75.3kB/s  0.0s
+font-ttf-inconsolata                                96.5kB @  27.6kB/s  0.0s
+xorg-libxdmcp                                       19.1kB @   5.4kB/s  0.0s
+perl-threaded                                        5.5kB @   1.5kB/s  0.0s
+harfbuzz                                             2.3MB @ 635.9kB/s  0.1s
+xorg-xextproto                                      28.3kB @   7.8kB/s  0.1s
+lerc                                               281.8kB @  77.6kB/s  0.0s
+xorg-libxrender                                     32.9kB @   9.0kB/s  0.0s
+perl-types-serialiser                               13.1kB @   3.6kB/s  0.0s
+sysroot_linux-64                                    35.8MB @   9.6MB/s  0.4s
+libcups                                              4.8MB @   1.2MB/s  0.5s
+xorg-xproto                                         74.9kB @  18.8kB/s  1.5s
+bowtie2                                             15.5MB @   3.5MB/s  0.8s
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(assembly) jiang@azur:~$ mamba install filtlong -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['filtlong']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Pinned packages:
+  - python 3.8.*
+
+
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/assembly
+
+  Updating specs:
+
+   - filtlong
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package     Version  Build       Channel               Size
+───────────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────────
+
+  + filtlong    0.2.1  hd03093a_1  bioconda/linux-64     83kB
+
+  Summary:
+
+  Install: 1 packages
+
+  Total download: 83kB
+
+───────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+filtlong                                            83.2kB @ 152.2kB/s  0.5s
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(assembly) jiang@azur:~$ mamba install fastp -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['fastp']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Pinned packages:
+  - python 3.8.*
+
+
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/assembly
+
+  Updating specs:
+
+   - fastp
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package  Version  Build       Channel                   Size
+────────────────────────────────────────────────────────────────
+  Install:
+────────────────────────────────────────────────────────────────
+
+  + fastp   0.23.2  h5f740d0_3  bioconda/linux-64          3MB
+  + isa-l   2.30.0  ha770c72_4  conda-forge/linux-64     196kB
+
+  Summary:
+
+  Install: 2 packages
+
+  Total download: 4MB
+
+────────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+isa-l                                              196.1kB @ 645.2kB/s  0.3s
+fastp                                                3.3MB @   4.5MB/s  0.7s
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(assembly) jiang@azur:~$ mamba install seqkit -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['seqkit']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Pinned packages:
+  - python 3.8.*
+
+
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/assembly
+
+  Updating specs:
+
+   - seqkit
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package   Version  Build       Channel               Size
+─────────────────────────────────────────────────────────────
+  Install:
+─────────────────────────────────────────────────────────────
+
+  + seqkit    2.3.1  h9ee0642_0  bioconda/linux-64      7MB
+
+  Summary:
+
+  Install: 1 packages
+
+  Total download: 7MB
+
+─────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+seqkit                                               7.0MB @  10.0MB/s  0.7s
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(assembly) jiang@azur:~$ mamba install fastqc -c bioconda
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['fastqc']
+
+bioconda/linux-64                                           Using cache
+bioconda/noarch                                             Using cache
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+
+Pinned packages:
+  - python 3.8.*
+
+
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/assembly
+
+  Updating specs:
+
+   - fastqc
+   - ca-certificates
+   - certifi
+   - openssl
+
+
+  Package   Version  Build       Channel             Size
+───────────────────────────────────────────────────────────
+  Install:
+───────────────────────────────────────────────────────────
+
+  + fastqc   0.11.9  hdfd78af_1  bioconda/noarch     10MB
+
+  Summary:
+
+  Install: 1 packages
+
+  Total download: 10MB
+
+───────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+fastqc                                              10.2MB @  55.6MB/s  0.2s
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(assembly) jiang@azur:~$ conda list
+# packages in environment at /home/jiang/mambaforge-pypy3/envs/assembly:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       2_gnu    conda-forge
+_sysroot_linux-64_curr_repodata_hack 3                   h5bd9786_13    conda-forge
+abseil-cpp                20210324.2           h9c3ff4c_0    conda-forge
+absl-py                   1.3.0              pyhd8ed1ab_0    conda-forge
+aiohttp                   3.8.3            py38h0a891b7_1    conda-forge
+aiosignal                 1.3.1              pyhd8ed1ab_0    conda-forge
+alsa-lib                  1.2.8                h166bdaf_0    conda-forge
+astunparse                1.6.3              pyhd8ed1ab_0    conda-forge
+async-timeout             4.0.2              pyhd8ed1ab_0    conda-forge
+attrs                     22.1.0             pyh71513ae_1    conda-forge
+bc                        1.07.1               h7f98852_0    conda-forge
+bcftools                  1.16                 hfe4b78e_1    bioconda
+biopython                 1.80             py38h0a891b7_0    conda-forge
+blast                     2.13.0               hf3cf87c_0    bioconda
+blinker                   1.5                pyhd8ed1ab_0    conda-forge
+bowtie2                   2.5.0            py38h77f66f0_0    bioconda
+brotlipy                  0.7.0           py38h0a891b7_1005    conda-forge
+bzip2                     1.0.8                h7f98852_4    conda-forge
+c-ares                    1.18.1               h7f98852_0    conda-forge
+ca-certificates           2022.9.24            ha878542_0    conda-forge
+cached-property           1.5.2                hd8ed1ab_1    conda-forge
+cached_property           1.5.2              pyha770c72_1    conda-forge
+cachetools                4.2.4              pyhd8ed1ab_0    conda-forge
+cairo                     1.16.0            ha61ee94_1014    conda-forge
+certifi                   2022.9.24          pyhd8ed1ab_0    conda-forge
+cffi                      1.15.1           py38h4a40e3a_2    conda-forge
+charset-normalizer        2.1.1              pyhd8ed1ab_0    conda-forge
+click                     8.1.3           unix_pyhd8ed1ab_2    conda-forge
+cryptography              38.0.4           py38h2b5fc30_0    conda-forge
+curl                      7.86.0               h7bff187_1    conda-forge
+entrez-direct             16.2                 he881be0_1    bioconda
+expat                     2.5.0                h27087fc_0    conda-forge
+fastp                     0.23.2               h5f740d0_3    bioconda
+fastqc                    0.11.9               hdfd78af_1    bioconda
+filtlong                  0.2.1                hd03093a_1    bioconda
+flye                      2.9.1            py38hf4f3596_0    bioconda
+font-ttf-dejavu-sans-mono 2.37                 hab24e00_0    conda-forge
+font-ttf-inconsolata      3.000                h77eed37_0    conda-forge
+font-ttf-source-code-pro  2.038                h77eed37_0    conda-forge
+font-ttf-ubuntu           0.83                 hab24e00_0    conda-forge
+fontconfig                2.14.1               hc2a2eb6_0    conda-forge
+fonts-conda-ecosystem     1                             0    conda-forge
+fonts-conda-forge         1                             0    conda-forge
+freebayes                 1.3.6                hbfe0e7f_2    bioconda
+freetype                  2.12.1               hca18f0e_1    conda-forge
+frozenlist                1.3.3            py38h0a891b7_0    conda-forge
+gast                      0.4.0              pyh9f0ad1d_0    conda-forge
+gettext                   0.21.1               h27087fc_0    conda-forge
+giflib                    5.2.1                h36c2ea0_2    conda-forge
+google-auth               1.35.0             pyh6c4a22f_0    conda-forge
+google-auth-oauthlib      0.4.6              pyhd8ed1ab_0    conda-forge
+google-pasta              0.2.0              pyh8c360ce_0    conda-forge
+graphite2                 1.3.13            h58526e2_1001    conda-forge
+grpc-cpp                  1.43.2               h9e046d8_3    conda-forge
+grpcio                    1.43.0           py38hdd6454d_0    conda-forge
+gsl                       2.7                  he838d99_0    conda-forge
+h5py                      3.7.0           nompi_py38h045baee_101    conda-forge
+harfbuzz                  5.3.0                h418a68e_0    conda-forge
+hdf5                      1.12.2          nompi_h2386368_100    conda-forge
+htslib                    1.16                 h6bc39ce_0    bioconda
+icu                       70.1                 h27087fc_0    conda-forge
+idna                      3.4                pyhd8ed1ab_0    conda-forge
+importlib-metadata        5.1.0              pyha770c72_0    conda-forge
+intervaltree              3.0.2                      py_0    conda-forge
+isa-l                     2.30.0               ha770c72_4    conda-forge
+jpeg                      9e                   h166bdaf_2    conda-forge
+k8                        0.2.5                hd03093a_2    bioconda
+keras                     2.7.0              pyhd8ed1ab_0    conda-forge
+keras-preprocessing       1.1.2              pyhd8ed1ab_0    conda-forge
+kernel-headers_linux-64   3.10.0              h4a8ded7_13    conda-forge
+keyutils                  1.6.1                h166bdaf_0    conda-forge
+krb5                      1.19.3               h3790be6_0    conda-forge
+lcms2                     2.14                 h6ed2654_0    conda-forge
+ld_impl_linux-64          2.39                 hcc3a1bd_1    conda-forge
+lerc                      4.0.0                h27087fc_0    conda-forge
+libblas                   3.9.0           16_linux64_openblas    conda-forge
+libcblas                  3.9.0           16_linux64_openblas    conda-forge
+libcups                   2.3.3                h3e49a29_2    conda-forge
+libcurl                   7.86.0               h7bff187_1    conda-forge
+libdeflate                1.13                 h166bdaf_0    conda-forge
+libedit                   3.1.20191231         he28a2e2_2    conda-forge
+libev                     4.33                 h516909a_1    conda-forge
+libffi                    3.4.2                h7f98852_5    conda-forge
+libgcc-ng                 12.2.0              h65d4601_19    conda-forge
+libgfortran-ng            12.2.0              h69a702a_19    conda-forge
+libgfortran5              12.2.0              h337968e_19    conda-forge
+libglib                   2.74.1               h606061b_1    conda-forge
+libgomp                   12.2.0              h65d4601_19    conda-forge
+libiconv                  1.17                 h166bdaf_0    conda-forge
+libidn2                   2.3.4                h166bdaf_0    conda-forge
+liblapack                 3.9.0           16_linux64_openblas    conda-forge
+libnghttp2                1.47.0               hdcd2b5c_1    conda-forge
+libnsl                    2.0.0                h7f98852_0    conda-forge
+libopenblas               0.3.21          pthreads_h78a6416_3    conda-forge
+libpng                    1.6.39               h753d276_0    conda-forge
+libprotobuf               3.19.4               h780b84a_0    conda-forge
+libsqlite                 3.40.0               h753d276_0    conda-forge
+libssh2                   1.10.0               haa6b8db_3    conda-forge
+libstdcxx-ng              12.2.0              h46fd767_19    conda-forge
+libtiff                   4.4.0                h0e0dad5_3    conda-forge
+libunistring              0.9.10               h7f98852_0    conda-forge
+libuuid                   2.32.1            h7f98852_1000    conda-forge
+libwebp-base              1.2.4                h166bdaf_0    conda-forge
+libxcb                    1.13              h7f98852_1004    conda-forge
+libzlib                   1.2.13               h166bdaf_4    conda-forge
+llvm-openmp               8.0.1                hc9558a2_0    conda-forge
+mappy                     2.24             py38h4c6a040_1    bioconda
+markdown                  3.4.1              pyhd8ed1ab_0    conda-forge
+markupsafe                2.1.1            py38h0a891b7_2    conda-forge
+medaka                    1.7.2            py38h6239ad4_1    bioconda
+miniasm                   0.3_r179             h7132678_3    bioconda
+minimap2                  2.24                 h7132678_1    bioconda
+multidict                 6.0.2            py38h0a891b7_2    conda-forge
+ncurses                   6.3                  h27087fc_1    conda-forge
+numpy                     1.19.5           py38h8246c76_3    conda-forge
+oauthlib                  3.2.2              pyhd8ed1ab_0    conda-forge
+ont-fast5-api             4.1.0              pyhdfd78af_0    bioconda
+openjdk                   17.0.3               hafdced1_4    conda-forge
+openmp                    8.0.1                         0    conda-forge
+openssl                   1.1.1s               h166bdaf_0    conda-forge
+opt_einsum                3.3.0              pyhd8ed1ab_1    conda-forge
+packaging                 21.3               pyhd8ed1ab_0    conda-forge
+parallel                  20160622                      1    bioconda
+parasail-python           1.3.3            py38h3b68952_0    bioconda
+pcre                      8.45                 h9c3ff4c_0    conda-forge
+pcre2                     10.40                hc3806b6_0    conda-forge
+perl                      5.32.1          2_h7f98852_perl5    conda-forge
+perl-archive-tar          2.40            pl5321hdfd78af_0    bioconda
+perl-carp                 1.38            pl5321hdfd78af_4    bioconda
+perl-common-sense         3.75            pl5321hdfd78af_0    bioconda
+perl-compress-raw-bzip2   2.201           pl5321h87f3376_1    bioconda
+perl-compress-raw-zlib    2.105           pl5321h87f3376_0    bioconda
+perl-encode               3.19            pl5321hec16e2b_1    bioconda
+perl-exporter             5.72            pl5321hdfd78af_2    bioconda
+perl-exporter-tiny        1.002002        pl5321hdfd78af_0    bioconda
+perl-extutils-makemaker   7.64            pl5321hd8ed1ab_0    conda-forge
+perl-io-compress          2.201           pl5321h87f3376_0    bioconda
+perl-io-zlib              1.11            pl5321hdfd78af_0    bioconda
+perl-json                 4.10            pl5321hdfd78af_0    bioconda
+perl-json-xs              2.34            pl5321h9f5acd7_5    bioconda
+perl-list-moreutils       0.430           pl5321hdfd78af_0    bioconda
+perl-list-moreutils-xs    0.430           pl5321hec16e2b_1    bioconda
+perl-parent               0.236           pl5321hdfd78af_2    bioconda
+perl-pathtools            3.75            pl5321hec16e2b_3    bioconda
+perl-scalar-list-utils    1.62            pl5321hec16e2b_1    bioconda
+perl-threaded             5.32.1               hdfd78af_1    bioconda
+perl-types-serialiser     1.01            pl5321hdfd78af_0    bioconda
+pilon                     1.24                 hdfd78af_0    bioconda
+pip                       22.3.1             pyhd8ed1ab_0    conda-forge
+pixman                    0.40.0               h36c2ea0_0    conda-forge
+progressbar33             2.4                        py_0    conda-forge
+protobuf                  3.19.4           py38h709712a_0    conda-forge
+pthread-stubs             0.4               h36c2ea0_1001    conda-forge
+pyasn1                    0.4.8                      py_0    conda-forge
+pyasn1-modules            0.2.7                      py_0    conda-forge
+pycparser                 2.21               pyhd8ed1ab_0    conda-forge
+pyjwt                     2.6.0              pyhd8ed1ab_0    conda-forge
+pyopenssl                 22.1.0             pyhd8ed1ab_0    conda-forge
+pyparsing                 3.0.9              pyhd8ed1ab_0    conda-forge
+pysam                     0.19.1           py38h1c8baaf_1    bioconda
+pysocks                   1.7.1              pyha2e5f31_6    conda-forge
+pyspoa                    0.0.3            py38h8ded8fe_3    bioconda
+python                    3.8.15          h257c98d_0_cpython    conda-forge
+python-edlib              1.3.9            py38h4a32c8e_1    bioconda
+python-flatbuffers        2.0                pyhd8ed1ab_0    conda-forge
+python_abi                3.8                      3_cp38    conda-forge
+pyu2f                     0.1.5              pyhd8ed1ab_0    conda-forge
+racon                     1.5.0                h7ff8a90_0    bioconda
+re2                       2022.02.01           h9c3ff4c_0    conda-forge
+readline                  8.1.2                h0f457ee_0    conda-forge
+requests                  2.28.1             pyhd8ed1ab_1    conda-forge
+requests-oauthlib         1.3.1              pyhd8ed1ab_0    conda-forge
+rsa                       4.9                pyhd8ed1ab_0    conda-forge
+samtools                  1.16.1               h6899075_1    bioconda
+scipy                     1.9.1            py38hea3f02b_0    conda-forge
+seqkit                    2.3.1                h9ee0642_0    bioconda
+setuptools                65.5.1             pyhd8ed1ab_0    conda-forge
+six                       1.16.0             pyh6c4a22f_0    conda-forge
+snappy                    1.1.9                hbd366e4_2    conda-forge
+sortedcontainers          2.4.0              pyhd8ed1ab_0    conda-forge
+spades                    3.15.5               h95f258a_1    bioconda
+sqlite                    3.40.0               h4ff8645_0    conda-forge
+sysroot_linux-64          2.17                h4a8ded7_13    conda-forge
+tabixpp                   1.1.0               h470d46e_11    bioconda
+tar                       1.34                 hb2e2bae_1    conda-forge
+tbb                       2021.7.0             h924138e_0    conda-forge
+tensorboard               2.6.0              pyhd8ed1ab_1    conda-forge
+tensorboard-data-server   0.6.0            py38h2b5fc30_3    conda-forge
+tensorboard-plugin-wit    1.8.1              pyhd8ed1ab_0    conda-forge
+tensorflow                2.7.1           cpu_py38h66f0ec1_0    conda-forge
+tensorflow-base           2.7.1           cpu_py38ha28dbe6_0    conda-forge
+tensorflow-estimator      2.7.1           cpu_py38h4e23bc6_0    conda-forge
+termcolor                 2.1.1              pyhd8ed1ab_0    conda-forge
+tk                        8.6.12               h27826a3_0    conda-forge
+typing-extensions         4.4.0                hd8ed1ab_0    conda-forge
+typing_extensions         4.4.0              pyha770c72_0    conda-forge
+unicycler                 0.4.8            py38h8e3bb3f_5    bioconda
+urllib3                   1.26.13            pyhd8ed1ab_0    conda-forge
+vcflib                    1.0.3                ha04fe3b_2    bioconda
+werkzeug                  2.2.2              pyhd8ed1ab_0    conda-forge
+wget                      1.20.3               ha56f1ee_1    conda-forge
+wheel                     0.38.4             pyhd8ed1ab_0    conda-forge
+wrapt                     1.14.1           py38h0a891b7_1    conda-forge
+xorg-fixesproto           5.0               h7f98852_1002    conda-forge
+xorg-inputproto           2.3.2             h7f98852_1002    conda-forge
+xorg-kbproto              1.0.7             h7f98852_1002    conda-forge
+xorg-libice               1.0.10               h7f98852_0    conda-forge
+xorg-libsm                1.2.3             hd9c2040_1000    conda-forge
+xorg-libx11               1.7.2                h7f98852_0    conda-forge
+xorg-libxau               1.0.9                h7f98852_0    conda-forge
+xorg-libxdmcp             1.1.3                h7f98852_0    conda-forge
+xorg-libxext              1.3.4                h7f98852_1    conda-forge
+xorg-libxfixes            5.0.3             h7f98852_1004    conda-forge
+xorg-libxi                1.7.10               h7f98852_0    conda-forge
+xorg-libxrender           0.9.10            h7f98852_1003    conda-forge
+xorg-libxtst              1.2.3             h7f98852_1002    conda-forge
+xorg-recordproto          1.14.2            h7f98852_1002    conda-forge
+xorg-renderproto          0.11.1            h7f98852_1002    conda-forge
+xorg-xextproto            7.3.0             h7f98852_1002    conda-forge
+xorg-xproto               7.0.31            h7f98852_1007    conda-forge
+xz                        5.2.6                h166bdaf_0    conda-forge
+yarl                      1.8.1            py38h0a891b7_0    conda-forge
+zipp                      3.11.0             pyhd8ed1ab_0    conda-forge
+zlib                      1.2.13               h166bdaf_4    conda-forge
+zstd                      1.5.2                h6239696_4    conda-forge
+(assembly) jiang@azur:~$ 

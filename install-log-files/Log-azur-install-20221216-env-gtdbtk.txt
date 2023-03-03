@@ -1,0 +1,365 @@
+Last login: Fri Dec 16 16:06:46 on ttys000
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % ssh azur                                                                                
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.15.0-56-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+55 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Thu Dec 15 12:05:33 2022 from 157.82.122.20
+(base) jiang@azur:~$ mamba create -n gtdbtk-2.1.1 -c conda-forge -c bioconda gtdbtk=2.1.1
+
+                  __    __    __    __
+                 /  \  /  \  /  \  /  \
+                /    \/    \/    \/    \
+███████████████/  /██/  /██/  /██/  /████████████████████████
+              /  / \   / \   / \   / \  \____
+             /  /   \_/   \_/   \_/   \    o \__,
+            / _/                       \_____/  `
+            |/
+        ███╗   ███╗ █████╗ ███╗   ███╗██████╗  █████╗
+        ████╗ ████║██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+        ██╔████╔██║███████║██╔████╔██║██████╔╝███████║
+        ██║╚██╔╝██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║
+        ██║ ╚═╝ ██║██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║
+        ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝
+
+        mamba (1.0.0) supported by @QuantStack
+
+        GitHub:  https://github.com/mamba-org/mamba
+        Twitter: https://twitter.com/QuantStack
+
+█████████████████████████████████████████████████████████████
+
+
+Looking for: ['gtdbtk=2.1.1']
+
+bioconda/noarch                                      4.1MB @   3.6MB/s  1.2s
+bioconda/linux-64                                    4.5MB @   3.7MB/s  1.3s
+conda-forge/noarch                                  10.6MB @   3.9MB/s  2.8s
+conda-forge/linux-64                                28.5MB @   5.3MB/s  5.7s
+Transaction
+
+  Prefix: /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1
+
+  Updating specs:
+
+   - gtdbtk=2.1.1
+
+
+  Package                 Version  Build                Channel                    Size
+─────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+─────────────────────────────────────────────────────────────────────────────────────────
+
+  + _libgcc_mutex             0.1  conda_forge          conda-forge/linux-64     Cached
+  + _openmp_mutex             4.5  2_gnu                conda-forge/linux-64     Cached
+  + boost                  1.70.0  py38h9de70de_1       conda-forge/linux-64      364kB
+  + boost-cpp              1.70.0  h7b93d67_3           conda-forge/linux-64       22MB
+  + bzip2                   1.0.8  h7f98852_4           conda-forge/linux-64     Cached
+  + ca-certificates     2022.12.7  ha878542_0           conda-forge/linux-64     Cached
+  + capnproto              0.10.2  h6239696_0           conda-forge/linux-64        5MB
+  + colorama                0.4.6  pyhd8ed1ab_0         conda-forge/noarch       Cached
+  + dendropy                4.5.2  pyh3252c3a_0         bioconda/noarch           315kB
+  + fastani                   1.3  he1c1bb9_0           bioconda/linux-64         136kB
+  + fasttree               2.1.11  hec16e2b_1           bioconda/linux-64        Cached
+  + gsl                       2.7  he838d99_0           conda-forge/linux-64     Cached
+  + gtdbtk                  2.1.1  pyhdfd78af_1         bioconda/noarch             2MB
+  + hmmer                   3.1b2  3                    bioconda/linux-64           6MB
+  + icu                      67.1  he1b5a44_0           conda-forge/linux-64       13MB
+  + ld_impl_linux-64         2.39  hcc3a1bd_1           conda-forge/linux-64     Cached
+  + libblas                 3.9.0  16_linux64_openblas  conda-forge/linux-64     Cached
+  + libcblas                3.9.0  16_linux64_openblas  conda-forge/linux-64     Cached
+  + libffi                  3.4.2  h7f98852_5           conda-forge/linux-64     Cached
+  + libgcc-ng              12.2.0  h65d4601_19          conda-forge/linux-64     Cached
+  + libgfortran-ng         12.2.0  h69a702a_19          conda-forge/linux-64     Cached
+  + libgfortran5           12.2.0  h337968e_19          conda-forge/linux-64     Cached
+  + libgomp                12.2.0  h65d4601_19          conda-forge/linux-64     Cached
+  + liblapack               3.9.0  16_linux64_openblas  conda-forge/linux-64     Cached
+  + libnsl                  2.0.0  h7f98852_0           conda-forge/linux-64     Cached
+  + libopenblas            0.3.21  pthreads_h78a6416_3  conda-forge/linux-64     Cached
+  + libsqlite              3.40.0  h753d276_0           conda-forge/linux-64     Cached
+  + libstdcxx-ng           12.2.0  h46fd767_19          conda-forge/linux-64     Cached
+  + libuuid                2.32.1  h7f98852_1000        conda-forge/linux-64     Cached
+  + libzlib                1.2.13  h166bdaf_4           conda-forge/linux-64     Cached
+  + lz4-c                   1.9.3  h9c3ff4c_1           conda-forge/linux-64     Cached
+  + mash                      2.3  hd3113c8_4           bioconda/linux-64         603kB
+  + ncurses                   6.3  h27087fc_1           conda-forge/linux-64     Cached
+  + numpy                  1.23.5  py38h7042d01_0       conda-forge/linux-64        6MB
+  + openssl                1.1.1s  h0b41bf4_1           conda-forge/linux-64        2MB
+  + pip                    22.3.1  pyhd8ed1ab_0         conda-forge/noarch       Cached
+  + pplacer           1.1.alpha19  h9ee0642_2           bioconda/linux-64           9MB
+  + prodigal                2.6.3  hec16e2b_4           bioconda/linux-64        Cached
+  + python                 3.8.15  h257c98d_0_cpython   conda-forge/linux-64     Cached
+  + python_abi                3.8  3_cp38               conda-forge/linux-64     Cached
+  + readline                8.1.2  h0f457ee_0           conda-forge/linux-64     Cached
+  + setuptools             65.5.1  pyhd8ed1ab_0         conda-forge/noarch       Cached
+  + tk                     8.6.12  h27826a3_0           conda-forge/linux-64     Cached
+  + tqdm                   4.64.1  pyhd8ed1ab_0         conda-forge/noarch       Cached
+  + wheel                  0.38.4  pyhd8ed1ab_0         conda-forge/noarch       Cached
+  + xz                      5.2.6  h166bdaf_0           conda-forge/linux-64     Cached
+  + zlib                   1.2.13  h166bdaf_4           conda-forge/linux-64     Cached
+  + zstd                    1.4.9  ha95c52a_0           conda-forge/linux-64      442kB
+
+  Summary:
+
+  Install: 48 packages
+
+  Total download: 67MB
+
+─────────────────────────────────────────────────────────────────────────────────────────
+
+Confirm changes: [Y/n] y
+openssl                                              2.0MB @   4.6MB/s  0.4s
+icu                                                 13.5MB @  28.9MB/s  0.5s
+dendropy                                           315.3kB @ 660.0kB/s  0.1s
+zstd                                               441.6kB @ 822.6kB/s  0.1s
+hmmer                                                5.8MB @   9.3MB/s  0.6s
+pplacer                                              9.0MB @  14.6MB/s  0.6s
+gtdbtk                                               1.6MB @   2.7MB/s  0.1s
+boost                                              363.5kB @ 521.1kB/s  0.1s
+numpy                                                5.9MB @   8.1MB/s  0.2s
+mash                                               603.5kB @ 687.6kB/s  0.3s
+fastani                                            136.0kB @ 145.6kB/s  0.2s
+capnproto                                            5.1MB @   4.4MB/s  1.2s
+boost-cpp                                           22.2MB @  13.3MB/s  1.1s
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: \ 
+    GTDB-Tk v2.1.1 requires ~63G of external data which needs to be downloaded
+    and extracted. This can be done automatically, or manually.
+
+    Automatic:
+
+        1. Run the command "download-db.sh" to automatically download and extract to:
+            /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/
+
+    Manual:
+
+        1. Manually download the latest reference data:
+            wget https://data.gtdb.ecogenomic.org/releases/release207/207.0/auxillary_files/gtdbtk_r207_v2_data.tar.gz
+
+        2. Extract the archive to a target directory:
+            tar -xvzf gtdbtk_r207_v2_data.tar.gz -C "/path/to/target/db" --strip 1 > /dev/null
+            rm gtdbtk_r207_v2_data.tar.gz
+
+        3. Set the GTDBTK_DATA_PATH environment variable by running:
+            conda env config vars set GTDBTK_DATA_PATH="/path/to/target/db"
+
+
+
+done
+
+To activate this environment, use
+
+     $ mamba activate gtdbtk-2.1.1
+
+To deactivate an active environment, use
+
+     $ mamba deactivate
+
+(base) jiang@azur:~$ download-db.sh
+download-db.sh: command not found
+(base) jiang@azur:~$ bash download-db.sh
+bash: download-db.sh: No such file or directory
+(base) jiang@azur:~$ ls
+Takada  anvio-7.1  azur_anvio7.1_environment.yml  blast-log.txt  diamond-log-file.txt  downloads  mambaforge-pypy3  scripts
+(base) jiang@azur:~$ cd cd /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/
+-bash: cd: too many arguments
+(base) jiang@azur:~$ ls
+Takada  anvio-7.1  azur_anvio7.1_environment.yml  blast-log.txt  diamond-log-file.txt  downloads  mambaforge-pypy3  scripts
+(base) jiang@azur:~$ cd /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1$ ls
+LICENSE  bin  compiler_compat  conda-meta  include  lib  man  share  ssl  x86_64-conda-linux-gnu  x86_64-conda_cos6-linux-gnu
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1$ cd
+(base) jiang@azur:~$ ./download-db.sh
+-bash: ./download-db.sh: No such file or directory
+(base) jiang@azur:~$ ls
+Takada  anvio-7.1  azur_anvio7.1_environment.yml  blast-log.txt  diamond-log-file.txt  downloads  mambaforge-pypy3  scripts
+(base) jiang@azur:~$ cd ..
+(base) jiang@azur:/home$ ls
+iwasaki  jiang  jinoue  kmori  linuxbrew  lost+found  makot  mhasegawa  mizukurage  newuser  qm  rc  salvocos  yoshizawa  yosuke  yuyatsukamoto
+(base) jiang@azur:/home$ cd ..
+(base) jiang@azur:/$ ls
+bin  boot  cdrom  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  ssd_home  sys  tmp  usr  var
+(base) jiang@azur:/$ cd
+(base) jiang@azur:~$ ls
+Takada  anvio-7.1  azur_anvio7.1_environment.yml  blast-log.txt  diamond-log-file.txt  download-db.sh  downloads  mambaforge-pypy3  scripts
+(base) jiang@azur:~$ mamba activate gtdbtk-2.1.1
+(gtdbtk-2.1.1) jiang@azur:~$ download-db.sh
+[INFO] - Downloading the GTDB-Tk database to: /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db
+--2022-12-16 16:28:06--  https://data.gtdb.ecogenomic.org/releases/release207/207.0/auxillary_files/gtdbtk_r207_v2_data.tar.gz
+Resolving data.gtdb.ecogenomic.org (data.gtdb.ecogenomic.org)... 203.101.230.53
+Connecting to data.gtdb.ecogenomic.org (data.gtdb.ecogenomic.org)|203.101.230.53|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 67365452463 (63G) [application/octet-stream]
+Saving to: ‘/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/gtdbtk_r207_v2_data.tar.gz’
+
+tdbtk_r207_v2_data.tar.gz                     0%[                                                                                         ]  23.10M   164KB/s    eta 4d 6h  ^C
+(gtdbtk-2.1.1) jiang@azur:~$ ls
+Takada  anvio-7.1  azur_anvio7.1_environment.yml  blast-log.txt  diamond-log-file.txt  download-db.sh  downloads  mambaforge-pypy3  scripts
+(gtdbtk-2.1.1) jiang@azur:~$ cd /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls
+gtdbtk_r207_v2_data.tar.gz
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ rm gtdbtk_r207_v2_data.tar.gz 
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ cd 
+(gtdbtk-2.1.1) jiang@azur:~$ download-db.sh
+[INFO] - Downloading the GTDB-Tk database to: /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db
+--2022-12-16 16:38:07--  https://data.gtdb.ecogenomic.org/releases/release207/207.0/auxillary_files/gtdbtk_r207_v2_data.tar.gz
+Resolving data.gtdb.ecogenomic.org (data.gtdb.ecogenomic.org)... 203.101.230.53
+Connecting to data.gtdb.ecogenomic.org (data.gtdb.ecogenomic.org)|203.101.230.53|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 67365452463 (63G) [application/octet-stream]
+Saving to: ‘/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/gtdbtk_r207_v2_data.tar.gz’
+
+mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gt   0%[                                                                                         ]  12.49M   191KB/s    eta 4d 21h ^C
+(gtdbtk-2.1.1) jiang@azur:~$ loacl download and upload to azur
+loacl: command not found
+(gtdbtk-2.1.1) jiang@azur:~$ ls
+Takada  anvio-7.1  azur_anvio7.1_environment.yml  blast-log.txt  diamond-log-file.txt  download-db.sh  downloads  mambaforge-pypy3  scripts
+(gtdbtk-2.1.1) jiang@azur:~$ cd downloads/
+(gtdbtk-2.1.1) jiang@azur:~/downloads$ ls
+Mambaforge-pypy3-Linux-x86_64.sh  anvio-7.1.tar.gz  gtdbtk_r207_v2_data.tar.gz
+(gtdbtk-2.1.1) jiang@azur:~/downloads$ rm gtdbtk_r207_v2_data.tar.gz 
+(gtdbtk-2.1.1) jiang@azur:~/downloads$ ls
+Mambaforge-pypy3-Linux-x86_64.sh  anvio-7.1.tar.gz
+(gtdbtk-2.1.1) jiang@azur:~/downloads$ client_loop: send disconnect: Broken pipe
+
+
+## loacl download and upload to azur
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % scp gtdbtk_r207_v2_data.tar.gz azur:~/downloads/
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+gtdbtk_r207_v2_data.tar.gz                                                                                                                 100%   63GB   3.2MB/s 5:38:35    
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % 
+
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % ssh azur
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.15.0-56-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+56 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Mon Dec 19 12:42:40 2022 from 157.82.122.20
+(base) jiang@azur:~$ cd ~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls
+gtdbtk_r207_v2_data.tar.gz
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls -la
+total 12808
+drwxrwxr-x 2 jiang jiang     4096 12月 16 16:38 .
+drwxrwxr-x 3 jiang jiang     4096 12月 16 16:19 ..
+-rw-rw-r-- 2 jiang jiang        0  8月  1 08:28 .empty
+-rw-rw-r-- 1 jiang jiang 13106859 12月 16 16:39 gtdbtk_r207_v2_data.tar.gz
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls -la ~/downloads/
+total 66090136
+drwxrwxr-x  2 jiang jiang        4096 12月 19 10:03 .
+drwxr-xr-x 14 jiang jiang        4096 12月 16 16:26 ..
+-rw-rw-r--  1 jiang jiang   100767712 11月 18 22:36 Mambaforge-pypy3-Linux-x86_64.sh
+-rw-rw-r--  1 jiang jiang   210052551 12月  2 12:28 anvio-7.1.tar.gz
+-rw-r--r--  1 jiang jiang 67365452463 12月 19 16:33 gtdbtk_r207_v2_data.tar.gz
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ rm gtdbtk_r207_v2_data.tar.gz 
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ tar -xvzf ~/downloads/gtdbtk_r207_v2_data.tar.gz -C "./" --strip 1 > /dev/null
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls
+fastani  markers  masks  metadata  mrca_red  msa  pplacer  radii  split  taxonomy  temp
+(base) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ cd
+(base) jiang@azur:~$ mamba activate gtdbtk-2.1.1
+(gtdbtk-2.1.1) jiang@azur:~$ conda env config vars set GTDBTK_DATA_PATH="~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db"
+To make your changes take effect please reactivate your environment
+(gtdbtk-2.1.1) jiang@azur:~$ conda deactivate
+(base) jiang@azur:~$ mamba activate gtdbtk-2.1.1
+(gtdbtk-2.1.1) jiang@azur:~$ 
+
+20230110
+# error when running aglin
+================================================================================
+                                     ERROR                                      
+________________________________________________________________________________
+
+           The GTDB-Tk reference data does not exist or is corrupted.           
+  GTDBTK_DATA_PATH=~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db   
+
+   Please compare the checksum to those provided in the download repository.    
+          https://github.com/Ecogenomics/GTDBTk#gtdb-tk-reference-data   
+==> decompress wrongly, no version directory
+==> decompress again with default seeting
+
+(gtdbtk-2.1.1) jiang@azur:~/downloads/db$ tar xvzf ../gtdbtk_r207_v2_data.tar.gz 
+...
+(gtdbtk-2.1.1) jiang@azur:~/downloads/db$ ls
+release207_v2
+(gtdbtk-2.1.1) jiang@azur:~/downloads/db$ cd ~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1$ ls
+db
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1$ rm -r db
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1$ ls
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1$ mv ~/downloads/db/ ./
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1$ ls
+db
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1$ cd db
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db$ ls
+release207_v2
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2$ ls
+fastani  markers  masks  metadata  mrca_red  msa  pplacer  radii  split  taxonomy  temp
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2$ conda env config vars set GTDBTK_DATA_PATH='/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2'
+To make your changes take effect please reactivate your environment
+(# do not use '~/', error always exit)
+(gtdbtk-2.1.1) jiang@azur:~/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2$ cd
+(gtdbtk-2.1.1) jiang@azur:~$ conda env config vars list
+GTDBTK_DATA_PATH = /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2
+(gtdbtk-2.1.1) jiang@azur:~$ conda deactivate
+(base) jiang@azur:~$ conda activate gtdbtk-2.1.1
+(gtdbtk-2.1.1) jiang@azur:~$ conda env config vars list
+GTDBTK_DATA_PATH = /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2
+(gtdbtk-2.1.1) jiang@azur:~$ gtdbtk check_install
+[2023-01-10 14:47:35] INFO: GTDB-Tk v2.1.1
+[2023-01-10 14:47:35] INFO: gtdbtk check_install
+[2023-01-10 14:47:35] INFO: Using GTDB-Tk reference data version r207: /home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2
+[2023-01-10 14:47:35] INFO: Running install verification
+[2023-01-10 14:47:35] INFO: Checking that all third-party software are on the system path:
+[2023-01-10 14:47:35] INFO:          |-- FastTree         OK
+[2023-01-10 14:47:35] INFO:          |-- FastTreeMP       OK
+[2023-01-10 14:47:35] INFO:          |-- fastANI          OK
+[2023-01-10 14:47:35] INFO:          |-- guppy            OK
+[2023-01-10 14:47:35] INFO:          |-- hmmalign         OK
+[2023-01-10 14:47:35] INFO:          |-- hmmsearch        OK
+[2023-01-10 14:47:35] INFO:          |-- mash             OK
+[2023-01-10 14:47:35] INFO:          |-- pplacer          OK
+[2023-01-10 14:47:35] INFO:          |-- prodigal         OK
+...
+[2023-01-10 14:47:35] INFO:          |-- pplacer          OK
+[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/masks/] [/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/masks/]                                                                                             [2023-01-10 14:47:35] INFO:          |-- masks            OK
+...
+                                                                                            [2023-01-10 14:47:35] INFO:          |-- markers          OK
+[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/radii/]                                                                                             [2023-01-10 14:47:35] INFO:          |-- radii            OK
+[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/msa/] - [/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/msa/] -                                                                                             [2023-01-10 14:47:37] INFO:          |-- msa              OK
+[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/metadata[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/metadata                                                                                            [2023-01-10 14:47:37] INFO:          |-- metadata         OK
+[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/taxonomy[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/taxonomy[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/taxonomy[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/taxonomy                                                                                            [2023-01-10 14:47:37] INFO:          |-- taxonomy         OK
+...
+...
+...
+[2023-01-10 14:48:32] INFO:          |-- fastani          OK
+[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/mrca_red[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/mrca_red[/home/jiang/mambaforge-pypy3/envs/gtdbtk-2.1.1/share/gtdbtk-2.1.1/db/release207_v2/mrca_red                                                                                            [2023-01-10 14:48:32] INFO:          |-- mrca_red         OK
+[2023-01-10 14:48:32] INFO: Done.
+(gtdbtk-2.1.1) jiang@azur:~$ 
+
