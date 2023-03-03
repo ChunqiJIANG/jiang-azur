@@ -26,23 +26,31 @@ Usage text
 
 ## Let's start !
 
-### Usage01: classify workflow
+### Usage01: [classify workflow](https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html#classify-wf)
+This is the most common workflow for obtaining taxonomic classifications. 
+
 The classify workflow will run the following steps: 
 - ani_screen 
-- **identify**, 
+- **identify**
 - **align**
-- **classify**
- Details here https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html#classify-wf
+- **classify** 
 
 ```
   (gtdbtk-2.1.1) jiang@azur:~/user_name$  gtdbtk classify_wf --genome_dir <genomes_dir> --extension <fasta/fna/fa/gz> --out_dir <output_dir> --cpu <num>
-
 ```
+
 The taxonomic classification of each bacterial and archaeal genome is contained in the *[prefix].[domain].summary.tsv* output files.
 
 
-### Usage02: de_novo workflow
-The de novo workflow will run the following steps: **identify**, **align**, **infer**, **root**, and **decorate**. Details here https://ecogenomics.github.io/GTDBTk/commands/de_novo_wf.html#de-novo-wf
+
+### Usage02: [de_novo workflow](https://ecogenomics.github.io/GTDBTk/commands/de_novo_wf.html#de-novo-wf)
+The de novo workflow will run the following steps: 
+- **identify**
+- **align**
+- **infer**
+- **root**
+- **decorate**
+
 > The de novo workflow infers new bacterial and archaeal trees containing all user supplied and GTDB-Tk reference genomes. The ***classify workflow*** is recommended for obtaining taxonomic classifications, and this workflow only recommended if a de novo domain-specific trees are desired. 
 
 ```
