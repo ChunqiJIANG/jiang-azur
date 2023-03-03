@@ -24,28 +24,34 @@ Usage text
   (gtdbtk-2.1.1) jiang@azur:~/user_name$ 
 ```
 
+## Let's start !
 
-### Usage01: de_novo workflow
+### Usage01: classify workflow
+The classify workflow will run the following steps: 
+- ani_screen 
+- **identify**, 
+- **align**
+- **classify**
+ Details here https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html#classify-wf
+
+```
+  (gtdbtk-2.1.1) jiang@azur:~/user_name$  gtdbtk classify_wf --genome_dir <genomes_dir> --extension <fasta/fna/fa/gz> --out_dir <output_dir> --cpu <num>
+
+```
+The taxonomic classification of each bacterial and archaeal genome is contained in the *[prefix].[domain].summary.tsv* output files.
+
+
+### Usage02: de_novo workflow
 The de novo workflow will run the following steps: **identify**, **align**, **infer**, **root**, and **decorate**. Details here https://ecogenomics.github.io/GTDBTk/commands/de_novo_wf.html#de-novo-wf
 > The de novo workflow infers new bacterial and archaeal trees containing all user supplied and GTDB-Tk reference genomes. The ***classify workflow*** is recommended for obtaining taxonomic classifications, and this workflow only recommended if a de novo domain-specific trees are desired. 
 
 ```
-(gtdbtk-2.1.1) ~$ gtdbtk de_novo_wf --genome_dir <genomes_dir>  --outgroup_taxon <outgroup> --out_dir <output_dir>
+  (gtdbtk-2.1.1) jiang@azur:~/user_name$  gtdbtk de_novo_wf --genome_dir <genomes_dir>  --outgroup_taxon <outgroup> --out_dir <output_dir>
 
-# example
-(gtdbtk-2.1.1) ~$ gtdbtk de_novo_wf --genome_dir genomes/ --outgroup_taxon p__Chloroflexota --bacteria  --taxa_filter p__Firmicutes --out_dir de_novo_output
+  # example
+  (gtdbtk-2.1.1) jiang@azur:~/user_name$  gtdbtk de_novo_wf --genome_dir genomes/ --outgroup_taxon p__Chloroflexota --bacteria  --taxa_filter p__Firmicutes --out_dir  de_novo_output
 
-# skip GTDB reference genomes ( requires --custom_taxonomy_file for outgrouping, you can retrieve it from classify step)
-(gtdbtk-2.1.1) ~$ gtdbtk de_novo_wf --genome_dir genomes/ --outgroup_taxon p__Customphylum --bacteria --custom_taxonomy_file custom_taxonomy.tsv --out_dir de_novo_output
-
-```
-
-
-### Usage02: classify workflow
-The classify workflow will run the following steps: ani_screen, **identify**, **align**, and **classify**. Details here https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html#classify-wf
+  # skip GTDB reference genomes ( requires --custom_taxonomy_file for outgrouping, you can retrieve it from classify step)
+  (gtdbtk-2.1.1) jiang@azur:~/user_name$  gtdbtk de_novo_wf --genome_dir genomes/ --outgroup_taxon p__Customphylum --bacteria --custom_taxonomy_file custom_taxonomy.tsv --out_dir de_novo_output
 
 ```
-(gtdbtk-2.1.1) ~$ gtdbtk classify_wf --genome_dir <genomes_dir> --extension <fasta/fna/fa/gz> --out_dir <output_dir> --cpu <num>
-
-```
-The taxonomic classification of each bacterial and archaeal genome is contained in the *[prefix].[domain].summary.tsv* output files.
