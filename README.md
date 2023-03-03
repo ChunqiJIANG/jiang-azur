@@ -9,7 +9,15 @@
 [^1]: All Rights Reserved.
 [^2]: You should know where to find him^.^
 
- 
+
+***Notes:***
+- ALWAYS enter your directory first ```cd user_name``` before any actions!
+
+- DO NOT install, update or modify anything without contacting! 
+
+- CONTACT first if you want new packages or environments! 
+  
+  
 ***Shortcuts：***
 
 - Basic information of this space and the general list of environments please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Info_system.md).  
