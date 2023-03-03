@@ -8,6 +8,8 @@
 
 - Detailed list of environments and packages please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/List_environments.md).  
 
+- The logs of the environment creation can be checked [here](https://github.com/ChunqiJIANG/jiang-azur/tree/main/install-log-files).
+
 
 
 [^1]: All Rights Reserved.
