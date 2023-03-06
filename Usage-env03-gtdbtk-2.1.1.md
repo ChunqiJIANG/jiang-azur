@@ -46,8 +46,6 @@ The taxonomic classification of each bacterial and archaeal genome is contained 
 
 ![classify_wf_out](/pics/classify_wf_out.png) 
 
-<img src="/pics/classify_wf_out.png" align=“center”/> 
-
 
 ### Usage02: [de_novo workflow](https://ecogenomics.github.io/GTDBTk/commands/de_novo_wf.html#de-novo-wf)
 > The de novo workflow infers new bacterial and archaeal trees containing all user supplied and GTDB-Tk reference genomes. The ***classify workflow*** is recommended for obtaining taxonomic classifications, and this workflow only recommended if a de novo domain-specific trees are desired. 
