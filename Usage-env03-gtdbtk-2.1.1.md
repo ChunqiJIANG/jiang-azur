@@ -42,7 +42,7 @@ The classify workflow will run the following steps:
   (gtdbtk-2.1.1) jiang@azur:~/user_name$ gtdbtk classify_wf --genome_dir genomes/ --extension fna --out_dir classify_wf_out --cpus 10
 ```
 
-The taxonomic classification of each bacterial and archaeal genome is contained in the *[prefix].[domain].summary.tsv* output files.
+The taxonomic classification of each bacterial and archaeal genome is contained in the output files *classify_wf_out/classify/gtdbtk.bac120.summary.tsv*.
 
 
 
