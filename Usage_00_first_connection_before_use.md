@@ -16,20 +16,21 @@ Japanese version [sshキー(秘密鍵・公開鍵)の作成と認証　流れ](h
   Your identification has been saved in id_rsa.
   Your public key has been saved in id_rsa.pub.
   
-  # check (this are default names without input in the first step)
+  # check (these are default names without input in the first step)
   $ ls 
   id_rsa  id_rsa.pub
 ```
 **private key: id_rsa (should not be shown to others)**  
 ****public key: id_rsa.pub (can be shown to others)***
 
-### Step 2: Send public key to jiang
+### Step 2: Send public key to jiang[^1]
+[^1]: anyway you like, slack or mail...
 ```
   # copy public key to desktop 
   $ cp id_rsa.pub ~/Desktop/
   
   # send it to jiang
-  
+
 ```
 
 ### Step 3: Connection
