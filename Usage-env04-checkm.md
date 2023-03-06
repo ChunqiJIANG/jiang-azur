@@ -1,19 +1,84 @@
 
+This page introduces the usages in the environment of **'checkm'**.
 
-## lineage workflow
+<p align="right"> Updated on 2023-03-06 </p>
+
+#### Usage description
+Usage text 
+```
+  # annotation
+  (environment) ~/location$ command line
+```
+
+
+### Move to your workplace and activate the environment first
+```
+  # don't forget to change to your directory first
+  (base) jiang@azur:~$ cd user_name
+  
+  # check the current environment at the beginning of the command line, like the 'base' here
+  (base) jiang@azur:~/user_name$
+  # if not the target environment, activate it by 'conda activate'
+  (base) jiang@azur:~/user_name$ conda activate checkm
+  # check again at the beginning, now it is 'gtdbtk-2.1.1', good to go
+  (checkm) jiang@azur:~/user_name$ 
+```
+
+# Let's start with CheckM v1.2.2 !
+
+> CheckM provides a set of tools for assessing the quality of genomes recovered from isolates, single cells, or metagenomes. It provides robust estimates of genome completeness and contamination by using collocated sets of genes that are ubiquitous and single-copy within a phylogenetic lineage. Assessment of genome quality can also be examined using plots depicting key genomic characteristics (e.g., GC, coding density) which highlight sequences outside the expected distributions of a typical genome. CheckM also provides tools for identifying genome bins that are likely candidates for merging based on marker set compatibility, similarity in genomic characteristics, and proximity within a reference genome tree.
+> Full details can be found [here}(https://github.com/Ecogenomics/CheckM/wiki)
+
+Here mainly introduce two workflows for genome quality check:
+- Lineage-specific Workflow (quality estimates with lineage-specific markers)
+- Taxonomic-specific Workflow (quality estimates with taxonomic-specific markers)
+
+---
+
+### Usage01:lineage workflow
+Regardless of taxonomy known/unknown
 ```
 checkm lineage_wf -t 20 -x fna putative/genomes/directory/ checkm/results/directory/ | tee checkm-linewf-results.txt
+
+# example
+checkm lineage_wf -t 20 -x fna ./genomes/ ./checkm-linewf-results | tee log-checkm-linewf-results.txt
 ```
+*results will be shown at the bottom of the screen and the txt file.  
 
 
-## taxonomy workflow
+#example
+|Bin Id|Marker lineage|	#genomes|	#markers|	#marker sets|	0|	1|	2|	3|	4|	5+|	Completeness|	Contamination|	Strain heterogeneity| 
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|GCA_003967575.1_ASM396757v1_genomic|	Chloroflexi(1)|	20|	225|	149|	0|	200|	22|	2|	1|	0	|100|	12.69|	0|  
+|GCA_003268475.1_ASM326847v1_genomic|	Chloroflexi(1)|	20|	225|	149|	0|	224|  1|	0|	0|	0|100|	0.67|	0|  
+|...|...|...|...|...|...|...|...|...|...|...|...|...|...| 
+
+> - bin id: unique identifier of genome bin (derived from input fasta file)
+> - **marker lineage**: indicates the taxonomic rank of the lineage-specific marker set used to estimated genome completeness, contamination, and strain heterogeneity. More detailed information about the placement of a genome within the reference genome tree can be obtained with the tree_qa command. The UID indicates the branch within the reference tree used to infer the marker set applied to estimate the bins quality.
+> - genomes: number of reference genomes used to infer the lineage-specific marker set
+> - markers: number of marker genes within the inferred lineage-specific marker set
+> - marker sets: number of co-located marker sets within the inferred lineage-specific marker set
+> - 0-5+: number of times each marker gene is identified
+> - **completeness**: estimated completeness of genome as determined from the presence/absence of marker genes and the expected collocalization of these genes
+> - **contamination**: estimated contamination of genome as determined by the presence of multi-copy marker genes and the expected collocalization of these genes
+> - strain heterogeneity: estimated strain heterogeneity as determined from the number of multi-copy marker pairs which exceed a specified amino acid identity threshold (default = 90%). High strain heterogeneity suggests the majority of reported contamination is from one or more closely related organisms (i.e. potentially the same species), while low strain heterogeneity suggests the majority of contamination is from more phylogenetically diverse sources. 
+
+
+### Usage02: taxonomy workflow
+Only if taxonomy known
 ```
-# rank and taxon are listed in the next section "checkm taxon_list"
+# specify the 'rank' and 'taxon',  available ones are listed in the next section "checkm taxon_list"
 checkm taxonomy_wf <rank> <taxon> -t 20 -x fna putative/genomes/directory/ checkm/results/directory/ | tee checkm-taxowf-results.txt
 
-```
+# example
+checkm taxonomy_wf phylum Chloroflexi -t 20 -x fna ./genomes/ ./checkm-taxowf-results | tee log-checkm-taxowf-results.txt
+``` 
+*similar format results will be shown at the bottom of the screen and the txt file.
 
-## checkm taxon_list
+
+
+---
+## Checkm taxon_list
 ```
 [2023-02-17 15:07:59] INFO: CheckM v1.2.2
 [2023-02-17 15:07:59] INFO: checkm taxon_list
