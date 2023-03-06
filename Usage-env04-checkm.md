@@ -38,10 +38,10 @@ Here mainly introduce two workflows for genome quality check:
 ### Usage01:lineage workflow
 Regardless of taxonomy known/unknown
 ```
-checkm lineage_wf -t 20 -x fna putative/genomes/directory/ checkm/results/directory/ | tee checkm-linewf-results.txt
+(checkm) jiang@azur:~/user_name$ checkm lineage_wf -t 20 -x fna putative/genomes/directory/ checkm/results/directory/ | tee checkm-linewf-results.txt
 
 # example
-checkm lineage_wf -t 20 -x fna ./genomes/ ./checkm-linewf-results | tee log-checkm-linewf-results.txt
+(checkm) jiang@azur:~/user_name$ checkm lineage_wf -t 20 -x fna ./genomes/ ./checkm-linewf-results | tee log-checkm-linewf-results.txt
 ```
 *results will be shown at the bottom of the screen and the txt file.  
 
@@ -67,19 +67,20 @@ checkm lineage_wf -t 20 -x fna ./genomes/ ./checkm-linewf-results | tee log-chec
 ### Usage02: taxonomy workflow
 Only if taxonomy known
 ```
-# specify the 'rank' and 'taxon',  available ones are listed in the next section "checkm taxon_list"
-checkm taxonomy_wf <rank> <taxon> -t 20 -x fna putative/genomes/directory/ checkm/results/directory/ | tee checkm-taxowf-results.txt
+# specify the 'rank' and 'taxon',  available ones are listed in the next section "checkm available taxon_list"
+(checkm) jiang@azur:~/user_name$ checkm taxonomy_wf <rank> <taxon> -t 20 -x fna putative/genomes/directory/ checkm/results/directory/ | tee checkm-taxowf-results.txt
 
 # example
-checkm taxonomy_wf phylum Chloroflexi -t 20 -x fna ./genomes/ ./checkm-taxowf-results | tee log-checkm-taxowf-results.txt
+(checkm) jiang@azur:~/user_name$ checkm taxonomy_wf phylum Chloroflexi -t 20 -x fna ./genomes/ ./checkm-taxowf-results | tee log-checkm-taxowf-results.txt
 ``` 
 *similar format results will be shown at the bottom of the screen and the txt file.
 
 
 
 ---
-## Checkm taxon_list
+## Checkm available taxon_list
 ```
+(checkm) jiang@azur:~/user_name$ checkm taxon_list
 [2023-02-17 15:07:59] INFO: CheckM v1.2.2
 [2023-02-17 15:07:59] INFO: checkm taxon_list
 [2023-02-17 15:07:59] INFO: CheckM data: /home/jiang/mambaforge-pypy3/envs/checkm/checkm_data
