@@ -20,7 +20,7 @@ Usage text
   (base) jiang@azur:~/user_name$
   # if not the target environment, activate it by 'conda activate'
   (base) jiang@azur:~/user_name$ conda activate checkm
-  # check again at the beginning, now it is 'gtdbtk-2.1.1', good to go
+  # check again at the beginning, now it is 'checkm', good to go
   (checkm) jiang@azur:~/user_name$ 
 ```
 
