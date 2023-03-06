@@ -11,16 +11,16 @@ Usage text
 ```
 
 
-### Check and Activate the environment first
+### Move to your workplace and activate the environment first
 ```
   # don't forget to change to your directory first
   (base) jiang@azur:~$ cd user_name
   
-  # check current enviroment at the beginning of command line, like the 'base' here
+  # check the current enviroment at the beginning of the command line, like the 'base' here
   (base) jiang@azur:~/user_name$
-  # if not thetargete d enviroment, activate it by 'conda activate'
+  # if not the target environment, activate it by 'conda activate'
   (base) jiang@azur:~/user_name$ conda activate gtdbtk-2.1.1
-  # check again at the beginning, now is 'gtdbtk-2.1.1', good to go
+  # check again at the beginning, now it is 'gtdbtk-2.1.1', good to go
   (gtdbtk-2.1.1) jiang@azur:~/user_name$ 
 ```
 
