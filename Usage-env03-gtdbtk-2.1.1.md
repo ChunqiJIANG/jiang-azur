@@ -44,6 +44,7 @@ The classify workflow will run the following steps:
 
 The taxonomic classification of each bacterial and archaeal genome is contained in the output files **classify_wf_out/classify/gtdbtk.bac120.summary.tsv**.
 
+![classify_wf_out](/pics/classify_wf_out.png)
 
 
 ### Usage02: [de_novo workflow](https://ecogenomics.github.io/GTDBTk/commands/de_novo_wf.html#de-novo-wf)
