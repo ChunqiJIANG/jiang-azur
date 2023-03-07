@@ -35,8 +35,8 @@
 - [Env2-assembly](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env02-assembly.md)
   - 2023-03-07 created
 - [Env3-gtdbtk-2.1.1](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env03-gtdbtk-2.1.1.md)
-  - 2023-03-02 created
   - 2023-03-06 updated
+  - 2023-03-02 created
 - [Env4-checkm](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env04-checkm.md)
   - 2023-03-06 created
 - [Env5-pydata]()
