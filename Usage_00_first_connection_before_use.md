@@ -9,16 +9,16 @@ Japanese version [sshキー(秘密鍵・公開鍵)の作成と認証　流れ](h
   
   # create ssh key
   $ ssh-keygen  # by default
-  Generating public/private rsa key pair.
-  Enter file in which to save the key (/Users/ユーザー名/.ssh/id_rsa): <-- # (save place) input nothing just enter by default
-  Enter passphrase (empty for no passphrase): <-- # enter your passphrase (password)
-  Enter same passphrase again:  <-- # confirm your passphrase (password)
-  Your identification has been saved in id_rsa.
-  Your public key has been saved in id_rsa.pub.
+      Generating public/private rsa key pair.
+      Enter file in which to save the key (/Users/ユーザー名/.ssh/id_rsa): <-- # (save place) input nothing just enter by default
+      Enter passphrase (empty for no passphrase): <-- # enter your passphrase (password)
+      Enter same passphrase again:  <-- # confirm your passphrase (password)
+      Your identification has been saved in id_rsa.
+      Your public key has been saved in id_rsa.pub.
   
   # check (these are default names without input in the first step)
   $ ls 
-  id_rsa  id_rsa.pub
+    id_rsa  id_rsa.pub
 ```
 **private key: id_rsa (should not be shown to others)**  
 ****public key: id_rsa.pub (can be shown to others)***
