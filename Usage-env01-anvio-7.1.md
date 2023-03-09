@@ -31,6 +31,10 @@ ssh azur -L 8080:localhost:8080
 
 ## Let's start !!!
 
+Here I mainly introduce the three usages:
+- Pan genomic
+- Meta genomics
+- Meta-pan genomics
 
 ### Usage01: [Pangenomics]()
 
