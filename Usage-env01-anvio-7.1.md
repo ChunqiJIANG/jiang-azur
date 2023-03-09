@@ -1,3 +1,34 @@
+
+This page introduces the usages in the environment of **'anvio-7.1'**.
+
+<p align="right"> Updated on 2023-03-0X </p>
+
+#### Usage description
+Usage text 
+```
+  # annotation
+  (environment) ~/location$ command line
+```
+
+
+### Move to your workplace and activate the environment first
+```
+  # don't forget to change to your directory first
+  (base) jiang@azur:~$ cd user_name
+  
+  # check the current enviroment at the beginning of the command line, like the 'base' here
+  (base) jiang@azur:~/user_name$
+  # if not the target environment, activate it by 'conda activate'
+  (base) jiang@azur:~/user_name$ conda activate anvio-7.1
+  # check again at the beginning, now it is 'anvio-7.1', good to go
+  (anvio-7.1) jiang@azur:~/user_name$ 
+```
+
+## Let's start !
+
+### Usage01: [classify workflow](https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html#classify-wf)
+
+
 # Usage of environment 01 'anvio-7.1'
 
 > ssh azur -L 8080:localhost:8080
