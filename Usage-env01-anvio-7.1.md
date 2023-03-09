@@ -34,7 +34,11 @@ ssh azur -L 8080:localhost:8080
 
 ### Usage01: [Pangenomics]()
 
-#### 01-00: Checking your input FASTA files
+
+#### 01-00: scripts
+
+
+#### 01-01: Checking your input FASTA files
 
 ```
 ## Re-formatting your input FASTA (simplify the header lines of FASTA files for genomes)
@@ -46,7 +50,7 @@ ssh azur -L 8080:localhost:8080
 
 ```
 
-#### 01-1 Converting FASTA files into anvi’o contigs databases 
+#### 01-02 Converting FASTA files into anvi’o contigs databases 
 ```
 ## Creating the anvi’o contigs databases
 # one by one
