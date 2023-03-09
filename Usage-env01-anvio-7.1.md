@@ -24,10 +24,6 @@ Usage text
   (anvio-7.1) jiang@azur:~/user_name$ 
 ```
 
-ssh azur -L 8080:localhost:8080
-
-~/scripts/script_pangenomics_workflow_T20.sh 2>&1 | tee log.txt
-
 
 ## Let's start !!!
 
@@ -40,7 +36,7 @@ Here I mainly introduce the three usages:
 
 
 #### 01-00: scripts
-
+~/scripts/script_pangenomics_workflow_T20.sh 2>&1 | tee log.txt
 
 #### 01-01: Checking your input FASTA files
 
@@ -93,6 +89,7 @@ anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchi
  anvi-summarize -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db  -C DEFAULT -o SUMMARY-XXXX-default
 
 #### Display the results using 
+ssh azur -L 8080:localhost:8080
 anvi-display-pan -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --server-only -P xxx
 
 ##  ANI calculation
