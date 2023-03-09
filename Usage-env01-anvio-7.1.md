@@ -53,12 +53,12 @@ Here I mainly introduce the three usages:
 #### 01-02 Converting FASTA files into anvi’o contigs databases 
 ```
 ## Creating the anvi’o contigs databases
-# one by one
-
-# one cmd for all 
+# one cmd for all (multiple files)
  for f in *_headfix.fasta; do anvi-gen-contigs-database -f $f -o CD_${f%_*}_CD.db; done
+# one by one if you like
 
-## Annotatting your contigs databases
+
+## Annotating your contigs databases
 # anvi-run-hmms
  for f in *_CD.db; do anvi-run-hmms -c $f -T n; done (n: the highest sequence number)
 # anvi-run-ncbi-cogs (COG20)
@@ -67,18 +67,32 @@ Here I mainly introduce the three usages:
  for f in *_CD.db; do anvi-run-kegg-kofams -c $f -T 20; done
 ```
 
-#### Generate an anvio genomes storage using
+#### 01-03 Generating an anvio genomes storage
+#external_database_path.txt
+name	contigs_db_path
+
+```
 anvi-gen-genomes-storage -e external_database_path.txt -o GDB_XXXX_GENOMES.db
-		# external_database_path.txt
-		    name	contigs_db_path
+```
+
 		
-#### Run pangenome analysis using 
-	--use-ncbi-blast (default: False) This program uses DIAMOND by default
-	--enforce-hierarchical-clustering (default: False)/--skip-hierarchical-clustering (default: False)	
+#### 01-04 Running the pangenome analysis
+```
 (fast)
 anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering
 (slow)
 anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering --use-ncbi-blast 
+
+```
+	--use-ncbi-blast (default: False) This program uses DIAMOND by default
+	--enforce-hierarchical-clustering (default: False)/--skip-hierarchical-clustering (default: False)	
+
+#### 01-05 Displaying the pangenome
+```
+ssh azur -L 8080:localhost:8080
+anvi-display-pan -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --server-only -P xxx
+```
+
 
 #### defualt summary
  # check collections
@@ -88,9 +102,6 @@ anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchi
  # summarize the 'DEFAULT' collection
  anvi-summarize -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db  -C DEFAULT -o SUMMARY-XXXX-default
 
-#### Display the results using 
-ssh azur -L 8080:localhost:8080
-anvi-display-pan -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --server-only -P xxx
 
 ##  ANI calculation
 anvi-compute-genome-similarity --program pyANI -i txt-internal-genomes.txt -p PROJECT-Sulfitobacter-PAN/PROJECT-Sulfitobacter-PAN-PAN.db -o pyANI-ANIb -T 20
