@@ -41,4 +41,5 @@
   - 2023-03-06 created
 - [Env5-pydata]()
 - [Env6-r-env]()
-- [Env7-]()
+- [Env7-unicycler050]()
+- [Env8-qiime2-2023.2]()
