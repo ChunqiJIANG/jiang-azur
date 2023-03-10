@@ -19,5 +19,7 @@
     05      pydata                   /home/jiang/mambaforge-pypy3/envs/pydata
     06      r-env                    /home/jiang/mambaforge-pypy3/envs/r-env
     07      unicycler050             /home/jiang/mambaforge-pypy3/envs/unicycler050
+    # update 2023-03-10
+    08      qiime2-2023.2            /home/jiang/mambaforge-pypy3/envs/qiime2-2023.2
  
 
