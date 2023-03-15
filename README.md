@@ -28,7 +28,7 @@
 
 ***Usages：***
 
-- [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage_00_first_connection_before_use.md)
+- [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage_env00_first_connection_before_use.md)
   - 2023-03-06 created
 - [Env1-anvio-7.1](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env01-anvio-7.1.md)
   - 2023-03-02 created
