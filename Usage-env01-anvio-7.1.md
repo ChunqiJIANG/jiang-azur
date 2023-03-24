@@ -35,12 +35,50 @@ Here I mainly introduce the three usages:
 ### Usage01: [Pangenomics]()
 
 
-#### 01-00: scripts
-~/scripts/script_pangenomics_workflow_T20.sh 2>&1 | tee log.txt
+#### 01-A: EASY WAY - Using jiang's script
+One script for easy use of pangenome database preparation was writen.
+> Hello, there! This is the workflow of database preparation for Pangenomic analysis, by Jiang. If you have any questions, please let him know. 
+> 
+> Following steps are included:
+>1. Simplify the contigs names in your fasta file
+>2. Create a contigs database for each genome
+>3. HMM decoration for each contigs database
+>4. COG annotations for each contigs database
+>5. Kofam annotation for each contigs database 
+>
+> Done 
 
-#### 01-01: Checking your input FASTA files
+Before start:
+1. put all your genomes in a directory named '00-GENOMES'
+2. prepare a txt file named 'external_database_path.txt', like this: 
+
+|  name   | contigs_db_path  |
+|  ----  | ----  |
+|  ***sample01*** | ./03-CONTIGS-DB/CD_***sample01***_CD.db  |
+|  ***sample02***  | ./03-CONTIGS-DB/CD_***sample02***_CD.db  |
+|  ...  | ...  |
+
+*only need change the ***italic&bold part***('sample01', 'sample02', ...) to your sample name.
 
 ```
+# prepare the database using a script
+(anvio-7.1) jiang@azur:~/user_name/your_place$ /home/jiang/user_jiang/00-scripts/script_pangenomics_workflow_database_prep_Ver3.sh NAME NUM_THREADS
+# generate an anvio genomes storage
+
+# Run the pangenome analysis
+
+# display the pangenome
+
+``` 
+*NAME: your project name, anything is ok.* 
+
+*NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
+
+
+#### 01-B: HARD BUT WORTH - Step by Step
+
+```
+Checking your input FASTA files
 ## Re-formatting your input FASTA (simplify the header lines of FASTA files for genomes)
 # one cmd for all (multiple files)
  for f in *.fasta; do anvi-script-reformat-fasta $f -o ../01_SIMPLIFY/${f%.*}_simplify.fasta -l 0 --simplify-names --seq-type NT ; done
