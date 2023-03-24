@@ -61,8 +61,11 @@ Before start:
 *only need change the ***italic&bold part***('sample01', 'sample02', ...) to your sample name.
 
 ```
+# check everything is ready
+(anvio-7.1) jiang@azur:~/user_name/your_place$ ls
+   00-GENOMES external_database_path.txt
 # prepare the database using a script
-(anvio-7.1) jiang@azur:~/user_name/your_place$ /home/jiang/user_jiang/00-scripts/script_pangenomics_workflow_database_prep_Ver3.sh NAME NUM_THREADS
+(anvio-7.1) jiang@azur:~/user_name/your_place$ /home/jiang/user_jiang/00-scripts/script_pangenomics_workflow_database_prep_Ver3.sh RUN_NAME NUM_THREADS
 # generate an anvio genomes storage
 
 # Run the pangenome analysis
@@ -70,7 +73,7 @@ Before start:
 # display the pangenome
 
 ``` 
-*NAME: your project name, anything is ok.* 
+*RUN_NAME: your project name, anything is ok.* 
 
 *NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
 
