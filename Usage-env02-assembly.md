@@ -25,7 +25,8 @@ checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /tax
 ```
 
 
-# filter long reads (priority: --target_bases > --keep_percent > --min_length)
+# filter long reads 
+(priority: --target_bases > --keep_percent > --min_length)
 ```
 filtlong --keep_percent 90 --min_length 1000  N4_25.fastq.gz | gzip > QF_N4_25.fastq.gz
 filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.gz | gzip > T4_f2000_p90_b5M.fastq.gz
@@ -76,7 +77,7 @@ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_M
 		## repeat ...
 
 # one script for all 
-	# default iterate 5 times, you can change "5" tn any number you like, but more than 10 is not recommended.
+	# default iterate 5 times, you can change "5" to any number you like, but less than 10 is recommended.
  	/home/jiang/user_jiang/scripts/script_pilon-polish_iterate_azur_T20_ver3.sh -p PilonSHv3_SAMPLE_n5 -i SAMPLE.fasta -1 QF_SAMPLE_Read1.fq.gz -2 QF_SAMPLE_Read2.fq.gz -n 5
 
 ```
