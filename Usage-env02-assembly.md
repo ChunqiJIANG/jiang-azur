@@ -36,14 +36,17 @@ filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.g
 # filter short reads
 ```
 fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
-fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 10 
-fastp --in1  --in2  --out1 --out2  --thread n
+fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 20 
+fastp --in1  --in2  --out1 --out2  --thread 20
 ```
 
 
 # unicycler
 ```
+# hybrid 
 unicycler -1 QF_N3_17_Read1.fq.gz -2 QF_N3_17_Read2.fq.gz -l QF_N3_17_v2.fastq.gz -t 30 -o Unicycler048_N3_17
+# short only
+unicycler -1 QF_short_R1.fq.gz -2 QF_short_R2.fq.gz  -o unicycler_short_SAMPLE --threads 20 --no_correct --no_pilon
 ```
 
 
