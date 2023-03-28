@@ -49,7 +49,7 @@ One script for easy use of pangenome database preparation was writen.
 > Done 
 
 Before start:
-1. put all your genomes in a directory named '00-GENOMES'
+1. put all your genomes in a directory, such as '00-GENOMES'
 2. prepare a txt file named 'external_database_path.txt', like this: 
 
 |  name   | contigs_db_path  |
@@ -65,7 +65,7 @@ Before start:
 (anvio-7.1) jiang@azur:~/user_name/your_place$ ls
    00-GENOMES external_database_path.txt
 # prepare the database using a script
-(anvio-7.1) jiang@azur:~/user_name/your_place$ /home/jiang/user_jiang/00-scripts/script_pangenomics_workflow_database_prep_Ver3.sh RUN_NAME NUM_THREADS
+(anvio-7.1) jiang@azur:~/user_name/your_place$ /home/jiang/user_jiang/00-scripts/script_pangenomics_workflow_all_T20_Ver5.sh GENOME_DIR EXTERNAL_FILE RUN_NAME NUM_THREADS
 # generate an anvio genomes storage
 
 # Run the pangenome analysis
@@ -73,6 +73,10 @@ Before start:
 # display the pangenome
 
 ``` 
+*GENOME_DIR: the directory containing all your genome files*
+
+*EXTERNAL_FILE: the txt file for external contigs database path*
+
 *RUN_NAME: your project name, anything is ok.* 
 
 *NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
