@@ -122,5 +122,10 @@
 - q2-SCNIC
 	- blas-1.1
 
+## 2023-03-28
+> **Environment-09 'ncbi':** (*conda activate ncbi*)
+- ncbi-blast-2.13.0+
+
+
 ***
 > **Environment-xx '':** (*conda activate *)
