@@ -1,0 +1,237 @@
+Last login: Mon Mar 27 12:19:09 on ttys002
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % ssh azur
+Enter passphrase for key '/Users/chunqijiang/.ssh/jiang_azur': 
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.15.0-67-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+77 updates can be applied immediately.
+9 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Tue Mar 28 13:38:45 2023 from 157.82.122.20
+(base) jiang@azur:~$ conda create -n ncbi
+Retrieving notices: ...working... done
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 22.11.1
+  latest version: 23.1.0
+
+Please update conda by running
+
+    $ conda update -n base -c conda-forge conda
+
+Or to minimize the number of packages updated during conda update use
+
+     conda install conda=23.1.0
+
+
+
+## Package Plan ##
+
+  environment location: /home/jiang/mambaforge-pypy3/envs/ncbi
+
+
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate ncbi
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) jiang@azur:~$ conda activate ncbi
+(ncbi) jiang@azur:~$ wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.13.0+-1.src.rpm  
+--2023-03-28 15:46:48--  https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.13.0+-1.src.rpm
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 130.14.250.13, 165.112.9.229, 2607:f220:41e:250::13, ...
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.13|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 55212073 (53M) [application/x-rpm]
+Saving to: ‘ncbi-blast-2.13.0+-1.src.rpm’
+
+ncbi-blast-2.13.0+-1.src.rpm      100%[=============================================================>]  52.65M   165KB/s    in 6m 51s  
+
+2023-03-28 15:53:40 (131 KB/s) - ‘ncbi-blast-2.13.0+-1.src.rpm’ saved [55212073/55212073]
+
+(ncbi) jiang@azur:~$ ls
+mambaforge-pypy3  ncbi-blast-2.13.0+-1.src.rpm  user_hasegawa  user_jiang
+(ncbi) jiang@azur:~$ rpm -ivh ncbi-blast-2.2.18-1.x86_64.rpm
+rpm: RPM should not be used directly install RPM packages, use Alien instead!
+rpm: However assuming you know what you are doing...
+error: open of ncbi-blast-2.2.18-1.x86_64.rpm failed: No such file or directory
+(ncbi) jiang@azur:~$ rpm -ivh ncbi-blast-2.13.0+-1.src.rpm 
+rpm: RPM should not be used directly install RPM packages, use Alien instead!
+rpm: However assuming you know what you are doing...
+Updating / installing...
+   1:ncbi-blast-2.13.0+-1             warning: user coremake does not exist - using root
+warning: group cppcore does not exist - using root
+################################# [100%]
+warning: user coremake does not exist - using root
+warning: group cppcore does not exist - using root
+(ncbi) jiang@azur:~$ rm ncbi-blast-2.13.0+-1.src.rpm 
+(ncbi) jiang@azur:~$ ls
+mambaforge-pypy3  rpmbuild  user_hasegawa  user_jiang
+(ncbi) jiang@azur:~$ rm -r rpmbuild/
+(ncbi) jiang@azur:~$ ls
+mambaforge-pypy3  user_hasegawa  user_jiang
+(ncbi) jiang@azur:~$ ls
+mambaforge-pypy3  user_hasegawa  user_jiang
+(ncbi) jiang@azur:~$ scp from local download
+download: No such file or directory
+(ncbi) jiang@azur:~$ ls
+mambaforge-pypy3  ncbi-blast-2.13.0+-x64-linux.tar.gz  user_hasegawa  user_jiang
+(ncbi) jiang@azur:~$ mv ncbi-blast-2.13.0+-x64-linux.tar.gz mambaforge-pypy3/envs/ncbi/
+(ncbi) jiang@azur:~$ cd mambaforge-pypy3/envs/ncbi/
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi$ ls
+conda-meta  ncbi-blast-2.13.0+-x64-linux.tar.gz
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi$ tar zxvpf ncbi-blast-2.13.0+-x64-linux.tar.gz 
+./ncbi-blast-2.13.0+/
+./ncbi-blast-2.13.0+/ncbi_package_info
+./ncbi-blast-2.13.0+/doc/
+./ncbi-blast-2.13.0+/doc/README.txt
+./ncbi-blast-2.13.0+/doc/BLAST_PRIVACY
+./ncbi-blast-2.13.0+/ChangeLog
+./ncbi-blast-2.13.0+/README
+./ncbi-blast-2.13.0+/LICENSE
+./ncbi-blast-2.13.0+/bin/
+./ncbi-blast-2.13.0+/bin/blastn
+./ncbi-blast-2.13.0+/bin/dustmasker
+./ncbi-blast-2.13.0+/bin/blast_vdb_cmd
+./ncbi-blast-2.13.0+/bin/windowmasker
+./ncbi-blast-2.13.0+/bin/blastn_vdb
+./ncbi-blast-2.13.0+/bin/makeblastdb
+./ncbi-blast-2.13.0+/bin/makeprofiledb
+./ncbi-blast-2.13.0+/bin/blastp
+./ncbi-blast-2.13.0+/bin/psiblast
+./ncbi-blast-2.13.0+/bin/blastx
+./ncbi-blast-2.13.0+/bin/deltablast
+./ncbi-blast-2.13.0+/bin/cleanup-blastdb-volumes.py
+./ncbi-blast-2.13.0+/bin/get_species_taxids.sh
+./ncbi-blast-2.13.0+/bin/blastdbcmd
+./ncbi-blast-2.13.0+/bin/legacy_blast.pl
+./ncbi-blast-2.13.0+/bin/blastdbcheck
+./ncbi-blast-2.13.0+/bin/tblastn
+./ncbi-blast-2.13.0+/bin/tblastn_vdb
+./ncbi-blast-2.13.0+/bin/blastdb_aliastool
+./ncbi-blast-2.13.0+/bin/convert2blastmask
+./ncbi-blast-2.13.0+/bin/blast_formatter_vdb
+./ncbi-blast-2.13.0+/bin/blast_formatter
+./ncbi-blast-2.13.0+/bin/rpstblastn
+./ncbi-blast-2.13.0+/bin/rpsblast
+./ncbi-blast-2.13.0+/bin/tblastx
+./ncbi-blast-2.13.0+/bin/segmasker
+./ncbi-blast-2.13.0+/bin/update_blastdb.pl
+./ncbi-blast-2.13.0+/bin/makembindex
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi$ ls
+conda-meta  ncbi-blast-2.13.0+  ncbi-blast-2.13.0+-x64-linux.tar.gz
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi$ cd ncbi-blast-2.13.0+/
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ ls
+ChangeLog  LICENSE  README  bin  doc  ncbi_package_info
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ export PATH=$PATH:$HOME/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/bin
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ echo $PATH
+/home/jiang/mambaforge-pypy3/envs/ncbi/bin:/home/jiang/mambaforge-pypy3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jiang/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/bin
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ ls
+ChangeLog  LICENSE  README  bin  doc  ncbi_package_info
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ mkdir blastdb
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ ls
+ChangeLog  LICENSE  README  bin  blastdb  doc  ncbi_package_info
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ export BLASTDB=$HOME/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+$ cd blastdb/
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb$ perl ../bin/update_blastdb.pl --passive --decompress 16S_ribosomal_RNA
+Connected to NCBI
+Downloading 16S_ribosomal_RNA.tar.gz...corrupt download, trying again.
+Downloading 16S_ribosomal_RNA.tar.gz...Unable to close datastream at ../bin/update_blastdb.pl line 444.
+Failed to download 16S_ribosomal_RNA.tar.gz.md5!
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb$ scp from local download
+download: No such file or directory
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb$ ls
+16S_ribosomal_RNA.ndb  16S_ribosomal_RNA.nnd  16S_ribosomal_RNA.nos  16S_ribosomal_RNA.ntf     16S_ribosomal_RNA.tar.gz.md5
+16S_ribosomal_RNA.nhr  16S_ribosomal_RNA.nni  16S_ribosomal_RNA.not  16S_ribosomal_RNA.nto     taxdb.btd
+16S_ribosomal_RNA.nin  16S_ribosomal_RNA.nog  16S_ribosomal_RNA.nsq  16S_ribosomal_RNA.tar.gz  taxdb.bti
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb$ ls -l
+total 206396
+-rw-r--r-- 1 jiang jiang   1417216  3月 28 16:21 16S_ribosomal_RNA.ndb
+-rw-r--r-- 1 jiang jiang   4182370  3月 28 16:21 16S_ribosomal_RNA.nhr
+-rw-r--r-- 1 jiang jiang    321820  3月 28 16:22 16S_ribosomal_RNA.nin
+-rw-r--r-- 1 jiang jiang    214448  3月 28 16:22 16S_ribosomal_RNA.nnd
+-rw-r--r-- 1 jiang jiang       884  3月 28 16:22 16S_ribosomal_RNA.nni
+-rw-r--r-- 1 jiang jiang    107256  3月 28 16:22 16S_ribosomal_RNA.nog
+-rw-r--r-- 1 jiang jiang    536128  3月 28 16:21 16S_ribosomal_RNA.nos
+-rw-r--r-- 1 jiang jiang    321680  3月 28 16:21 16S_ribosomal_RNA.not
+-rw-r--r-- 1 jiang jiang   9842163  3月 28 16:22 16S_ribosomal_RNA.nsq
+-rw-r--r-- 1 jiang jiang    675840  3月 28 16:22 16S_ribosomal_RNA.ntf
+-rw-r--r-- 1 jiang jiang    190608  3月 28 16:22 16S_ribosomal_RNA.nto
+-rw-rw-r-- 1 jiang jiang  15021552  3月 28 16:18 16S_ribosomal_RNA.tar.gz
+-rw-r--r-- 1 jiang jiang        59  3月 28 16:21 16S_ribosomal_RNA.tar.gz.md5
+-rw-r--r-- 1 jiang jiang 161527582  3月 28 16:22 taxdb.btd
+-rw-r--r-- 1 jiang jiang  16959560  3月 28 16:22 taxdb.bti
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb$ rm 16S_ribosomal_RNA.tar.gz
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb$ ls
+16S_ribosomal_RNA.ndb  16S_ribosomal_RNA.nin  16S_ribosomal_RNA.nni  16S_ribosomal_RNA.nos  16S_ribosomal_RNA.nsq  16S_ribosomal_RNA.nto         taxdb.btd
+16S_ribosomal_RNA.nhr  16S_ribosomal_RNA.nnd  16S_ribosomal_RNA.nog  16S_ribosomal_RNA.not  16S_ribosomal_RNA.ntf  16S_ribosomal_RNA.tar.gz.md5  taxdb.bti
+(ncbi) jiang@azur:~/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb$ cd
+(ncbi) jiang@azur:~$ cd user_jiang/
+(ncbi) jiang@azur:~/user_jiang$ blastn -h
+USAGE
+  blastn [-h] [-help] [-import_search_strategy filename]
+    [-export_search_strategy filename] [-task task_name] [-db database_name]
+    [-dbsize num_letters] [-gilist filename] [-seqidlist filename]
+    [-negative_gilist filename] [-negative_seqidlist filename]
+    [-taxids taxids] [-negative_taxids taxids] [-taxidlist filename]
+    [-negative_taxidlist filename] [-entrez_query entrez_query]
+    [-db_soft_mask filtering_algorithm] [-db_hard_mask filtering_algorithm]
+    [-subject subject_input_file] [-subject_loc range] [-query input_file]
+    [-out output_file] [-evalue evalue] [-word_size int_value]
+    [-gapopen open_penalty] [-gapextend extend_penalty]
+    [-perc_identity float_value] [-qcov_hsp_perc float_value]
+    [-max_hsps int_value] [-xdrop_ungap float_value] [-xdrop_gap float_value]
+    [-xdrop_gap_final float_value] [-searchsp int_value]
+    [-sum_stats bool_value] [-penalty penalty] [-reward reward] [-no_greedy]
+    [-min_raw_gapped_score int_value] [-template_type type]
+    [-template_length int_value] [-dust DUST_options]
+    [-filtering_db filtering_database]
+    [-window_masker_taxid window_masker_taxid]
+    [-window_masker_db window_masker_db] [-soft_masking soft_masking]
+    [-ungapped] [-culling_limit int_value] [-best_hit_overhang float_value]
+    [-best_hit_score_edge float_value] [-subject_besthit]
+    [-window_size int_value] [-off_diagonal_range int_value]
+    [-use_index boolean] [-index_name string] [-lcase_masking]
+    [-query_loc range] [-strand strand] [-parse_deflines] [-outfmt format]
+    [-show_gis] [-num_descriptions int_value] [-num_alignments int_value]
+    [-line_length line_length] [-html] [-sorthits sort_hits]
+    [-sorthsps sort_hsps] [-max_target_seqs num_sequences]
+    [-num_threads int_value] [-mt_mode int_value] [-remote] [-version]
+
+DESCRIPTION
+   Nucleotide-Nucleotide BLAST 2.13.0+
+
+Use '-help' to print detailed descriptions of command line arguments
+(ncbi) jiang@azur:~/user_jiang$ exit
+logout
+Connection to 157.82.133.226 closed.
+(base) chunqijiang@Jermy-MacM1Pro14 ~ % 
+
+
+# set path forever
+(base) jiang@azur:~$ conda activate ncbi
+(ncbi) jiang@azur:~$ conda env config vars set PATH=$PATH:$HOME/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/bin
+To make your changes take effect please reactivate your environment
+(ncbi) jiang@azur:~$ conda env config vars set BLASTDB=$HOME/mambaforge-pypy3/envs/ncbi/ncbi-blast-2.13.0+/blastdb
+To make your changes take effect please reactivate your environment
+(ncbi) jiang@azur:~$ 
