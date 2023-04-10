@@ -1,5 +1,5 @@
 
-# This is a repository[^1] for internal usage ([Yoshizawa Group](https://genedynamics.aori.u-tokyo.ac.jp/)) in server space 'jiang@azur' *only if you can access*.
+# This is a repository[^1] for internal usage ([Yoshizawa Group](https://genedynamics.aori.u-tokyo.ac.jp/)) in server space 'jiang@azur' *(access necessary)*.
 
 <p align="right"> Start from 2023-02-28 </p>
 
