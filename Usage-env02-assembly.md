@@ -23,36 +23,37 @@ Usage text
   (assembly) jiang@azur:~/user_name$ 
 ```
 
+## Let's start !!!
+The usages of each tool in this environment are listed:
 
-
-# Remote copy upload
+### Remote copy upload
 ```
 scp /path/to/file azur:~/path/to/directory/
 scp -r azur:~/path/to/directory/ /Users/chunqijiang/Dropbox/Mine_UTokyo_AORI/local/ 
 ```
 
 
-# check sequence features
+### check sequence features
 ```
 seqkit watch --fields ReadLen T4_f2000_p90_b5M.fastq.gz -O len_T4_f2p9b5m.png
 seqkit stat *.gz -a
 ```
 
 
-# check data quality
+### check data quality
 ```
 fastqc T4_f1000_p90.fastq.gz -o fastqc -t 10
 ```
 
 
-# check genome quality (completeness)
+### check genome quality (completeness)
 ```
 checkm lineage_wf -t 40 -x fna path/to/fasta/directory/ /results/directory/
 checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /taxowf-results/directory/
 ```
 
 
-# filter long reads 
+### filter long reads 
 (priority: --target_bases > --keep_percent > --min_length)
 ```
 filtlong --keep_percent 90 --min_length 1000  N4_25.fastq.gz | gzip > QF_N4_25.fastq.gz
@@ -60,7 +61,7 @@ filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.g
 ```
 
 
-# filter short reads
+### filter short reads
 ```
 fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
 fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 20 
@@ -68,7 +69,7 @@ fastp --in1  --in2  --out1 --out2  --thread 20
 ```
 
 
-# unicycler
+### unicycler
 ```
 # hybrid 
 unicycler -1 QF_N3_17_Read1.fq.gz -2 QF_N3_17_Read2.fq.gz -l QF_N3_17_v2.fastq.gz -t 30 -o Unicycler048_N3_17
@@ -77,19 +78,19 @@ unicycler -1 QF_short_R1.fq.gz -2 QF_short_R2.fq.gz  -o unicycler_short_SAMPLE -
 ```
 
 
-# flye
+### flye
 ```
 flye --nano-raw QF_N4_25_p60-l9000.fastq.gz --out-dir Flye_N4_25_v1 -t 20
 ```
 
 
-# medaka
+### medaka
 ```
 medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_Medaka -t 10
 ```
 
 
-# pilon
+### pilon
 ```
 # step by step
 		# create an index for the reference genome (fasta) with Bowtie2
@@ -113,7 +114,7 @@ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_M
 ```
 
 
-# check length
+### check length
 ```
 # Print sequence length, GC content, and only print names (no sequences), we could also print title line by flag -H.
 seqkit fx2tab -l -g -n -i -H assembly.fasta
