@@ -35,7 +35,7 @@ Here I mainly introduce the three usages:
 ### Usage01: [Pangenomics]()
 
 
-#### 01-A: EASY WAY - Using jiang's script
+#### 01-01-A: EASY WAY - Using jiang's script
 One script for easy use of pangenome database preparation was writen.
 > Hello, there! This is the workflow of database preparation for Pangenomic analysis, by Jiang. If you have any questions, please let him know. 
 > 
@@ -82,7 +82,7 @@ Before start:
 *NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
 
 
-#### 01-B: HARD BUT WORTH - Step by Step
+#### 01-01-B: HARD BUT WORTH - Step by Step
 
 ```
 Checking your input FASTA files
@@ -138,18 +138,21 @@ ssh azur -L 8080:localhost:8080
 anvi-display-pan -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --server-only -P xxx
 ```
 
-
-#### defualt summary
+#### 01-06 Defualt summary
+```
  # check collections
  anvi-summarize  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --list-collections
  # add a 'DEFAULT' collection for pangenome
  anvi-script-add-default-collection  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db 
  # summarize the 'DEFAULT' collection
  anvi-summarize -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db  -C DEFAULT -o SUMMARY-XXXX-default
+```
 
-
-##  ANI calculation
+#### 01-07 Optinal choice
+```
+ #  ANI calculation
 anvi-compute-genome-similarity --program pyANI -i txt-internal-genomes.txt -p PROJECT-Sulfitobacter-PAN/PROJECT-Sulfitobacter-PAN-PAN.db -o pyANI-ANIb -T 20
+```
 
 
 ### Usage02: [Metagenomics]()
