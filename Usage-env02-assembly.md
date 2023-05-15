@@ -117,8 +117,11 @@ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_M
 ### check length
 ```
 # Print sequence length, GC content, and only print names (no sequences), we could also print title line by flag -H.
-seqkit fx2tab -l -g -n -i -H assembly.fasta
+	seqkit fx2tab -l -g -n -i -H assembly.fasta
 # Sort sequences by id/name/sequence/length.
+	seqkit sort -l assembly.fasta > assembly.sorted.fasta (short to long)
+	seqkit sort -l -r assembly.fasta > assembly.sorted.fasta (long to short)
+  
 Flags:
   -b, --by-bases                by non-gap bases
   -l, --by-length               by sequence length
@@ -132,7 +135,5 @@ Flags:
   -r, --reverse                 reverse the result
   -L, --seq-prefix-length int   length of sequence prefix on which seqkit sorts by sequences (0 for whole sequence) (default 10000)
   -2, --two-pass                two-pass mode read files twice to lower memory usage. (only for FASTA format)
-  
-  seqkit sort -l assembly.fasta > assembly.sorted.fasta (short to long)
-  seqkit sort -l -r assembly.fasta > assembly.sorted.fasta (long to short)
+
 ```
