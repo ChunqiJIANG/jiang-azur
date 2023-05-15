@@ -1,7 +1,7 @@
 
 This page introduces the usages in the environment of **'anvio-7.1'**.
 
-<p align="right"> Updated on 2023-03-0X </p>
+<p align="right"> Updated on 2023-05-15 </p>
 
 #### Usage description
 Usage text 
