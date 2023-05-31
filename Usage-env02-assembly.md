@@ -28,24 +28,26 @@ The usages of each tool in this environment are listed:
 
 ### Remote copy upload
 ```
-scp /path/to/file azur:~/path/to/directory/
-scp -r azur:~/path/to/directory/ /Users/chunqijiang/Dropbox/Mine_UTokyo_AORI/local/ 
+# for file
+$ scp /path/to/local/file azur:~/path/to/directory/
+# for directory
+$ scp -r azur:~/path/to/directory/ /local/directory/ 
 ```
 
 
 ### check sequence features
 ```
 # example 1 (check length distribution)
-seqkit watch --fields ReadLen T4_f2000_p90_b5M.fastq.gz -O len_T4_f2p9b5m.png
+(assembly) jiang@azur:~/user_name$ seqkit watch --fields ReadLen T4_f2000_p90_b5M.fastq.gz -O len_T4_f2p9b5m.png
 # example 2 (list all information for all .gz files)
-seqkit stat *.gz -a
+(assembly) jiang@azur:~/user_name$ seqkit stat *.gz -a
 ```
 
 
 ### check data quality
 ```
 # example 1 
-fastqc T4_f1000_p90.fastq.gz -o fastqc -t 10
+(assembly) jiang@azur:~/user_name$ fastqc T4_f1000_p90.fastq.gz -o fastqc -t 10
 ```
 
 
@@ -53,9 +55,9 @@ fastqc T4_f1000_p90.fastq.gz -o fastqc -t 10
 
 ```
 # example 1 
-checkm lineage_wf -t 40 -x fna path/to/fasta/directory/ /results/directory/
+(assembly) jiang@azur:~/user_name$ checkm lineage_wf -t 40 -x fna path/to/fasta/directory/ /results/directory/
 # example 2
-checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /taxowf-results/directory/
+(assembly) jiang@azur:~/user_name$ checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /taxowf-results/directory/
 ```
 
 
@@ -63,41 +65,41 @@ checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /tax
 (priority: --target_bases > --keep_percent > --min_length)
 ```
 # example 1 
-filtlong --keep_percent 90 --min_length 1000  N4_25.fastq.gz | gzip > QF_N4_25.fastq.gz
+(assembly) jiang@azur:~/user_name$ filtlong --keep_percent 90 --min_length 1000  N4_25.fastq.gz | gzip > QF_N4_25.fastq.gz
 # example 2
-filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.gz | gzip > T4_f2000_p90_b5M.fastq.gz
+(assembly) jiang@azur:~/user_name$ filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.gz | gzip > T4_f2000_p90_b5M.fastq.gz
 ```
 
 
 ### filter short reads
 ```
 # example 1 (default)
-fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
+(assembly) jiang@azur:~/user_name$ fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
 # example 2 (set threads number, max = 16)
-fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 16 
+(assembly) jiang@azur:~/user_name$ fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 16 
 # example 3 (simple copy)
-fastp --in1  --in2  --out1 --out2  --thread 16
+(assembly) jiang@azur:~/user_name$ fastp --in1  --in2  --out1 --out2  --thread 16
 ```
 
 
 ### unicycler
 ```
 # hybrid 
-unicycler -1 QF_N3_17_Read1.fq.gz -2 QF_N3_17_Read2.fq.gz -l QF_N3_17_v2.fastq.gz -t 30 -o Unicycler048_N3_17
+(assembly) jiang@azur:~/user_name$ unicycler -1 QF_N3_17_Read1.fq.gz -2 QF_N3_17_Read2.fq.gz -l QF_N3_17_v2.fastq.gz -t 30 -o Unicycler048_N3_17
 # short only
-unicycler -1 QF_short_R1.fq.gz -2 QF_short_R2.fq.gz  -o unicycler_short_SAMPLE --threads 20 --no_correct --no_pilon
+(assembly) jiang@azur:~/user_name$ unicycler -1 QF_short_R1.fq.gz -2 QF_short_R2.fq.gz  -o unicycler_short_SAMPLE --threads 20 --no_correct --no_pilon
 ```
 
 
 ### flye
 ```
-flye --nano-raw QF_N4_25_p60-l9000.fastq.gz --out-dir Flye_N4_25_v1 -t 20
+(assembly) jiang@azur:~/user_name$ flye --nano-raw QF_N4_25_p60-l9000.fastq.gz --out-dir Flye_N4_25_v1 -t 20
 ```
 
 
 ### medaka
 ```
-medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_Medaka -t 10
+(assembly) jiang@azur:~/user_name$ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_Medaka -t 10
 ```
 
 
@@ -105,22 +107,22 @@ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_M
 ```
 # step by step
 		# create an index for the reference genome (fasta) with Bowtie2
-		bowtie2-build Medaka_SAMPLE/consensus.fasta index_SAMPLE (--threads 10)
+		$ bowtie2-build Medaka_SAMPLE/consensus.fasta index_SAMPLE (--threads 10)
 		# align the short reads to the reference genome
-		bowtie2 -x index_SAMPLE -1 QF_SAMPLE_Read1.fq.gz -2 QF_SAMPLE_Read2.fq.gz -S SAMPLE.sam --threads 10
+		$ bowtie2 -x index_SAMPLE -1 QF_SAMPLE_Read1.fq.gz -2 QF_SAMPLE_Read2.fq.gz -S SAMPLE.sam --threads 10
 		# convert the SAM file into a BAM file 
-		samtools view -bS SAMPLE.sam > SAMPLE.bam --threads 10
+		$ samtools view -bS SAMPLE.sam > SAMPLE.bam --threads 10
 		# convert the BAM file to a sorted BAM file
-		samtools sort SAMPLE.bam -o SAMPLE.sorted.bam --threads 10
+		$ samtools sort SAMPLE.bam -o SAMPLE.sorted.bam --threads 10
 		# index the sorted BAM file (  -@ Sets the number of threads)
-		samtools index -@ 10 SAMPLE.sorted.bam
+		$ samtools index -@ 10 SAMPLE.sorted.bam
 		# polish with Pilon (--threads no longer support)
-		pilon --genome Medaka_SAMPLE/consensus.fasta --bam SAMPLE.sorted.bam --changes --outdir Pilon_SAMPLE 
+		$ pilon --genome Medaka_SAMPLE/consensus.fasta --bam SAMPLE.sorted.bam --changes --outdir Pilon_SAMPLE 
 		## repeat ...
 
 # one script for all 
 	# default iterate 5 times, you can change "5" to any number you like, but less than 10 is recommended.
- 	/home/jiang/user_jiang/scripts/script_pilon-polish_iterate_azur_T20_ver3.sh -p PilonSHv3_SAMPLE_n5 -i SAMPLE.fasta -1 QF_SAMPLE_Read1.fq.gz -2 QF_SAMPLE_Read2.fq.gz -n 5
+ 	$ /home/jiang/user_jiang/scripts/script_pilon-polish_iterate_azur_T20_ver3.sh -p PilonSHv3_SAMPLE_n5 -i SAMPLE.fasta -1 QF_SAMPLE_Read1.fq.gz -2 QF_SAMPLE_Read2.fq.gz -n 5
 
 ```
 
@@ -128,10 +130,12 @@ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_M
 ### check length
 ```
 # Print sequence length, GC content, and only print names (no sequences), we could also print title line by flag -H.
-	seqkit fx2tab -l -g -n -i -H assembly.fasta
+	(assembly) jiang@azur:~/user_name$ seqkit fx2tab -l -g -n -i -H assembly.fasta
 # Sort sequences by id/name/sequence/length.
-	seqkit sort -l assembly.fasta > assembly.sorted.fasta (short to long)
-	seqkit sort -l -r assembly.fasta > assembly.sorted.fasta (long to short)
+	# short to long
+	(assembly) jiang@azur:~/user_name$ seqkit sort -l assembly.fasta > assembly.sorted.fasta 
+	# long to short
+	(assembly) jiang@azur:~/user_name$ seqkit sort -l -r assembly.fasta > assembly.sorted.fasta 
   
 Flags:
   -b, --by-bases                by non-gap bases
