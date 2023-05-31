@@ -1,6 +1,6 @@
 This page introduces the usages in the environment of **'assembly'**.
 
-<p align="right"> Updated on 2023-04-19 </p>
+<p align="right"> Updated on 2023-05-31 </p>
 
 #### Usage description
 Usage text 
@@ -35,20 +35,26 @@ scp -r azur:~/path/to/directory/ /Users/chunqijiang/Dropbox/Mine_UTokyo_AORI/loc
 
 ### check sequence features
 ```
+# example 1 (check length distribution)
 seqkit watch --fields ReadLen T4_f2000_p90_b5M.fastq.gz -O len_T4_f2p9b5m.png
+# example 2 (list all information for all .gz files)
 seqkit stat *.gz -a
 ```
 
 
 ### check data quality
 ```
+# example 1 
 fastqc T4_f1000_p90.fastq.gz -o fastqc -t 10
 ```
 
 
 ### check genome quality (completeness)
+
 ```
+# example 1 
 checkm lineage_wf -t 40 -x fna path/to/fasta/directory/ /results/directory/
+# example 2
 checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /taxowf-results/directory/
 ```
 
@@ -56,16 +62,21 @@ checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /tax
 ### filter long reads 
 (priority: --target_bases > --keep_percent > --min_length)
 ```
+# example 1 
 filtlong --keep_percent 90 --min_length 1000  N4_25.fastq.gz | gzip > QF_N4_25.fastq.gz
+# example 2
 filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.gz | gzip > T4_f2000_p90_b5M.fastq.gz
 ```
 
 
 ### filter short reads
 ```
+# example 1 (default)
 fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
-fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 20 
-fastp --in1  --in2  --out1 --out2  --thread 20
+# example 2 (set threads number, max = 16)
+fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 16 
+# example 3 (simple copy)
+fastp --in1  --in2  --out1 --out2  --thread 16
 ```
 
 
