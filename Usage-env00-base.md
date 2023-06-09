@@ -16,7 +16,7 @@ Usage text
   
   # '$' in Linux = '%' in Mac, means the current location
 ```
-
+---
 
 ### General Usage
 For a detailed explanation, please see here or google it.
