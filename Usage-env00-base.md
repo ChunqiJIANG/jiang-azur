@@ -44,18 +44,25 @@ For a detailed explanation, please see here or google it.
 (*) $ mkdir NAME
 
 ## Copy
-# 
-(*) $ cp
+# copy one or more files
+(*) $ cp path/to/file1 (file2 file3) path/to/save/directory/
+# copy folder
+(*) $ cp -r /path/to/folder path/to/save/directory/
 
-## Move
-# 
-(*) $ mv
+## Move/rename
+# move file/folder to other location (give path if needed)
+(*) $ mv file1 path/to/save/directory/
+# rename the file/folder (give path if needed)
+(*) $ mv old_name new_name
 
-## Remove
-# 
-(*) $ rm
+## Remove/Delete
+# delete files (give path if needed)
+(*) $ rm file1 file2 file3
+# delete folders (give path if needed)
+(*) $ rm -r folder1 folder2 folder3
 
-## Clean the screen 
+## Clean
+# clean the screen (delete all contents on the current screen)
 (*) $ clear
 ``` 
 
@@ -82,12 +89,15 @@ For a detailed explanation, please see here or google it.
 ```
 # list all environments 
 (*) $ conda-env list
+
 # enter a sepcific environment (ex: 'NAME')
 (*) $ conda activate NAME
 (NAME) $ 
+
 # quit current environment
 (NAME) $ conda deactivate
 (base) $
+
 # list all installed tools in the located environment ('NAME')
 (NAME) $ conda list
 ``` 
