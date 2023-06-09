@@ -1,11 +1,11 @@
 This page introduces the usages in the environment of **'assembly'**.
 
-<p align="right"> Updated on 2023-05-31 </p>
+<p align="right"> Updated on 2023-06-09 </p>
 
 #### Usage description
 Usage text 
 ```
-  # annotation
+  # annotation line
   (environment) ~/location$ command line
 ```
 
@@ -26,12 +26,21 @@ Usage text
 ## Let's start !!!
 The usages of each tool in this environment are listed:
 
-### Remote copy upload
+### Remote upload/download
 ```
+## follow commands should be performed at your local terminal (not the server side, open a new terminal window when you need)
+
+## upload to jiang@azur
 # for file
-$ scp /path/to/local/file azur:~/path/to/directory/
-# for directory
-$ scp -r azur:~/path/to/directory/ /local/directory/ 
+$ scp -p 10022 /path/to/local/file jiang@157.82.133.226:~/path/to/save/directory/
+# for folder
+$ scp -r -p 10022 /path/to/local/folder/ jiang@157.82.133.226:~/path/to/save/directory/
+
+## download from jiang@azur
+# for file
+$ scp -p 10022 jiang@157.82.133.226:~/path/to/file/ /path/to/local/directory/ 
+# for folder
+$ scp -r -p 10022 jiang@157.82.133.226:~/path/to/folder/ /path/to/local/directory/ 
 ```
 
 
