@@ -1,7 +1,7 @@
 The **'base'** environment is the **default** environment of conda, usually not be used, **ALWAYS** activate your own environment.
 
 ---
-FYI, this page introduces the **common/basic command usages** (suitable for any *MacOS* or *LinuxOS*, including any installed conda environments).
+FYI, this page introduces the **common/basic command usages** for beginners (suitable for any *MacOS* or *LinuxOS*, including any installed conda environments).
 
 <p align="right"> Updated on 2023-06-09 </p>
 
@@ -19,7 +19,14 @@ Usage text
 ---
 
 ### General Usage
-For a detailed explanation, please see here or google it.
+For a detailed explanation, please refer here
+([English](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) 
+or 
+[Japanese](https://lecture.ecc.u-tokyo.ac.jp/~hideo-t/howto/cheetsheet.html) 
+or 
+[Chinese](https://www.runoob.com/linux/linux-command-manual.html)) 
+or 
+[Google](google.com) it.
 ```
 ## Change directory/location
 # change to a specific folder
