@@ -18,7 +18,7 @@ Usage text
 ```
 ---
 
-### General Usage
+### Basic Usage
 For a detailed explanation, please refer here
 ([English](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) 
 or 
@@ -74,6 +74,33 @@ or
 ``` 
 
 
+### Conda Related [(Homepage)](https://docs.conda.io/projects/conda/en/stable/glossary.html#miniconda-glossary)
+```
+# check conda version
+(*) $ conda --version
+
+# list all environments 
+(*) $ conda-env list
+or
+(*) $ conda info --envs 
+
+# enter a sepcific environment (ex: 'NAME')
+(*) $ conda activate NAME
+(NAME) $ 
+
+# quit current environment
+(NAME) $ conda deactivate
+(base) $
+
+# list all installed tools in the located environment ('NAME')
+(NAME) $ conda list
+
+# install/uninstall packages in the current environmnet
+(NAME) $ conda install xxx
+(NAME) $ conda uninstall xxx
+```
+
+
 ### Remote upload/download
 ```
 ## for file
@@ -91,20 +118,44 @@ or
 ```
 *'user_name@IP_address' : same as your connect/login info*
 
+---
 
-### Conda Related
+### More General Usages
+
+#### grant permission to the file
 ```
-# list all environments 
-(*) $ conda-env list
+# 755 permission (777: all permission)
+(*) $ sudo chmod 755 file
+```
+#### zip and unzip
+```
+# unzip .gz file
+(*) $ gzip file.gz
 
-# enter a sepcific environment (ex: 'NAME')
-(*) $ conda activate NAME
-(NAME) $ 
 
-# quit current environment
-(NAME) $ conda deactivate
-(base) $
-
-# list all installed tools in the located environment ('NAME')
-(NAME) $ conda list
-``` 
+```
+#### 
+```
+# 
+(*) $ 
+```
+#### 
+```
+# 
+(*) $ 
+```
+#### 
+```
+# 
+(*) $ 
+```
+#### 
+```
+# 
+(*) $ 
+```
+#### 
+```
+# 
+(*) $ 
+```
