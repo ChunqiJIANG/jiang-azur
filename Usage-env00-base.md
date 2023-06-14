@@ -131,8 +131,8 @@ or
 ```
 # unzip .gz file
 (*) $ gzip file.gz
-
-
+# unzip current all .gz files ('./' means current directory )
+(*) $ gzip ./*.gz
 ```
 #### 
 ```
