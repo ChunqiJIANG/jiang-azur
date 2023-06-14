@@ -3,13 +3,15 @@
 
 <p align="right"> Start from 2023-02-28 </p>
 
-### For access to 'jiang@azur' at the first time, please contact Jiang[^2].
+> For access to 'jiang@azur' at the first time, please contact Jiang[^2].
+
+*You are possible to apply all the usages listed here on your own terminal if you have a similar environment and OS. Free to ask if have any questions.*
 
 
 [^1]: All Rights Reserved.
 [^2]: You should know where to find him^.^
 
-
+---
 ***Notes:***
 - ALWAYS enter your directory first ```cd user_name``` before any action!
 
@@ -30,6 +32,8 @@
 
 - [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-connect-first-before-use.md)
   - 2023-03-06 created
+- [Env00-base](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env00-base.md)
+  - Introduction of common/basic commands
 - [Env01-anvio-7.1](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env01-anvio-7.1.md)
   - 2023-05-15 updated
   - 2023-03-02 created
