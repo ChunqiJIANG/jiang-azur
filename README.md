@@ -5,7 +5,7 @@
 
 > For access to 'jiang@azur' at the first time, please contact Jiang[^2].
 
-*You are possible to apply all the usages listed here on your own terminal if you have a similar environment and OS. Free to ask if have any questions.*
+*It is possible to refer to all the usages listed here on your own terminal if you have a similar environment and OS. Free to ask if have any questions.*
 
 
 [^1]: All Rights Reserved.
