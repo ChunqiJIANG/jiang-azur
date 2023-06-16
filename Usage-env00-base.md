@@ -19,7 +19,7 @@ Usage text
 ---
 
 ### Basic Usage
-For a detailed explanation, please refer here
+For more or detailed explanations, please refer here
 ([English](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) 
 or 
 [Japanese](https://lecture.ecc.u-tokyo.ac.jp/~hideo-t/howto/cheetsheet.html) 
