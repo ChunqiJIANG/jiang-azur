@@ -3,7 +3,7 @@ The **'base'** environment is the **default** environment of conda, usually not 
 ---
 FYI, this page introduces the **common/basic command usages** for beginners (suitable for any *MacOS* or *LinuxOS*, including any installed conda environments).
 
-<p align="right"> Updated on 2023-06-09 </p>
+<p align="right"> Updated on 2023-06-16 </p>
 
 #### Usage description
 Usage text 
@@ -62,6 +62,10 @@ or
 # rename the file/folder (give path if needed)
 (*) $ mv old_name new_name
 
+# change extensions (.fa => .fna)
+(*) $ for f in *fa; do mv -- "$f" "${f%.fa}.fna"; done 
+
+
 ## Remove/Delete
 # delete files (give path if needed)
 (*) $ rm file1 file2 file3
@@ -73,6 +77,13 @@ or
 (*) $ clear
 ``` 
 
+### zip and unzip
+```
+# unzip the .gz file
+(*) $ gzip file.gz
+# unzip current all .gz files ('./' means current directory )
+(*) $ gzip ./*.gz
+```
 
 ### Conda Related [(Homepage)](https://docs.conda.io/projects/conda/en/stable/glossary.html#miniconda-glossary)
 ```
@@ -127,35 +138,40 @@ or
 # 755 permission (777: all permission)
 (*) $ sudo chmod 755 file
 ```
-#### zip and unzip
+
+#### check running processes :['top'](https://phoenixnap.com/kb/top-command-in-linux)
 ```
-# unzip .gz file
-(*) $ gzip file.gz
-# unzip current all .gz files ('./' means current directory )
-(*) $ gzip ./*.gz
+# Top command
+(*) $ top
 ```
-#### 
-```
-# 
-(*) $ 
-```
-#### 
+
+#### cut the files: ['cut']()
 ```
 # 
 (*) $ 
 ```
-#### 
+
+#### split the files: ['split']()
 ```
 # 
 (*) $ 
 ```
-#### 
+
+#### sort the files: ['sort']()
 ```
 # 
 (*) $ 
 ```
-#### 
+
+#### text filter1 simple: ['grep']()
 ```
 # 
 (*) $ 
 ```
+
+#### text filter2 stronger: ['sed']()
+```
+# 
+(*) $ 
+```
+
