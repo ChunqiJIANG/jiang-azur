@@ -50,7 +50,7 @@ There are three strategies for genome assembly, please choose the suitable one a
 - S3-**Hybrid** (use both short and long reads)
 
 ### S1-**Short** Strategy
-#### S1.1 filter reads (short) by 'fastp'
+#### S1.1 filter reads (short) by ['fastp'](https://github.com/OpenGene/fastp)
 ```
 # example 1 (default)
 (assembly) jiang@azur:~/user_name$ fastp --in1 sample_short_R1.fastq.gz --in2 sample_short_R2.fastq.gz --out1 QF_sample_short_R1.fastq.gz --out2 QF_sample_short_R2.fastq.gz
@@ -60,7 +60,7 @@ There are three strategies for genome assembly, please choose the suitable one a
 # example 3 (simple use by copy/paste, exchange the 'xxx' parts with yours)
 (assembly) jiang@azur:~/user_name$ fastp --in1 xxx --in2 xxx --out1 xxx --out2 xxx --thread 16
 ```
-#### S1.2 assembly by 'unicycler' using short-only method
+#### S1.2 assembly by ['unicycler'](https://github.com/rrwick/Unicycler#method-illumina-only-assembly) using short-only method
 ```
 # example 1 (default)
 (assembly) jiang@azur:~/user_name$ unicycler -1 QF_sample_short_R1.fastq.gz -2 QF_sample_short_R2.fastq.gz  -o unicycler_short_NAME --threads 20 --no_correct --no_pilon
@@ -71,7 +71,7 @@ There are three strategies for genome assembly, please choose the suitable one a
 
 
 ### S2-**Long** Strategy
-#### S2.1 filter reads (long) by 'filtlong'
+#### S2.1 filter reads (long) by ['filtlong'](https://github.com/rrwick/Filtlong)
 (priority: --target_bases > --keep_percent > --min_length)
 ```
 # example 1 (common use: only keep 90% data with minimum length at 1000bp )
@@ -80,11 +80,11 @@ There are three strategies for genome assembly, please choose the suitable one a
 # example 2 (custom use: only keep 90% data with minimum length at 2000bp and total size at 5Mbp)
 (assembly) jiang@azur:~/user_name$ filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 sample_long.fastq.gz | gzip > QF_sample_long_f2000_p90_b5M.fastq.gz
 ```
-#### S2.2 assembly by 'flye'
+#### S2.2 assembly by ['flye'](https://github.com/fenderglass/Flye)
 ```
 (assembly) jiang@azur:~/user_name$ flye --nano-raw QF_sample_long.fastq.gz --out-dir Flye_NAME -t 20
 ```
-#### S2.3 polish by 'medaka'
+#### S2.3 polish by ['medaka'](https://github.com/nanoporetech/medaka) 
 ```
 (assembly) jiang@azur:~/user_name$ medaka_consensus -i QF_N4_25_1G.fastq.gz -d Flye_NAME/assembly.fasta -o Medaka_NAME -t 20
 ```
@@ -92,7 +92,7 @@ There are three strategies for genome assembly, please choose the suitable one a
 
 
 ### S3-**Hybrid** Strategy
-#### S3.1 filter reads (short) by 'fastp'
+#### S3.1 filter reads (short) by ['fastp'](https://github.com/OpenGene/fastp)
 ```
 # example 1 (default)
 (assembly) jiang@azur:~/user_name$ fastp --in1 sample_short_R1.fastq.gz --in2 sample_short_R2.fastq.gz --out1 QF_sample_short_R1.fastq.gz --out2 QF_sample_short_R2.fastq.gz
@@ -102,7 +102,7 @@ There are three strategies for genome assembly, please choose the suitable one a
 # example 3 (simple use by copy/paste, exchange the 'xxx' parts with yours)
 (assembly) jiang@azur:~/user_name$ fastp --in1 xxx --in2 xxx --out1 xxx --out2 xxx --thread 16
 ```
-#### S3.2 filter reads (long) by 'filtlong'
+#### S3.2 filter reads (long) by ['filtlong'](https://github.com/rrwick/Filtlong)
 (priority: --target_bases > --keep_percent > --min_length)
 ```
 # example 1 (common use: only keep 90% data with minimum length at 1000bp )
@@ -111,13 +111,13 @@ There are three strategies for genome assembly, please choose the suitable one a
 # example 2 (custom use: only keep 90% data with minimum length at 2000bp and total size at 5Mbp)
 (assembly) jiang@azur:~/user_name$ filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 sample_long.fastq.gz | gzip > QF_sample_long_f2000_p90_b5M.fastq.gz
 ```
-#### S3.3 assembly by 'unicycler' using hybrid method
+#### S3.3 assembly by ['unicycler'](https://github.com/rrwick/Unicycler#method-hybrid-assembly) using hybrid method
 ```
 (assembly) jiang@azur:~/user_name$ unicycler -1 QF_sample_short_R1.fastq.gz -2 QF_sample_short_R2.fastq.gz -l QF_sample_long.fastq.gz -t 20 -o Unicycler048_Hybrid_NAME
 ```
 
 
-### Further Polish by 'pilon'
+### Further Polish by ['pilon'](https://github.com/broadinstitute/pilon)
 ```
 # step by step
 		# create an index for the reference genome (fasta) with Bowtie2
