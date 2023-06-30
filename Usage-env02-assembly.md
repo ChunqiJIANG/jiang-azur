@@ -1,6 +1,6 @@
 This page introduces the usages in the environment of **'assembly'**.
 
-<p align="right"> Updated on 2023-06-09 </p>
+<p align="right"> Updated on 2023-06-30 </p>
 
 #### Usage description
 Usage text 
@@ -23,12 +23,10 @@ Usage text
   (assembly) jiang@azur:~/user_name$ 
 ```
 
-## Let's start !!!
-The usages of each tool in this environment are listed:
-
-### Remote upload/download
+---
+#### Prep: Remote upload/download
 ```
-## follow commands should be performed at your local terminal (not the server side, open a new terminal window when you need)
+## Follow commands should be performed at your local terminal (not the server side, open a new terminal window when you need)
 
 ## upload to jiang@azur
 # for file
@@ -43,34 +41,64 @@ $ scp -p 10022 jiang@157.82.133.226:~/path/to/file/ /path/to/local/directory/
 $ scp -r -p 10022 jiang@157.82.133.226:~/path/to/folder/ /path/to/local/directory/ 
 ```
 
+---
+## Let's start !!!
 
-### check sequence features
+There are three strategies for genome assembly, please choose the suitable one according to your conditions(data).
+- S1-**Short**  (only use short reads, like Illumina data)
+- S2-**Long** (only use long reads, like Nanopore/PacBio data)  
+- S3-**Hybrid** (use both short and long reads)
+
+### S1-**Short** Strategy
+#### S1.1 filter reads (short) by 'fastp'
 ```
-# example 1 (check length distribution)
-(assembly) jiang@azur:~/user_name$ seqkit watch --fields ReadLen T4_f2000_p90_b5M.fastq.gz -O len_T4_f2p9b5m.png
-# example 2 (list all information for all .gz files)
-(assembly) jiang@azur:~/user_name$ seqkit stat *.gz -a
+# example 1 (default)
+(assembly) jiang@azur:~/user_name$ fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
+# example 2 (set threads number, max = 16)
+(assembly) jiang@azur:~/user_name$ fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 16 
+# example 3 (simple use by copy/paste, exchange the 'xxx' parts with yours)
+(assembly) jiang@azur:~/user_name$ fastp --in1 xxx --in2 xxx --out1 xxx --out2 xxx --thread 16
+```
+#### S1.2 assembly by 'unicycler' using short-only method
+```
+# example 1 (default)
+(assembly) jiang@azur:~/user_name$ unicycler -1 QF_short_R1.fq.gz -2 QF_short_R2.fq.gz  -o unicycler_short_SAMPLE --threads 20 --no_correct --no_pilon
+# example 2 (simple use by copy/paste, exchange the 'xxx' parts with yours)
+(assembly) jiang@azur:~/user_name$ unicycler -1 xxx -2 xxx -o unicycler_xxx --threads 20 --no_correct --no_pilon
 ```
 
 
-### check data quality
+### S2-**Long** Strategy
+#### S2.1 filter reads (long) by 'filtlong'
+(priority: --target_bases > --keep_percent > --min_length)
 ```
-# example 1 
-(assembly) jiang@azur:~/user_name$ fastqc T4_f1000_p90.fastq.gz -o fastqc -t 10
+# example 1 (only keep 90% data with minimum length at 1000bp )
+(assembly) jiang@azur:~/user_name$ filtlong --keep_percent 90 --min_length 1000  N4_25.fastq.gz | gzip > QF_N4_25.fastq.gz
+# example 2 (only keep 90% data with minimum length at 2000bp and total size at 5Mbp)
+(assembly) jiang@azur:~/user_name$ filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.gz | gzip > T4_f2000_p90_b5M.fastq.gz
+```
+#### S2.2 assembly by 'flye'
+```
+(assembly) jiang@azur:~/user_name$ flye --nano-raw QF_N4_25_p60-l9000.fastq.gz --out-dir Flye_N4_25_v1 -t 20
+```
+#### S2.3 polish by 'medaka'
+```
+(assembly) jiang@azur:~/user_name$ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_Medaka -t 10
 ```
 
 
-### check genome quality (completeness)
 
+### S3-**Hybrid** Strategy
+#### S3.1 filter reads (short) by 'fastp'
 ```
-# example 1 
-(assembly) jiang@azur:~/user_name$ checkm lineage_wf -t 40 -x fna path/to/fasta/directory/ /results/directory/
-# example 2
-(assembly) jiang@azur:~/user_name$ checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /taxowf-results/directory/
+# example 1 (default)
+(assembly) jiang@azur:~/user_name$ fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
+# example 2 (set threads number, max = 16)
+(assembly) jiang@azur:~/user_name$ fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 16 
+# example 3 (simple use by copy/paste, exchange the 'xxx' parts with yours)
+(assembly) jiang@azur:~/user_name$ fastp --in1 xxx --in2 xxx --out1 xxx --out2 xxx --thread 16
 ```
-
-
-### filter long reads 
+#### S3.2 filter reads (long) by 'filtlong'
 (priority: --target_bases > --keep_percent > --min_length)
 ```
 # example 1 
@@ -78,42 +106,14 @@ $ scp -r -p 10022 jiang@157.82.133.226:~/path/to/folder/ /path/to/local/director
 # example 2
 (assembly) jiang@azur:~/user_name$ filtlong --keep_percent 90 --min_length 2000 --target_bases 500000000 T4.fastq.gz | gzip > T4_f2000_p90_b5M.fastq.gz
 ```
-
-
-### filter short reads
-```
-# example 1 (default)
-(assembly) jiang@azur:~/user_name$ fastp --in1 sample_R1.fastq.gz --in2 sample_R2.fastq.gz --out1 QC_sample_R1.fastq.gz --out2 QC_sample_R2.fastq.gz
-# example 2 (set threads number, max = 16)
-(assembly) jiang@azur:~/user_name$ fastp --in1 in.R1.fq.gz --in2 in.R2.fq.gz --out1 R1_trimmed.fq.gz --out2 R2_trimmed.fq.gz --thread 16 
-# example 3 (simple copy)
-(assembly) jiang@azur:~/user_name$ fastp --in1  --in2  --out1 --out2  --thread 16
-```
-
-
-### unicycler
-
+#### S3.3 assembly by 'unicycler' using hybrid method
 ```
 # hybrid 
 (assembly) jiang@azur:~/user_name$ unicycler -1 QF_N3_17_Read1.fq.gz -2 QF_N3_17_Read2.fq.gz -l QF_N3_17_v2.fastq.gz -t 30 -o Unicycler048_N3_17
-# short only
-(assembly) jiang@azur:~/user_name$ unicycler -1 QF_short_R1.fq.gz -2 QF_short_R2.fq.gz  -o unicycler_short_SAMPLE --threads 20 --no_correct --no_pilon
 ```
 
 
-### flye
-```
-(assembly) jiang@azur:~/user_name$ flye --nano-raw QF_N4_25_p60-l9000.fastq.gz --out-dir Flye_N4_25_v1 -t 20
-```
-
-
-### medaka
-```
-(assembly) jiang@azur:~/user_name$ medaka_consensus -i QF_N4_25_1G.fastq.gz -d assembly_N4_25_flye.fasta -o N4_25_Medaka -t 10
-```
-
-
-### pilon
+### Further Polish by 'pilon'
 ```
 # step by step
 		# create an index for the reference genome (fasta) with Bowtie2
@@ -136,8 +136,31 @@ $ scp -r -p 10022 jiang@157.82.133.226:~/path/to/folder/ /path/to/local/director
 
 ```
 
+### Optional usages
+#### check sequence features
+```
+# example 1 (check length distribution)
+(assembly) jiang@azur:~/user_name$ seqkit watch --fields ReadLen T4_f2000_p90_b5M.fastq.gz -O len_T4_f2p9b5m.png
+# example 2 (list all information for all .gz files)
+(assembly) jiang@azur:~/user_name$ seqkit stat *.gz -a
+```
 
-### check length
+#### check data quality
+```
+# example 1 
+(assembly) jiang@azur:~/user_name$ fastqc T4_f1000_p90.fastq.gz -o fastqc -t 10
+```
+
+#### check genome quality (completeness)
+
+```
+# example 1 
+(assembly) jiang@azur:~/user_name$ checkm lineage_wf -t 40 -x fna path/to/fasta/directory/ /results/directory/
+# example 2
+(assembly) jiang@azur:~/user_name$ checkm taxonomy_wf phylum Chloroflexi -t 40 -x fna path/to/fasta/directory/ /taxowf-results/directory/
+```
+
+#### check length
 ```
 # Print sequence length, GC content, and only print names (no sequences), we could also print title line by flag -H.
 	(assembly) jiang@azur:~/user_name$ seqkit fx2tab -l -g -n -i -H assembly.fasta
