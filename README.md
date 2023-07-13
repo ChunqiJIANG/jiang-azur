@@ -12,7 +12,8 @@
 [^2]: You should know where to find him^.^
 
 ---
-***Notes:***
+#### Notes:
+
 - ALWAYS enter your directory first ```cd user_name``` before any action!
 
 - DO NOT install, update or modify anything without contact! 
@@ -20,7 +21,8 @@
 - CONTACT first if you want new packages or environments! 
 
 
-### Currently released environments(env):
+#### Currently released environments(env):
+
 |  <env_id>  |  <env_name>  |  <create_date>  |  <update_date>  |  <env_description>  | 
 |  ----  |  ----  |  ----  |  ----  |  ----  |
 |  00  | base          | 2023-02-28 |            | basic environment, common usages |
