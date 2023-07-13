@@ -18,15 +18,6 @@
 - DO NOT install, update or modify anything without contact! 
 
 - CONTACT first if you want new packages or environments! 
-  
-  
-***Shortcuts：***
-
-- Basic information of this space and the general list of environments please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Info_system.md).  
-
-- Detailed list of environments and packages please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/List_environments.md).  
-
-- The logs of the environment creation can be checked [here](https://github.com/ChunqiJIANG/jiang-azur/tree/main/install-log-files).
 
 
 ### Currently released environments(env):
@@ -43,6 +34,15 @@
 |  08  | qiime2-2023.2 | 2023-03-10 |            | for qiime2 analyses |
 |  09  | ncbi          | 2023-03-28 | 2023-07-12 | local blast using *blast+* or *diamond* |
 |  10  | prokka        | 2023-07-03 |            | rapid prokaryotic genome annotation |
+
+
+***Shortcuts：***
+
+- Basic information of this space and the general list of environments please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Info_system.md).  
+
+- Detailed list of environments and packages please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/List_environments.md).  
+
+- The logs of the environment creation can be checked [here](https://github.com/ChunqiJIANG/jiang-azur/tree/main/install-log-files).
 
 
 ***Usages：***
