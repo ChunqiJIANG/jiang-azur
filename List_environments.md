@@ -67,6 +67,9 @@
 	- matplotlib-base-3.6.3
 	- numpy-1.24.2
 	- pysam-0.20.0
+ - **gunc-1.0.5** (2023-07-06 add)
+	- pandas-2.0.3 (error => 1.5.1)
+	- diamond-2.0.4
 
 
 > **Environment-05 'pydata':** (*conda activate pydata*)
@@ -128,6 +131,13 @@
 ## 2023-03-28
 > **Environment-09 'ncbi':** (*conda activate ncbi*)
 - ncbi-blast-2.13.0+
+- **diamond-2.1.8** (2023-07-12)
+
+## 2023-07-03
+> **Environment-10 'prokka':** (*conda activate prokka*)
+- prokka-1.14.6
+	- blast-2.14.0
+ 	- prodigal-2.6.3
 
 
 ***
