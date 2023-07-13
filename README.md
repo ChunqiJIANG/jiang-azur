@@ -15,7 +15,7 @@
 ***Notes:***
 - ALWAYS enter your directory first ```cd user_name``` before any action!
 
-- DO NOT install, update or modify anything without contacting! 
+- DO NOT install, update or modify anything without contact! 
 
 - CONTACT first if you want new packages or environments! 
   
