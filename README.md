@@ -28,6 +28,23 @@
 
 - The logs of the environment creation can be checked [here](https://github.com/ChunqiJIANG/jiang-azur/tree/main/install-log-files).
 
+
+### Currently released environments(env):
+|  <env_id>  |  <env_name>  |  <create_date>  |  <update_date>  |  <env_description>  | 
+|  ----  |  ----  |  ----  |  ----  |  ----  |
+|  00  | base          | 2023-02-28 |            | basic environment, common usages |
+|  01  | anvio-7.1     | 2023-02-28 |            | anvi'o for pangenome / metagenome analyses |
+|  02  | assembly      | 2023-02-28 |            | tools for genome assembly |
+|  03  | gtdbtk-2.1.1  | 2023-02-28 |            | gtdbtk tool for GDTB |
+|  04  | checkm        | 2023-02-28 | 2023-07-06 | genome quialty check (checkm/gunc), completeness/ contamination|
+|  05  | pydata        | 2023-02-28 |            | data analysis using python  |
+|  06  | r-env         | 2023-02-28 |            | data analysis using R  |
+|  07  | unicycler050  | 2023-02-13 |            | only unicycler 0.5.0 |
+|  08  | qiime2-2023.2 | 2023-03-10 |            | for qiime2 analyses |
+|  09  | ncbi          | 2023-03-28 | 2023-07-12 | local blast using *blast+* or *diamond* |
+|  10  | prokka        | 2023-07-03 |            | rapid prokaryotic genome annotation |
+
+
 ***Usages：***
 
 - [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-connect-first-before-use.md)
@@ -44,9 +61,12 @@
   - 2023-03-06 updated
   - 2023-03-02 created
 - [Env04-checkm](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env04-checkm.md)
+  - 2023-07-06 **'gunc'** was added for MAG check
   - 2023-03-06 created
 - [Env05-pydata]()
 - [Env06-r-env]()
 - [Env07-unicycler050]()
 - [Env08-qiime2-2023.2]()
 - [Env09-ncbi](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env09-ncbi.md)
+  - 2023-07-12 **'diamond'** was added for large scale blast
+- [Env10-prokka]()
