@@ -26,21 +26,21 @@
 |  <env_id>  |  <env_name>  |  <create_date>  |  <update_date>  |  <env_description>  | 
 |  ----  |  ----  |  ----  |  ----  |  ----  |
 |  00  | base          | 2023-02-28 |            | basic environment, common usages |
-|  01  | anvio-7.1     | 2023-02-28 |            | anvi'o for pangenome / metagenome analyses |
-|  02  | assembly      | 2023-02-28 |            | tools for genome assembly |
-|  03  | gtdbtk-2.1.1  | 2023-02-28 |            | gtdbtk tool for GDTB |
-|  04  | checkm        | 2023-02-28 | 2023-07-06 | genome quialty check (checkm/gunc), completeness/ contamination|
+|  01  | anvio-7.1     | 2023-02-28 |            | **anvi'o** for pangenome / metagenome analyses |
+|  02  | assembly      | 2023-02-28 |            | tools for genome assembly: **seqkit, fastqc, unicycler, flye, medaka, pilon ...** |
+|  03  | gtdbtk-2.1.1  | 2023-02-28 |            | **gtdbtk** tool for GDTB |
+|  04  | checkm        | 2023-02-28 | 2023-07-06 | genome quialty check (**checkm** or **gunc**), completeness and contamination|
 |  05  | pydata        | 2023-02-28 |            | data analysis using python  |
 |  06  | r-env         | 2023-02-28 |            | data analysis using R  |
 |  07  | unicycler050  | 2023-02-13 |            | only unicycler 0.5.0 |
-|  08  | qiime2-2023.2 | 2023-03-10 |            | for qiime2 analyses |
-|  09  | ncbi          | 2023-03-28 | 2023-07-12 | local blast using *blast+* or *diamond* |
+|  08  | qiime2-2023.2 | 2023-03-10 |            | for **qiime2** analyses |
+|  09  | ncbi          | 2023-03-28 | 2023-07-12 | local blast using **blast+** or **diamond** |
 |  10  | prokka        | 2023-07-03 |            | rapid prokaryotic genome annotation |
 
 
 ***Shortcuts：***
 
-- Basic information of this space and the general list of environments please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Info_system.md).  
+- Basic information on this space and the general list of environments please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Info_system.md).  
 
 - Detailed list of environments and packages please check [here](https://github.com/ChunqiJIANG/jiang-azur/blob/main/List_environments.md).  
 
