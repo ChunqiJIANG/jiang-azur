@@ -34,9 +34,8 @@ Here I mainly introduce the three usages:
 
 ### Usage01: [Pangenomics]()
 
-
-#### 01-01-A: EASY WAY - Using jiang's script
-One script for easy use of pangenome database preparation was writen.
+#### 01-00: EASY WAY - Using jiang's script
+One script for easy use of pangenome database preparation was written.
 > Hello, there! This is the workflow of database preparation for Pangenomic analysis, by Jiang. If you have any questions, please let him know. 
 > 
 > Following steps are included:
@@ -58,7 +57,7 @@ Before start:
 |  ***sample02***  | ./03-CONTIGS-DB/CD_***sample02***_CD.db  |
 |  ...  | ...  |
 
-*only need change the ***italic&bold part***('sample01', 'sample02', ...) to your sample name.
+   *only need change the ***italic&bold part***('sample01', 'sample02', ...) to your sample name.
 
 ```
 # check everything is ready
@@ -73,16 +72,14 @@ Before start:
 # display the pangenome
 
 ``` 
-*GENOME_DIR: the directory containing all your genome files*
-
-*EXTERNAL_FILE: the txt file for external contigs database path*
-
-*RUN_NAME: your project name, anything is ok.* 
-
-*NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
+   *GENOME_DIR: the directory containing all your genome files*
+   *EXTERNAL_FILE: the txt file for external contigs database path*
+   *RUN_NAME: your project name, anything is ok.* 
+   *NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
 
 
-#### 01-01-B: HARD BUT WORTH - Step by Step
+
+#### 01-01: HARD BUT WORTH - Step by Step
 
 ```
 Checking your input FASTA files
