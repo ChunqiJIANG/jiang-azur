@@ -72,11 +72,13 @@ Before start:
 # display the pangenome
 
 ``` 
-   *GENOME_DIR: the directory containing all your genome files*
-   *EXTERNAL_FILE: the txt file for external contigs database path*
-   *RUN_NAME: your project name, anything is ok.* 
-   *NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
+>*GENOME_DIR: the directory containing all your genome files;*
 
+>*EXTERNAL_FILE: the txt file for external contigs database path;*
+
+>*RUN_NAME: your project name, anything is ok;*
+
+>*NUM_THREADS: number of threads you want to use, usually recommend 20 here.*
 
 
 #### 01-01: HARD BUT WORTH - Step by Step
@@ -85,7 +87,7 @@ Before start:
 Checking your input FASTA files
 ## Re-formatting your input FASTA (simplify the header lines of FASTA files for genomes)
 # one cmd for all (multiple files)
- for f in *.fasta; do anvi-script-reformat-fasta $f -o ../01_SIMPLIFY/${f%.*}_simplify.fasta -l 0 --simplify-names --seq-type NT ; done
+(anvio-7.1) jiang@azur:~/user_name/your_place$ for f in *.fasta; do anvi-script-reformat-fasta $f -o ../01_SIMPLIFY/${f%.*}_simplify.fasta -l 0 --simplify-names --seq-type NT ; done
 
 # one by one (one file per time) if you like
 
@@ -96,17 +98,17 @@ Checking your input FASTA files
 ```
 ## Creating the anvi’o contigs databases
 # one cmd for all (multiple files)
- for f in *_headfix.fasta; do anvi-gen-contigs-database -f $f -o CD_${f%_*}_CD.db; done
+(anvio-7.1) jiang@azur:~/user_name/your_place$ for f in *_headfix.fasta; do anvi-gen-contigs-database -f $f -o CD_${f%_*}_CD.db; done
 # one by one if you like
 
 
 ## Annotating your contigs databases
 # anvi-run-hmms
- for f in *_CD.db; do anvi-run-hmms -c $f -T n; done (n: the highest sequence number)
+(anvio-7.1) jiang@azur:~/user_name/your_place$ for f in *_CD.db; do anvi-run-hmms -c $f -T n; done (n: the highest sequence number)
 # anvi-run-ncbi-cogs (COG20)
- for f in *_CD.db; do anvi-run-ncbi-cogs -c $f -T 20; done
+(anvio-7.1) jiang@azur:~/user_name/your_place$ for f in *_CD.db; do anvi-run-ncbi-cogs -c $f -T 20; done
 # Run KOfam HMMs
- for f in *_CD.db; do anvi-run-kegg-kofams -c $f -T 20; done
+(anvio-7.1) jiang@azur:~/user_name/your_place$ for f in *_CD.db; do anvi-run-kegg-kofams -c $f -T 20; done
 ```
 
 #### 01-03 Generating an anvio genomes storage
@@ -114,41 +116,40 @@ Checking your input FASTA files
 name	contigs_db_path
 
 ```
-anvi-gen-genomes-storage -e external_database_path.txt -o GDB_XXXX_GENOMES.db
+(anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-gen-genomes-storage -e external_database_path.txt -o GDB_XXXX_GENOMES.db
 ```
-
 		
 #### 01-04 Running the pangenome analysis
 ```
-(fast)
-anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering
-(slow)
-anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering --use-ncbi-blast 
-
+# slow mode, but recommend
+(anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering --use-ncbi-blast
+# fast mode
+(anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-pan-genome -g GDB_XXXX_GENOMES.db -n PROJECT_XXXX -T 20 --enforce-hierarchical-clustering
 ```
-	--use-ncbi-blast (default: False) This program uses DIAMOND by default
-	--enforce-hierarchical-clustering (default: False)/--skip-hierarchical-clustering (default: False)	
+>*--use-ncbi-blast (default: False) This program uses DIAMOND by default;*
+
+>*--enforce-hierarchical-clustering (default: False)/--skip-hierarchical-clustering (default: False)*	
 
 #### 01-05 Displaying the pangenome
 ```
-ssh azur -L 8080:localhost:8080
-anvi-display-pan -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --server-only -P xxx
+# before displaying remotely, re-connect the server by 'ssh -L 8080:localhost:8080 xxxx'
+(anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-display-pan -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --server-only -P 8080
 ```
 
-#### 01-06 Defualt summary
+#### 01-06 Default summary
 ```
  # check collections
- anvi-summarize  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --list-collections
+ (anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-summarize  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db --list-collections
  # add a 'DEFAULT' collection for pangenome
- anvi-script-add-default-collection  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db 
+ (anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-script-add-default-collection  -p PROJECT_XXXX/PROJECT_XXXX-PAN.db 
  # summarize the 'DEFAULT' collection
- anvi-summarize -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db  -C DEFAULT -o SUMMARY-XXXX-default
+ (anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-summarize -p PROJECT_XXXX/PROJECT_XXXX-PAN.db -g G_XXXX_GENOMES.db  -C DEFAULT -o SUMMARY-XXXX-default
 ```
 
-#### 01-07 Optinal choice
+#### 01-07 Optional choice
 ```
  #  ANI calculation
-anvi-compute-genome-similarity --program pyANI -i txt-internal-genomes.txt -p PROJECT-Sulfitobacter-PAN/PROJECT-Sulfitobacter-PAN-PAN.db -o pyANI-ANIb -T 20
+(anvio-7.1) jiang@azur:~/user_name/your_place$ anvi-compute-genome-similarity --program pyANI -i txt-internal-genomes.txt -p PROJECT-Sulfitobacter-PAN/PROJECT-Sulfitobacter-PAN-PAN.db -o pyANI-ANIb -T 20
 ```
 
 
