@@ -76,6 +76,30 @@ Only if taxonomy known
 *similar format results will be shown at the bottom of the screen and the txt file.
 
 
+# New tool with [GUNC]([https://ecogenomics.github.io/CheckM/](https://grp-bork.embl-community.io/gunc/index.html)
+> Genome UNClutterer (GUNC) is a tool for detection of chimerism and contamination in prokaryotic genomes resulting from mis-binning of genomic contigs from unrelated lineages. It does so by applying an entropy based score on taxonomic assignment and contig location of all genes in a genome.
+>> Full details can be found [here](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02393-0).
+
+---
+### Usage
+#### Step01: Run chimerism detection
+```
+# quick start
+(checkm) jiang@azur:~/user_name$ gunc run -i genome.fa -r ~/mambaforge-pypy3/envs/checkm/gunc_db_progenomes2.1.dmnd
+
+# for directory(GENOME/) with multiple fasta files (*.fa)
+(checkm) jiang@azur:~/user_name$ gunc run -d GENOME/ -r ~/mambaforge-pypy3/envs/checkm/gunc_db_progenomes2.1.dmnd -t 20 -o GUNC_OUT/
+# for directory(GENOME/) with multiple fasta files (*.fna or others)
+(checkm) jiang@azur:~/user_name$ gunc run -d GENOME/ -e .fna -r ~/mambaforge-pypy3/envs/checkm/gunc_db_progenomes2.1.dmnd -t 20 -o GUNC_OUT/
+```
+*results can be seen in the '*.tsv' file.
+
+#### Step02: Produce an interactive plot using the output from Step01
+```
+(checkm) jiang@azur:~/user_name$ gunc plot -d GUNC_OUT/diamond_output/*.out 
+```
+*results can be seen in the '*.viz.html' file.
+
 
 ---
 ## Checkm available taxon_list
