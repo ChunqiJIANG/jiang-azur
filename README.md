@@ -69,7 +69,7 @@
 - [Env06-r-env]()
 - [Env07-unicycler050]()
 - [Env08-qiime2-2023.2]()
-- [Env09-ncbi](https://github.com/ChunqiJIANG/jiang-azur/blob/main/sages/Usage-env09-ncbi.md)
+- [Env09-ncbi](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env09-ncbi.md)
   - 2023-07-12 **'diamond'** was added for large scale blast
 - [Env10-prokka](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env10-prokka.md)
   - 2023-07-28 created
