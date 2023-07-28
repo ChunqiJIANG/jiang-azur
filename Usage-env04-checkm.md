@@ -76,7 +76,7 @@ Only if taxonomy known
 *similar format results will be shown at the bottom of the screen and the txt file.
 
 
-# New tool with [GUNC]([https://ecogenomics.github.io/CheckM/](https://grp-bork.embl-community.io/gunc/index.html)
+# New tool with [GUNC](https://grp-bork.embl-community.io/gunc/index.html)
 > Genome UNClutterer (GUNC) is a tool for detection of chimerism and contamination in prokaryotic genomes resulting from mis-binning of genomic contigs from unrelated lineages. It does so by applying an entropy based score on taxonomic assignment and contig location of all genes in a genome.
 >> Full details can be found [here](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02393-0).
 
