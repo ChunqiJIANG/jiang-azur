@@ -49,7 +49,7 @@
 
 ***Usages：***
 
-- [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/First-connection-before-use.md)
+- [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/First-connection-before-use.md)
   - 2023-03-06 created
 - [Env00-base](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env00-base.md)
   - Introduction of common/basic commands
