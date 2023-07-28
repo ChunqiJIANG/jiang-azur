@@ -49,20 +49,20 @@
 
 ***Usages：***
 
-- [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/First-connection-before-use.md)
+- [Connection](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/First-connection-before-use.md)
   - 2023-03-06 created
-- [Env00-base](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env00-base.md)
+- [Env00-base](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env00-base.md)
   - Introduction of common/basic commands
-- [Env01-anvio-7.1](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env01-anvio-7.1.md)
+- [Env01-anvio-7.1](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env01-anvio-7.1.md)
   - 2023-05-15 updated
   - 2023-03-02 created
-- [Env02-assembly](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env02-assembly.md)
+- [Env02-assembly](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env02-assembly.md)
   - 2023-05-15 updated
   - 2023-03-07 created
-- [Env03-gtdbtk-2.1.1](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env03-gtdbtk-2.1.1.md)
+- [Env03-gtdbtk-2.1.1](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env03-gtdbtk-2.1.1.md)
   - 2023-03-06 updated
   - 2023-03-02 created
-- [Env04-checkm](https://github.com/ChunqiJIANG/jiang-azur/blob/main/Usage-env04-checkm.md)
+- [Env04-checkm](https://github.com/ChunqiJIANG/jiang-azur/blob/main/usages/Usage-env04-checkm.md)
   - 2023-07-06 **'gunc'** was added for MAG check
   - 2023-03-06 created
 - [Env05-pydata]()
