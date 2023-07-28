@@ -1,7 +1,7 @@
 
 This page introduces the usages in the environment of **'ncbi'**.
 
-<p align="right"> Updated on 2023-03-06 </p>
+<p align="right"> Updated on 2023-07-28 </p>
 
 #### Usage description
 Usage text 
