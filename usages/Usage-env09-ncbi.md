@@ -23,3 +23,7 @@ Usage text
   # check again at the beginning, now it is 'ncbi', good to go
   (ncbi) jiang@azur:~/user_name$ 
 ```
+---
+Here mainly introduce two tools for local blast:
+- NCBI blast+
+- Diamond
