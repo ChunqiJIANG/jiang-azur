@@ -1,7 +1,7 @@
 
 This page introduces the usages in the environment of **'anvio-7.1'**.
 
-<p align="right"> Updated on 2023-05-15 </p>
+<p align="right"> Updated on 2023-08-02 </p>
 
 #### Usage description
 Usage text 
@@ -36,45 +36,24 @@ Here I mainly introduce the three usages:
 
 #### 01-00: EASY WAY - Using jiang's script
 One script for easy use of pangenome database preparation was written.
-> Hello, there! This is the workflow of database preparation for Pangenomic analysis, by Jiang. If you have any questions, please let him know. 
-> 
-> Following steps are included:
->1. Simplify the contigs names in your fasta file
->2. Create a contigs database for each genome
->3. HMM decoration for each contigs database
->4. COG annotations for each contigs database
->5. Kofam annotation for each contigs database 
->
-> Done 
+> USAGE: xxx/00-scripts/script_CJ_pangenomics_workflow_full_Ver6.sh GENOME_DIR RUN_NAME NUM_THREADS
+>> This is the workflow for Pangenomic analyses, written by Chunqi Jiang. If you have any questions, please let him know.
 
 Before start:
-1. put all your genomes in a directory, such as '00-GENOMES'
-2. prepare a txt file named 'external_database_path.txt', like this: 
-
-|  name   | contigs_db_path  |
-|  ----  | ----  |
-|  ***sample01*** | ./03-CONTIGS-DB/CD_***sample01***_CD.db  |
-|  ***sample02***  | ./03-CONTIGS-DB/CD_***sample02***_CD.db  |
-|  ...  | ...  |
-
-   *only need change the ***italic&bold part***('sample01', 'sample02', ...) to your sample name.
-
+1. put all your genomes (.fna) in a directory, such as '00-GENOMES'
+	*Please limit the name characters to ASCII letters, digits, and the underscore*
 ```
 # check everything is ready
 (anvio-7.1) jiang@azur:~/user_name/your_place$ ls
-   00-GENOMES external_database_path.txt
-# prepare the database using a script
-(anvio-7.1) jiang@azur:~/user_name/your_place$ /home/jiang/user_jiang/00-scripts/script_pangenomics_workflow_all_T20_Ver5.sh GENOME_DIR EXTERNAL_FILE RUN_NAME NUM_THREADS
-# generate an anvio genomes storage
+   00-GENOMES 
+# start script
+(anvio-7.1) jiang@azur:~/user_name/your_place$ ~/user_jiang/00-scripts/script_CJ_pangenomics_workflow_full_Ver6.sh GENOME_DIR RUN_NAME NUM_THREADS
+	# example
+	(anvio-7.1) jiang@azur:~/user_name/your_place$ ~/user_jiang/00-scripts/script_CJ_pangenomics_workflow_full_Ver6.sh 00-GENOMES Test_Jiang 20
 
-# Run the pangenome analysis
-
-# display the pangenome
-
+That's it! Easy right?
 ``` 
 >*GENOME_DIR: the directory containing all your genome files;*
-
->*EXTERNAL_FILE: the txt file for external contigs database path;*
 
 >*RUN_NAME: your project name, anything is ok;*
 
