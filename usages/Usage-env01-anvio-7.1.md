@@ -34,14 +34,23 @@ Here I mainly introduce the three usages:
 
 ### Usage01: [Pangenomics]()
 
-#### 01-00: EASY WAY - Using jiang's script
+#### 01-00: EASY WAY - Using Jiang's script
 One script for easy use of pangenome database preparation was written.
 > USAGE: xxx/00-scripts/script_CJ_pangenomics_workflow_full_Ver6.sh GENOME_DIR RUN_NAME NUM_THREADS
 >> This is the workflow for Pangenomic analyses, written by Chunqi Jiang. If you have any questions, please let him know.
+>> Following steps are included
+>> 1. Simplify the contigs names in your fasta file
+>> 2. Create a contigs database for each genome
+>> 3. HMM decoration for each contigs database
+>> 4. COG annotations for each contigs database
+>> 5. Kofam annotation for each contigs database
+>> 6. Generate an anvio genomes storage including all databases
+>> 7. Run the pangenome analysis (--use-ncbi-blast --enforce-hierarchical-clustering)
+>> 8. Perform an additional ANI calculation"
 
-Before start:
-1. put all your genomes (.fna) in a directory, such as '00-GENOMES'
-	*Please limit the name characters to ASCII letters, digits, and the underscore*
+Before starting: put all your genomes (.fna) in a directory, such as '00-GENOMES'
+
+   ***Please limit the name characters to ASCII letters, digits, and the underscore***
 ```
 # check everything is ready
 (anvio-7.1) jiang@azur:~/user_name/your_place$ ls
