@@ -56,9 +56,9 @@ Before starting: put all your genomes (.fna) in a directory, such as '00-GENOMES
 (anvio-7.1) jiang@azur:~/user_name/your_place$ ls
    00-GENOMES 
 # start script
-(anvio-7.1) jiang@azur:~/user_name/your_place$ ~/user_jiang/00-scripts/script_CJ_pangenomics_workflow_full_Ver6.sh GENOME_DIR RUN_NAME NUM_THREADS
+(anvio-7.1) jiang@azur:~/user_name/your_place$ ~/user_jiang/00-scripts/script_CJ_pangenomics_workflow_full_Ver7.sh GENOME_DIR RUN_NAME NUM_THREADS
 	# example
-	(anvio-7.1) jiang@azur:~/user_name/your_place$ ~/user_jiang/00-scripts/script_CJ_pangenomics_workflow_full_Ver6.sh 00-GENOMES Test_Jiang 20
+	(anvio-7.1) jiang@azur:~/user_name/your_place$ ~/user_jiang/00-scripts/script_CJ_pangenomics_workflow_full_Ver7.sh 00-GENOMES Test_Jiang 20
 
 That's it! Easy right?
 ``` 
