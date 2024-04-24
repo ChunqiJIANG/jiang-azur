@@ -18,7 +18,7 @@ Usage text
   # check the current enviroment at the beginning of the command line, like the 'base' here
   (base) jiang@azur:~/user_name$
   # if not the target environment, activate it by 'conda activate'
-  (base) jiang@azur:~/user_name$ conda activate anvio-7.1
+  (base) jiang@azur:~/user_name$ conda activate assembly
   # check again at the beginning, now it is 'assembly', good to go
   (assembly) jiang@azur:~/user_name$ 
 ```
