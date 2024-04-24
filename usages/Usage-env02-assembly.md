@@ -30,15 +30,15 @@ Usage text
 
 ## upload to jiang@azur
 # for file
-$ scp -p 10022 /path/to/local/file jiang@157.82.133.226:~/path/to/save/directory/
+$ scp -P 10022 /path/to/local/file jiang@157.82.133.226:~/path/to/save/directory/
 # for folder
-$ scp -r -p 10022 /path/to/local/folder/ jiang@157.82.133.226:~/path/to/save/directory/
+$ scp -r -P 10022 /path/to/local/folder/ jiang@157.82.133.226:~/path/to/save/directory/
 
 ## download from jiang@azur
 # for file
-$ scp -p 10022 jiang@157.82.133.226:~/path/to/file/ /path/to/local/directory/ 
+$ scp -P 10022 jiang@157.82.133.226:~/path/to/file/ /path/to/local/directory/ 
 # for folder
-$ scp -r -p 10022 jiang@157.82.133.226:~/path/to/folder/ /path/to/local/directory/ 
+$ scp -r -P 10022 jiang@157.82.133.226:~/path/to/folder/ /path/to/local/directory/ 
 ```
 
 ---
