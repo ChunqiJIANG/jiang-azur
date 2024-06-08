@@ -23,7 +23,7 @@
 
 #### Currently released environments(env):
 
-|  <env_id>  |  <env_name>  |  <create_date>  |  <update_date>  |  <env_description>  | 
+|  <env_id>  |  <env_name>  |  <create_date>  |  <update>  |  <env_description>  | 
 |  ----  |  ----  |  ----  |  ----  |  ----  |
 |  00  | base          | 2023-02-28 |            | basic environment, common usages |
 |  01  | anvio-7.1     | 2023-02-28 |            | **anvi'o** for pangenome / metagenome analyses |
