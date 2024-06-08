@@ -28,15 +28,20 @@
 |  00  | base          | 2023-02-28 |            | basic environment, common usages |
 |  01  | anvio-7.1     | 2023-02-28 |            | **anvi'o** for pangenome / metagenome analyses |
 |  02  | assembly      | 2023-02-28 |            | tools for genome assembly: **seqkit, fastqc, unicycler, flye, medaka, pilon ...** |
-|  03  | gtdbtk-2.1.1  | 2023-02-28 |            | **gtdbtk** tool for GDTB |
-|  04  | checkm        | 2023-02-28 | 2023-07-06 | genome quialty check (**checkm** or **gunc**), completeness and contamination|
+|  03  | gtdbtk-2.1.1  | 2023-02-28 |   env 12   | **gtdbtk** tool for GDTB |
+|  04  | checkm        | 2023-02-28 |   env 13   | genome quialty check (**checkm** or **gunc**), completeness and contamination|
 |  05  | pydata        | 2023-02-28 |            | data analysis using python  |
 |  06  | r-env         | 2023-02-28 |            | data analysis using R  |
 |  07  | unicycler050  | 2023-02-13 |            | only unicycler 0.5.0 |
-|  08  | qiime2-2023.2 | 2023-03-10 |            | for **qiime2** analyses |
+|  08  | qiime2-2023.2 | 2023-03-10 |   env 14  | for **qiime2** analyses |
 |  09  | ncbi          | 2023-03-28 | 2023-07-12 | local blast using **blast+** or **diamond** |
 |  10  | prokka        | 2023-07-03 |            | rapid prokaryotic genome annotation |
-
+|  11  | rna-seq       | 2023-11-02 |            | RNA seq analysis: **Trimmomatic, Trinity** |
+|  12  | gtdbtk-2.4.0  | 2024-05-14 |            | **gtdbtk-2.4.0** with new GTDB-Tk reference dataset **R220 (ver202404)** |
+|  13  | checkm2       | 2024-06-04 |            | MAGs quality check: **checkM2, QUAST, GUNC** |
+|  14  | qiime2-amplicon-2024.5 | 2024-06-05 |            | The **2024.5 release** of the QIIME 2 **Amplicon** Distribution includes the QIIME 2 framework, q2cli and the following plugins: **q2-alignment, q2-composition, q2-cutadapt, q2-dada2, ...** |
+|  15  | qiime2-metagenome-2024.5 | 2024-06-07 |            | The **2024.5 release** of the QIIME 2 **Metagenome** Distribution includes the QIIME 2 framework, q2cli (a QIIME 2 command-line interface) and the following plugins: **q2-assembly, q2-composition, q2-cutadapt, q2-demux, ...** |
+|  --  | -          | - | -          | - |
 
 ***Shortcuts：***
 
