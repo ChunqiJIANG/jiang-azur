@@ -41,6 +41,7 @@
 |  13  | checkm2       | 2024-06-04 |            | MAGs quality check: **checkM2, QUAST, GUNC** |
 |  14  | qiime2-amplicon-2024.5 | 2024-06-05 |            | The **2024.5 release** of the QIIME 2 **Amplicon** Distribution includes the QIIME 2 framework, q2cli and the following plugins: **q2-alignment, q2-composition, q2-cutadapt, q2-dada2, ...** |
 |  15  | qiime2-metagenome-2024.5 | 2024-06-07 |            | The **2024.5 release** of the QIIME 2 **Metagenome** Distribution includes the QIIME 2 framework, q2cli (a QIIME 2 command-line interface) and the following plugins: **q2-assembly, q2-composition, q2-cutadapt, q2-demux, ...** |
+|  16  | metawrap          | 2024-06-10 |            | **MetaWRAP** environment, a flexible pipeline for genome-resolved metagenomic data analysis: metawrap-mg, blast, concoct, maxbin2, megahit, metabat2, … **Databases installed**: checkm, ncbi_nt, ncbi_tax, SILVA 16S  |
 |  --  | -          | - | -          | - |
 
 ***Shortcuts：***
