@@ -22,6 +22,7 @@
 
 
 #### Currently released environments(env):
+<p align="right"> Recent update on 2024-12-27 </p>
 
 |  <env_id>  |  <env_name>  |  <create_date>  |  <update_date>  |  <env_description>  | 
 |  ----  |  ----  |  ----  |  ----  |  ----  |
@@ -37,12 +38,18 @@
 |  09  | ncbi          | 2023-03-28 | 2023-07-12 | local blast using **blast+** or **diamond** |
 |  10  | prokka        | 2023-07-03 |            | rapid prokaryotic genome annotation |
 |  11  | rna-seq       | 2023-11-02 |            | RNA seq analysis: **Trimmomatic, Trinity** |
-|  12  | gtdbtk-2.4.0  | 2024-05-14 |            | **gtdbtk-2.4.0** with new GTDB-Tk reference dataset **R220 (ver202404)** |
+|  12  | gtdbtk-2.4.0  | 2024-05-14 | 2024-12-25 | **gtdbtk-2.4.0 R220 (ver202404)**, iqtree, fasttree, mafft, raxml-ng|
 |  13  | checkm2       | 2024-06-04 |            | MAGs quality check: **checkM2, QUAST, GUNC** |
 |  14  | qiime2-amplicon-2024.5 | 2024-06-05 |            | The **2024.5 release** of the QIIME 2 **Amplicon** Distribution includes the QIIME 2 framework, q2cli and the following plugins: **q2-alignment, q2-composition, q2-cutadapt, q2-dada2, ...** |
 |  15  | qiime2-metagenome-2024.5 | 2024-06-07 |            | The **2024.5 release** of the QIIME 2 **Metagenome** Distribution includes the QIIME 2 framework, q2cli (a QIIME 2 command-line interface) and the following plugins: **q2-assembly, q2-composition, q2-cutadapt, q2-demux, ...** |
-|  16  | metawrap          | 2024-06-10 |            | **MetaWRAP** environment, a flexible pipeline for genome-resolved metagenomic data analysis: metawrap-mg, blast, concoct, maxbin2, megahit, metabat2, … **Databases installed**: checkm, ncbi_nt, ncbi_tax, SILVA 16S  |
+|  16  | metawrap          | 2024-06-10 | 2024-10-18 | **MetaWRAP** environment, a flexible pipeline for genome-resolved metagenomic data analysis: metawrap-mg, blast, concoct, maxbin2, megahit, metabat2, … **Databases installed**: checkm, ncbi_nt, ncbi_tax, SILVA 16S  |
+|  17  | anvio-8           | 2024-06-18 |            | **anvi'o v8** for pangenome / metagenome analyses: hmmer, diamond, blast, spades, megahit, prodigal, fasttree, fastani, concoct, coverM, kaiju,seqkit … **Databases installed**: SCG v214.1, COG20, KEGG_20230922, cazymes V12 |
+|  18  | metaplatanus      | 2024-09-12 |            | **MetaPlatanus** is a de novo assembler for metagenome (microbiome): metaplatanus, megahit, metabat2, minimap2, samtools, seqkit… |
+|  19  | meta              | 2024-09-30 |            | An optional env for meta analysis: **metaphlan** (db vJun23_202403) |
+|  20  | mtb               | 2024-12-17 |            | For **MTB** related analyses: fegenie, magcluster … |
+|  21  | hocort            | 2024-12-25 |            | Removes specific organisms from sequencing reads on Linux: blast, bowtie2, bwa-mem2, **hocort**, kraken2, minimap2, samtools... |
 |  --  | -          | - | -          | - |
+
 
 ***Shortcuts：***
 
